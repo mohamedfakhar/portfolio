@@ -578,61 +578,69 @@ nav.scrolled {
   position: relative;
   width: clamp(250px, 28vw, 340px);
   height: clamp(310px, 34vw, 410px);
-  border-radius: 16px;
+  border-radius: 18px;
+  transition: box-shadow var(--tr-smooth);
 }
 
+.hero-photo-frame:hover {
+  box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.7), 0 0 30px rgba(201, 168, 106, 0.12);
+}
+
+/* Subtle inner accent border */
 .hero-photo-frame::before {
   content: '';
   position: absolute;
   inset: -2px;
-  border-radius: 18px;
-  background: linear-gradient(135deg, var(--accent), transparent 55%, var(--accent-dark));
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(201, 168, 106, 0.45), rgba(255, 255, 255, 0.06) 50%, rgba(201, 168, 106, 0.25));
   z-index: 0;
-  opacity: 0.55;
-  transition: opacity var(--tr-smooth), inset var(--tr-smooth);
+  opacity: 0.75;
+  transition: opacity var(--tr-smooth), box-shadow var(--tr-smooth);
 }
 
 .hero-photo-frame:hover::before {
-  opacity: 0.9;
-  inset: -3px;
+  opacity: 1;
+  box-shadow: 0 0 20px rgba(201, 168, 106, 0.18);
 }
 
+/* Option 1: Perfectly Symmetrical Geometric Outer Frame */
 .hero-photo-frame::after {
   content: '';
   position: absolute;
-  top: 14px;
-  left: 14px;
-  right: -14px;
-  bottom: -14px;
-  border: 1px solid rgba(201, 168, 106, 0.18);
-  border-radius: 18px;
-  z-index: -1;
-  transition: all var(--tr-smooth);
+  inset: -8px;
+  border: 1px solid rgba(201, 168, 106, 0.22);
+  border-radius: 24px;
+  z-index: 0;
+  pointer-events: none;
+  transition: border-color var(--tr-smooth), box-shadow var(--tr-smooth);
 }
 
 .hero-photo-frame:hover::after {
-  top: 18px;
-  left: 18px;
-  right: -18px;
-  bottom: -18px;
-  border-color: rgba(201, 168, 106, 0.35);
+  border-color: rgba(201, 168, 106, 0.48);
+  box-shadow: 0 0 25px rgba(201, 168, 106, 0.15);
+}
+
+.hero-photo-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+  overflow: hidden;
+  z-index: 1;
+  background: #101112;
 }
 
 .hero-photo {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 18%;
-  border-radius: 16px;
-  position: relative;
-  z-index: 1;
-  filter: contrast(1.04) brightness(1.01);
-  transition: transform var(--tr-smooth);
+  object-position: center top;
+  border-radius: 18px;
   display: block;
-}
-
-.hero-photo-frame:hover .hero-photo {
-  transform: scale(1.015);
+  transform: scale(1.09);
+  transform-origin: center 15%;
+  filter: contrast(1.04) brightness(1.01);
+  transition: filter var(--tr-smooth);
 }
 
 .photo-badge {
@@ -2067,6 +2075,11 @@ body.modal-open {
     height: 310px;
   }
 
+  .hero-photo-frame::after {
+    inset: -6px;
+    border-radius: 22px;
+  }
+
   .photo-badge {
     bottom: -12px;
     left: 50%;
@@ -2112,6 +2125,11 @@ body.modal-open {
   .hero-photo-frame {
     width: 220px;
     height: 270px;
+  }
+
+  .hero-photo-frame::after {
+    inset: -5px;
+    border-radius: 20px;
   }
 
   .stat-num {
