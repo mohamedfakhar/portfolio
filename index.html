@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mohamed Elshahat Ibrahim — Full Stack Developer (Node.js / React.js)</title>
+  <meta name="description"
+    content="Full Stack Developer with hands-on experience building web applications using Node.js, Express.js, and React.js. Skilled in RESTful APIs, MongoDB, SQL, and web security. AWS Certified Cloud Practitioner." />
+  
+  <!-- Open Graph Metadata -->
+  <meta property="og:title" content="Mohamed Elshahat Ibrahim — Full Stack Developer" />
+  <meta property="og:description"
+    content="Full Stack Developer specializing in Node.js, Express.js, React.js, REST APIs, databases, authentication, and secure web applications." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/images/hero-profile.jpg" />
+
+  <!-- Google Fonts: Plus Jakarta Sans (Primary), DM Mono (Code/Tags), Instrument Serif (Accents) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,400&family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="#hero" class="nav-logo" aria-label="Mohamed Elshahat Ibrahim Homepage">
+      M<span>.</span>Elshahat
+    </a>
+
+    <!-- Desktop Menu -->
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#credentials">Credentials</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#why">Why Me</a></li>
+      <li><a href="#contact" class="nav-cta">Hire Me</a></li>
+    </ul>
+
+    <!-- Mobile Hamburger Button -->
+    <button class="nav-hamburger" id="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false"
+      aria-controls="mobile-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Overlay & Slide-in Drawer -->
+  <div class="mobile-overlay" id="mobile-overlay"></div>
+  <div class="nav-mobile-menu" id="mobile-menu" aria-hidden="true">
+    <a href="#services" class="mobile-link">Services <span>&rarr;</span></a>
+    <a href="#projects" class="mobile-link">Projects <span>&rarr;</span></a>
+    <a href="#experience" class="mobile-link">Experience <span>&rarr;</span></a>
+    <a href="#credentials" class="mobile-link">Credentials <span>&rarr;</span></a>
+    <a href="#skills" class="mobile-link">Skills <span>&rarr;</span></a>
+    <a href="#why" class="mobile-link">Why Me <span>&rarr;</span></a>
+    <a href="#process" class="mobile-link">Process <span>&rarr;</span></a>
+    <a href="#contact" class="nav-cta mobile-link">Hire Me</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-bg-lines"></div>
+    <div class="hero-glow"></div>
+
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-meta-badges">
+            <span class="hero-badge">Available for Full-Time &amp; Freelance</span>
+            <span class="hero-badge location">📍 Cairo, Egypt &middot; Open to Relocation</span>
+          </div>
+          <h1 class="hero-title">
+            Mohamed Elshahat<br />Full Stack <em>Developer</em>
+          </h1>
+          <p class="hero-sub">
+            Full Stack Developer with hands-on experience building scalable web applications using Node.js, Express.js, and React.js. Skilled in designing RESTful APIs, integrating MongoDB and SQL databases, and implementing authentication, authorization, and web security fundamentals.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn-primary">Explore Projects &rarr;</a>
+            <a href="assets/Mohamed_Elshahat_CV.pdf" download="Mohamed_Elshahat_CV.pdf" class="btn-secondary">Download Resume</a>
+            <a href="https://github.com/mohamedfakhar" target="_blank" rel="noopener noreferrer" class="btn-secondary" aria-label="GitHub Profile">🐙 GitHub</a>
+          </div>
+
+          <!-- Hero Stats Bar (Derived strictly from CV) -->
+          <div class="hero-stats">
+            <div class="stat-item">
+              <div class="stat-num">5<span>+</span></div>
+              <div class="stat-label">Major Projects</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num">Full Stack</div>
+              <div class="stat-label">Node.js &amp; React.js</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num">AWS</div>
+              <div class="stat-label">Certified Practitioner</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num">B.Sc.</div>
+              <div class="stat-label">Computer Science</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Profile Photo -->
+        <div class="hero-photo-wrap">
+          <div class="hero-photo-frame">
+            <img class="hero-photo" src="assets/images/hero-profile.jpg" alt="Mohamed Elshahat Ibrahim — Full Stack Developer" width="350" height="420" />
+            <div class="photo-badge">
+              <span class="photo-badge-dot"></span>
+              <div>
+                <div class="photo-badge-text">Available for Hire</div>
+                <div class="photo-badge-sub">Remote &middot; Saudi / UAE &middot; On-site</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services">
+    <div class="container">
+      <div class="section-label">Core Capabilities</div>
+      <h2 class="section-title">Engineering <span>Services</span></h2>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon-box">⚡</div>
+          <h3 class="service-name">Backend Development</h3>
+          <p class="service-desc">Architecting robust server-side systems with Node.js and Express.js. Structured controller-service layers, asynchronous queue management, and resilient error handling.</p>
+          <div class="service-tags">
+            <span class="tag">Node.js</span>
+            <span class="tag">Express.js</span>
+            <span class="tag">RESTful APIs</span>
+            <span class="tag">WebSockets</span>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon-box">🎨</div>
+          <h3 class="service-name">Frontend Engineering</h3>
+          <p class="service-desc">Building responsive, accessible, high-performance web user interfaces using React.js and modern CSS. Fluid state management, reusable design tokens, and cross-device optimization.</p>
+          <div class="service-tags">
+            <span class="tag">React.js</span>
+            <span class="tag">Vite</span>
+            <span class="tag">Tailwind CSS</span>
+            <span class="tag">Bootstrap</span>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon-box">🗄️</div>
+          <h3 class="service-name">Database Design &amp; Optimization</h3>
+          <p class="service-desc">Designing scalable NoSQL and relational database schemas, relationship modeling, index optimization, aggregation pipelines, and data integrity constraints.</p>
+          <div class="service-tags">
+            <span class="tag">MongoDB</span>
+            <span class="tag">Mongoose</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">PostgreSQL</span>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon-box">🔒</div>
+          <h3 class="service-name">Authentication &amp; Security</h3>
+          <p class="service-desc">Implementing JWT authentication with refresh tokens, Role-Based Access Control (RBAC), input validation (Joi), rate limiting, and OWASP security hygiene.</p>
+          <div class="service-tags">
+            <span class="tag">JWT Auth</span>
+            <span class="tag">RBAC</span>
+            <span class="tag">OWASP Top 10</span>
+            <span class="tag">Joi Validation</span>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon-box">🚀</div>
+          <h3 class="service-name">Full-Stack Web Applications</h3>
+          <p class="service-desc">Delivering complete web solutions from initial requirements to production deployment. Third-party integrations including payment gateways (Stripe) and real-time events.</p>
+          <div class="service-tags">
+            <span class="tag">Full Stack</span>
+            <span class="tag">Stripe Payments</span>
+            <span class="tag">Socket.IO</span>
+            <span class="tag">Cron Jobs</span>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon-box">📊</div>
+          <h3 class="service-name">Admin Dashboards &amp; Workflows</h3>
+          <p class="service-desc">Building operational management portals, multi-tier approval pipelines, attendance &amp; payroll logic, and analytical summary reporting interfaces.</p>
+          <div class="service-tags">
+            <span class="tag">Dashboards</span>
+            <span class="tag">Approval Pipelines</span>
+            <span class="tag">Multi-Role</span>
+            <span class="tag">Data Analytics</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-label">Case Studies</div>
+      <h2 class="section-title">Featured <span>Projects</span></h2>
+      <p class="projects-intro">
+        Explore 5 end-to-end projects demonstrating production-ready full-stack architecture, backend security, robust database modeling, and polished user experiences.
+      </p>
+
+      <!-- Featured Project (#1 Kemet Gate) Container -->
+      <div id="featured-project-container" style="margin-bottom: 36px;">
+        <!-- Injected dynamically via script.js -->
+      </div>
+
+      <!-- Standard Projects (2, 3, 4, 5) Grid -->
+      <div class="projects-standard-grid" id="projects-grid">
+        <!-- Injected dynamically via script.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience & Education Section (Directly from CV) -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-label">Professional Background</div>
+      <h2 class="section-title">Experience &amp; <span>Education</span></h2>
+
+      <div class="timeline-grid">
+        <!-- 1. Freelance Experience -->
+        <div class="timeline-card featured-exp">
+          <div class="timeline-badge">Professional Experience</div>
+          <h3 class="timeline-title">Freelance Full Stack Web Developer</h3>
+          <div class="timeline-org">Self-Employed &middot; Egypt</div>
+          <div class="timeline-date">Jan 2024 – Present</div>
+          <ul class="timeline-list">
+            <li>Developed full stack web applications on a project basis using Node.js, Express.js, and React.js.</li>
+            <li>Designed and implemented RESTful APIs for authentication, payments, and data management.</li>
+            <li>Integrated MongoDB and MySQL databases with secure, optimized queries.</li>
+            <li>Collaborated directly with clients to deliver customized, scalable web solutions.</li>
+          </ul>
+        </div>
+
+        <!-- 2. Digilians Professional Training -->
+        <div class="timeline-card">
+          <div class="timeline-badge">Professional Training</div>
+          <h3 class="timeline-title">Software Development Trainee</h3>
+          <div class="timeline-org">Digital Pioneers Initiative (Digilians), NTI</div>
+          <div class="timeline-date">Dec 2025 – Sep 2026</div>
+          <ul class="timeline-list">
+            <li>9-month diploma in AI-Powered Software Development covering full stack web dev, DevOps, and web security.</li>
+            <li>Completed practical team-based training covering the full lifecycle from planning through deployment.</li>
+            <li>Built full stack features and RESTful APIs using Node.js, Express.js, React.js, and MongoDB.</li>
+            <li>Gained working knowledge of Docker, Kubernetes, Linux, CI/CD, and cloud/AWS fundamentals.</li>
+            <li>Applied secure coding practices based on the OWASP Top 10 across project work.</li>
+          </ul>
+        </div>
+
+        <!-- 3. Academic Degree -->
+        <div class="timeline-card">
+          <div class="timeline-badge">University Education</div>
+          <h3 class="timeline-title">B.Sc. in Computer Science</h3>
+          <div class="timeline-org">Faculty of Computers and Information, Zagazig University</div>
+          <div class="timeline-date">Sep 2020 – Jun 2024</div>
+          <ul class="timeline-list">
+            <li>Comprehensive 4-year degree in Computer Science, software engineering methodologies, data structures, and algorithms.</li>
+            <li>Completed graduation project: Diabetes Management App (Node.js RESTful APIs, MySQL, and ML trend prediction).</li>
+            <li>Strong foundation in C++ programming, OOP, relational databases, and system design.</li>
+            <li>Languages: Arabic (Native), English (Very Good — Written &amp; Spoken).</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Credentials & Certifications Section -->
+  <section id="credentials">
+    <div class="container">
+      <div class="section-label">Verified Certifications</div>
+      <h2 class="section-title">Certifications &amp; <span>Training</span></h2>
+
+      <div class="credentials-grid">
+        <!-- AWS Cloud Practitioner -->
+        <div class="credential-card">
+          <div class="cred-header">
+            <div>
+              <h3 class="cred-title">AWS Certified Cloud Practitioner</h3>
+              <div class="cred-sub">Amazon Web Services (AWS)</div>
+            </div>
+            <span class="cred-badge verified">✓ Verified Credential</span>
+          </div>
+          <div style="font-size: 12px; color: var(--muted); margin-bottom: 10px; font-family: var(--font-mono);">
+            Issued: July 2026 &middot; Expires: July 2029
+          </div>
+          <p class="cred-desc">
+            Validated foundational cloud fluency, security architectures, IAM permission modeling, core AWS services (EC2, S3, RDS, VPC), and operational cost management.
+          </p>
+          <div class="service-tags">
+            <span class="tag">Cloud Architecture</span>
+            <span class="tag">AWS IAM</span>
+            <span class="tag">Security Standards</span>
+            <span class="tag">Cloud Economics</span>
+          </div>
+        </div>
+
+        <!-- AWS Developer Associate Training -->
+        <div class="credential-card">
+          <div class="cred-header">
+            <div>
+              <h3 class="cred-title">AWS Developer Associate (DVA-C02)</h3>
+              <div class="cred-sub">Training &amp; Exam Preparation (In Progress)</div>
+            </div>
+            <span class="cred-badge">Training / Exam Prep</span>
+          </div>
+          <div style="font-size: 12px; color: var(--muted); margin-bottom: 10px; font-family: var(--font-mono);">
+            Active Preparation &middot; Target: 2026
+          </div>
+          <p class="cred-desc">
+            In-depth training on developing, deploying, and debugging cloud-native applications on AWS, containerized deployments with Docker, serverless patterns, and CI/CD pipelines.
+          </p>
+          <div class="service-tags">
+            <span class="tag">AWS Lambda</span>
+            <span class="tag">API Gateway</span>
+            <span class="tag">Docker &amp; ECS</span>
+            <span class="tag">CI/CD Automation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Skills Section (Categorized strictly from new CV) -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-label">Technical Expertise</div>
+      <h2 class="section-title">Skills &amp; <span>Toolbox</span></h2>
+
+      <div class="skills-container">
+        <!-- 1. Languages & Frontend -->
+        <div class="skill-category">
+          <div class="skill-group-title">Languages &amp; Frontend</div>
+          <div class="tech-pills">
+            <span class="tech-pill"><span class="tech-pill-dot"></span>JavaScript</span>
+            <span class="tech-pill"><span class="tech-pill-dot"></span>HTML5</span>
+            <span class="tech-pill"><span class="tech-pill-dot"></span>CSS3</span>
+            <span class="tech-pill"><span class="tech-pill-dot"></span>C++</span>
+            <span class="tech-pill"><span class="tech-pill-dot"></span>React.js</span>
+            <span class="tech-pill"><span class="tech-pill-dot"></span>Angular</span>
+            <span class="tech-pill"><span class="tech-pill-dot"></span>Vite</span>
+            <span class="tech-pill"><span class="tech-pill-dot"></span>Tailwind CSS</span>
+            <span class="tech-pill"><span class="tech-pill-dot"></span>Bootstrap</span>
+            <span class="tech-pill"><span class="tech-pill-dot"></span>Axios</span>
+          </div>
+        </div>
+
+        <!-- 2. Backend & Databases -->
+        <div class="skill-category">
+          <div class="skill-group-title">Backend &amp; Databases</div>
+          <div class="tech-pills">
+            <span class="tech-pill"><span class="tech-pill-dot"></span>Node.js</span>
+            <span class="tech-pill"><span class="tech-pill-dot"></span>Express.js</span>
+            <span class="tech-pill"><span class="tech-pill-dot"></span>RESTful APIs</span>
+            <span class="tech-pill"><span class="tech-pill-dot"></span>WebSockets</span>
+            <span class="tech-pill"><span class="tech-pill-dot"></span>Socket.IO</span>
+            <span class="tech-pill"><span class="tech-pill-dot"></span>MongoDB</span>
+            <span class="tech-pill"><span class="tech-pill-dot"></span>Mongoose</span>
+            <span class="tech-pill"><span class="tech-pill-dot"></span>MySQL</span>
+            <span class="tech-pill"><span class="tech-pill-dot"></span>PostgreSQL</span>
+          </div>
+        </div>
+
+        <!-- 3. Authentication & Security -->
+        <div class="skill-category">
+          <div class="skill-group-title">Authentication &amp; Security</div>
+          <div class="tech-pills">
+            <span class="tech-pill"><span class="tech-pill-dot"></span>JWT &amp; Refresh Tokens</span>
+            <span class="tech-pill"><span class="tech-pill-dot"></span>RBAC Authorization</span>
+            <span class="tech-pill"><span class="tech-pill-dot"></span>OWASP Top 10</span>
+            <span class="tech-pill"><span class="tech-pill-dot"></span>XSS Prevention</span>
+            <span class="tech-pill"><span class="tech-pill-dot"></span>SQL Injection Defense</span>
+            <span class="tech-pill"><span class="tech-pill-dot"></span>IDOR Mitigation</span>
+            <span class="tech-pill"><span class="tech-pill-dot"></span>CSRF Protection</span>
+            <span class="tech-pill"><span class="tech-pill-dot"></span>Secure API Practices</span>
+            <span class="tech-pill"><span class="tech-pill-dot"></span>Joi Validation</span>
+            <span class="tech-pill"><span class="tech-pill-dot"></span>bcrypt Hashing</span>
+          </div>
+        </div>
+
+        <!-- 4. Cloud, DevOps, Automation, Payments & Tools -->
+        <div class="skill-category">
+          <div class="skill-group-title">Cloud, DevOps, Payments &amp; Tools</div>
+          <div class="tech-pills">
+            <span class="tech-pill"><span class="tech-pill-dot"></span>AWS Cloud</span>
+            <span class="tech-pill"><span class="tech-pill-dot"></span>Docker</span>
+            <span class="tech-pill"><span class="tech-pill-dot"></span>Kubernetes</span>
+            <span class="tech-pill"><span class="tech-pill-dot"></span>Linux</span>
+            <span class="tech-pill"><span class="tech-pill-dot"></span>CI/CD</span>
+            <span class="tech-pill"><span class="tech-pill-dot"></span>n8n Automation</span>
+            <span class="tech-pill"><span class="tech-pill-dot"></span>Cron Jobs</span>
+            <span class="tech-pill"><span class="tech-pill-dot"></span>Stripe API</span>
+            <span class="tech-pill"><span class="tech-pill-dot"></span>Git &amp; GitHub</span>
+            <span class="tech-pill"><span class="tech-pill-dot"></span>Postman</span>
+            <span class="tech-pill"><span class="tech-pill-dot"></span>VS Code</span>
+            <span class="tech-pill"><span class="tech-pill-dot"></span>System Design</span>
+            <span class="tech-pill"><span class="tech-pill-dot"></span>Unit Testing</span>
+            <span class="tech-pill"><span class="tech-pill-dot"></span>Agile / Scrum</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Engineering Principles Section (Why Work With Me) -->
+  <section id="why">
+    <div class="container">
+      <div class="section-label">Core Philosophy</div>
+      <h2 class="section-title">Why Work <span>With Me</span></h2>
+
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-num">01</div>
+          <h3 class="why-title">Full-Stack Versatility</h3>
+          <p class="why-text">I seamlessly connect backend REST APIs, databases, and microservices with responsive React interfaces, ensuring cohesive state management and zero integration friction.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-num">02</div>
+          <h3 class="why-title">Security-First Mindset</h3>
+          <p class="why-text">Trained in OWASP Top 10 vulnerabilities. I build defensive architectures with token rotation, strict input validation, cryptographic signatures, and role-based access guards on every endpoint.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-num">03</div>
+          <h3 class="why-title">Complex Business Logic</h3>
+          <p class="why-text">Proven experience handling real-world workflows, such as multi-tier booking pipelines, idempotent payment webhooks (Stripe), dynamic payroll calculations, and duplicate prevention.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-num">04</div>
+          <h3 class="why-title">Clean &amp; Maintainable Code</h3>
+          <p class="why-text">Adhering to modular separation of concerns, clean controller-service hierarchies, well-indexed database schemas, and structured Git workflows for reliable team collaboration.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section id="process">
+    <div class="container">
+      <div class="section-label">Development Workflow</div>
+      <h2 class="section-title">Execution <span>Methodology</span></h2>
+
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-header">
+            <div class="step-dot">01</div>
+          </div>
+          <h3 class="step-title">Discovery &amp; Requirements</h3>
+          <p class="step-desc">Analyzing business goals, user personas, roles, security constraints, and data flows to establish a clear scope and non-ambiguous roadmap.</p>
+        </div>
+
+        <div class="process-step">
+          <div class="step-header">
+            <div class="step-dot">02</div>
+          </div>
+          <h3 class="step-title">Architecture &amp; Planning</h3>
+          <p class="step-desc">Designing database models, API endpoint structures, authorization tiers, and frontend component hierarchies for optimal performance.</p>
+        </div>
+
+        <div class="process-step">
+          <div class="step-header">
+            <div class="step-dot">03</div>
+          </div>
+          <h3 class="step-title">Development &amp; Integration</h3>
+          <p class="step-desc">Writing clean backend services, building responsive UI components, integrating third-party APIs, and linking real-time Socket.IO events.</p>
+        </div>
+
+        <div class="process-step">
+          <div class="step-header">
+            <div class="step-dot">04</div>
+          </div>
+          <h3 class="step-title">Testing &amp; Delivery</h3>
+          <p class="step-desc">Verifying database integrity, cross-browser responsiveness, error handling, and preparing clean documentation for deployment.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-label">Get in Touch</div>
+      <h2 class="section-title">Let's Build <span>Together</span></h2>
+
+      <div class="contact-layout">
+        <!-- Direct Contact Card -->
+        <div class="contact-info-card">
+          <p class="contact-tagline">"Ready to create scalable, high-impact web solutions."</p>
+          <p class="contact-desc">
+            I am available for full-time engineering roles (remote or on-site in Saudi Arabia / UAE / Egypt) as well as freelance contracts. Feel free to reach out directly via email, phone, or LinkedIn.
+          </p>
+          <div class="contact-links">
+            <a href="mailto:shahathamdy29@gmail.com" class="contact-link" aria-label="Send Email">
+              <span class="contact-link-icon">📧</span>
+              <span>shahathamdy29@gmail.com</span>
+            </a>
+            <a href="tel:+201066082415" class="contact-link" aria-label="Phone Call">
+              <span class="contact-link-icon">📱</span>
+              <span>+20 106 608 2415</span>
+            </a>
+            <a href="https://linkedin.com/in/mohamedfakhar" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="LinkedIn Profile">
+              <span class="contact-link-icon">💼</span>
+              <span>linkedin.com/in/mohamedfakhar</span>
+            </a>
+            <a href="https://github.com/mohamedfakhar" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="GitHub Profile">
+              <span class="contact-link-icon">🐙</span>
+              <span>github.com/mohamedfakhar</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Verified Freelance Profiles -->
+        <div>
+          <div class="platforms-title">Verified Freelance Platforms</div>
+          <div class="platforms-grid">
+            <a href="https://www.upwork.com/freelancers/~011cb897177dd10d5c" target="_blank" rel="noopener noreferrer" class="platform-card highlight">
+              <div class="platform-name">Upwork <span>&nearr;</span></div>
+              <div class="platform-status">✦ View Profile</div>
+            </a>
+            <a href="https://mostaql.com/u/Mohammed_Fakhr" target="_blank" rel="noopener noreferrer" class="platform-card highlight">
+              <div class="platform-name">Mostaql مستقل <span>&nearr;</span></div>
+              <div class="platform-status">✦ View Profile</div>
+            </a>
+            <a href="https://nafezly.com/u/MohamedFakhr" target="_blank" rel="noopener noreferrer" class="platform-card">
+              <div class="platform-name">Nafezly نفذلي <span>&nearr;</span></div>
+              <div class="platform-status">✦ View Profile</div>
+            </a>
+            <a href="https://www.freelancer.com/u/mohamedf386" target="_blank" rel="noopener noreferrer" class="platform-card">
+              <div class="platform-name">Freelancer <span>&nearr;</span></div>
+              <div class="platform-status">✦ View Profile</div>
+            </a>
+            <a href="https://khamsat.com/user/mohamed_fakhar204" target="_blank" rel="noopener noreferrer" class="platform-card">
+              <div class="platform-name">Khamsat خمسات <span>&nearr;</span></div>
+              <div class="platform-status">✦ View Profile</div>
+            </a>
+            <a href="https://www.peopleperhour.com/freelancer/mohamed-fakhar-full-stack-developer-zxqwxqmz" target="_blank" rel="noopener noreferrer" class="platform-card">
+              <div class="platform-name">PeoplePerHour <span>&nearr;</span></div>
+              <div class="platform-status">✦ View Profile</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-copy">
+          &copy; <span id="current-year">2026</span> <span>Mohamed Fakhr</span> &middot; Full Stack Developer (Node.js / React.js)
+        </div>
+        <div class="footer-links">
+          <a href="#hero">Back to Top &uarr;</a>
+          <a href="https://github.com/mohamedfakhar" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://linkedin.com/in/mohamedfakhar" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Project Details Modal Dialog (Light Dismiss & Accessible) -->
+  <div class="modal-dialog" id="project-modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title-heading">
+    <div class="modal-backdrop"></div>
+    <div class="modal-container" id="modal-container" tabindex="-1">
+      <button class="modal-close" id="modal-close-btn" aria-label="Close project modal">&times;</button>
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-subtitle" id="modal-subtitle-text">Featured Case Study</div>
+          <h2 class="modal-title" id="modal-title-heading">Project Name</h2>
+          <div class="modal-status-badge" id="modal-status-badge">Status</div>
+        </div>
+        <div class="modal-body" id="modal-body-content">
+          <!-- Dynamically populated by script.js -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+
+</html>
