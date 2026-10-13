@@ -246,6 +246,29 @@ nav.scrolled {
   box-shadow: 0 4px 18px var(--accent-glow);
 }
 
+.nav-cv-link {
+  font-family: var(--font-mono) !important;
+  font-size: 11.5px !important;
+  color: var(--accent) !important;
+  border: 1px solid rgba(201, 168, 106, 0.35) !important;
+  padding: 6px 12px !important;
+  border-radius: 5px !important;
+  transition: all var(--tr-fast) !important;
+  text-decoration: none !important;
+  letter-spacing: 0.04em !important;
+}
+
+.nav-cv-link::after {
+  display: none !important;
+}
+
+.nav-cv-link:hover {
+  background: var(--accent-subtle) !important;
+  border-color: var(--accent) !important;
+  color: var(--accent-hover) !important;
+  transform: translateY(-1px);
+}
+
 /* Mobile Hamburger Button */
 .nav-hamburger {
   display: none;
@@ -775,11 +798,77 @@ nav.scrolled {
   max-width: 680px;
   color: var(--muted2);
   font-size: 14.5px;
-  margin-bottom: 38px;
+  margin-bottom: 24px;
   line-height: 1.75;
 }
 
-/* Featured Flagship Project Card (#1 Kemet Gate) */
+/* Interactive Filter Tabs */
+.projects-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 36px;
+  align-items: center;
+}
+
+.filter-btn {
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--muted2);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all var(--tr-fast);
+}
+
+.filter-btn:hover {
+  border-color: var(--accent);
+  color: var(--text);
+  background: var(--card2);
+}
+
+.filter-btn.active {
+  background: var(--accent);
+  color: #000000;
+  border-color: var(--accent);
+  font-weight: 700;
+  box-shadow: 0 2px 12px var(--accent-glow);
+}
+
+/* Section Subheadings */
+.featured-section-header,
+.standard-section-header {
+  margin-bottom: 22px;
+}
+
+.section-subheading {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: -0.01em;
+}
+
+.section-subtext {
+  font-size: 13.5px;
+  color: var(--muted2);
+  line-height: 1.6;
+}
+
+/* Featured Projects Stack */
+.featured-projects-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* Featured Flagship Project Card */
 .project-card.featured {
   display: grid;
   grid-template-columns: 1.18fr 0.82fr;
@@ -852,6 +941,13 @@ nav.scrolled {
 /* Portrait / Dashboard screenshots framing adjustment */
 .project-img.portrait-preview {
   object-position: top center;
+}
+
+/* SVG Vector / Logo presentation */
+.project-img.svg-preview {
+  object-fit: contain;
+  padding: 40px;
+  background: radial-gradient(circle at center, #18191a 0%, #0d0e0f 100%);
 }
 
 .project-badge-featured {
@@ -1049,7 +1145,7 @@ nav.scrolled {
 
 .timeline-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
 }
 
@@ -1086,6 +1182,12 @@ nav.scrolled {
   color: var(--accent);
   width: fit-content;
   margin-bottom: 14px;
+}
+
+.timeline-badge.current-role {
+  background: rgba(52, 211, 153, 0.12);
+  border-color: rgba(52, 211, 153, 0.4);
+  color: var(--success);
 }
 
 .timeline-title {

@@ -11,11 +11,15 @@ const urls = [
   'http://localhost:8080/assets/images/kemet-gate-4.png',
   'http://localhost:8080/assets/images/hrm-portal-1.png',
   'http://localhost:8080/assets/images/hrm-portal-2.png',
+  'http://localhost:8080/assets/images/frio-restaurant-1.jpg',
+  'http://localhost:8080/assets/images/frio-restaurant-2.jpg',
   'http://localhost:8080/assets/images/shopery-1.png',
   'http://localhost:8080/assets/images/shopery-2.png',
   'http://localhost:8080/assets/images/topico-1.png',
   'http://localhost:8080/assets/images/topico-2.png',
   'http://localhost:8080/assets/images/diabetes-app.png',
+  'http://localhost:8080/assets/images/al-quds-pharmacy-logo.svg',
+  'http://localhost:8080/assets/Mohamed_Elshahat_Ibrahim_CV.pdf',
   'http://localhost:8080/assets/Mohamed_Elshahat_CV.pdf'
 ];
 
@@ -36,4 +40,5 @@ Promise.all(checks).then(results => {
     if (r.status !== 200) allOk = false;
   });
   console.log('\nResult: ' + (allOk ? 'ALL ASSETS VERIFIED 200 OK' : 'SOME ASSETS FAILED'));
+  process.exit(allOk ? 0 : 1);
 });
