@@ -1,12 +1,94 @@
 /**
  * MOHAMED ELSHAHAT IBRAHIM — FULL STACK DEVELOPER PORTFOLIO
- * Core Logic, Dynamic Project Data (7 Verified Projects) & Accessible Interactions
+ * Core Logic, Dynamic Project Data (7 Verified Projects) & Editorial Showcase
  */
 
 // ==========================================================================
 // 1. Projects Data Structure (7 Verified Projects Synchronized with CV & Repos)
 // ==========================================================================
 const projectsData = [
+  {
+    id: "hrm-system",
+    name: "HR & Payroll Management System",
+    fullName: "HR & Payroll Management System & HR Smart Assistant",
+    badge: "Enterprise Business Platform · 105/105 Automated Tests Passed",
+    timeline: "Jan 2026 – Present",
+    role: "Full Stack Developer (Solo Project)",
+    category: "ENTERPRISE BUSINESS PLATFORM · FULL STACK & AI",
+    filterCategories: ["featured", "fullstack", "enterprise"],
+    status: "Active Development",
+    isFeatured: true,
+    isSpotlight: true,
+    shortDesc: "An enterprise-grade Human Resource and Payroll management platform built with Node.js, Express.js 5, MongoDB, React 19, and Socket.IO. Features attendance tracking, leave lifecycles, dynamic payroll calculation engines, operational anomaly detection, smart recommendations, and an HR Smart Assistant with 16 validated tools.",
+    problem: "Manual spreadsheets and disconnected HR tools create administrative bottlenecks, attendance logging discrepancies, payroll calculation errors, and missed operational irregularities across growing organizations.",
+    highlights: [
+      "Built an enterprise-style HRM platform using Node.js, Express.js, MongoDB, React.js, and Socket.IO, with JWT authentication and role-based access control",
+      "Implemented attendance, leave management, payroll, performance evaluation, anomaly detection, smart recommendations, and real-time notifications",
+      "Developed an HR Smart Assistant with 16 validated tools for employee, attendance, leave, payroll, performance, anomaly, and recommendation insights",
+      "Applied secure service-layer architecture, input validation, audit logging, targeted database indexing, and automated testing with 105/105 passing assertions",
+      "Zero arbitrary database queries: deterministic NLP pipeline with prompt injection defense and complete interaction audit logging"
+    ],
+    features: {
+      "Authentication & Role Guards": [
+        "Stateless access tokens (15-min) paired with httpOnly refresh token rotation and revocation",
+        "Authoritative server-side role guards strictly separating Employee, HR Manager, and Administrator access",
+        "Deterministic authorization decorators ensuring complete resource-level access control"
+      ],
+      "Attendance, Leave & Dynamic Payroll": [
+        "Automated check-in/out logging with dynamic duration, overtime tracking, and late-entry calculations",
+        "Multi-tier leave request lifecycles (Submit → Manager Review → Approval/Rejection with audit rationale)",
+        "Deterministic payroll calculation engine synthesizing base salary, overtime allowances, tax deductions, and unpaid leave penalties"
+      ],
+      "Anomaly Detection & Smart Insights": [
+        "Statistical anomaly detection flagging unusual overtime spikes, excessive absenteeism, and payroll variance",
+        "Recommendation engine delivering proactive operational alerts directly to HR administrators",
+        "Real-time event broadcasting using Socket.IO for immediate notification of critical updates"
+      ],
+      "Bilingual HR Smart Assistant (16 Validated Tools)": [
+        "Zero arbitrary database queries: deterministic NLP pipeline mapping natural language queries to strictly validated service functions",
+        "Multi-turn conversational context in Arabic and English for employee records, leave balances, and payroll breakdowns",
+        "Prompt injection defense and complete audit logging of every query and assistant interaction"
+      ]
+    },
+    techStack: {
+      "Frontend": ["React 19", "Vite", "Tailwind CSS", "Axios", "Lucide React"],
+      "Backend": ["Node.js", "Express.js 5", "Socket.IO", "Node-Cron", "Bcrypt.js"],
+      "Database": ["MongoDB", "Mongoose (12 Schemas, Compound Indexes)"],
+      "Security & Auth": ["JWT (Access & Refresh)", "RBAC", "Helmet", "Rate-Limiting", "Data Sanitization"],
+      "Testing & Architecture": ["Automated Assertions (105/105 Passing)", "Service-Layer Pattern", "Audit Logging"]
+    },
+    challenges: [
+      {
+        title: "Deterministic HR Assistant Security",
+        desc: "Prevented arbitrary database execution and prompt injection vulnerabilities by engineering a 16-tool deterministic dispatch layer. Natural language queries are parsed through an intent classifier and dispatched only to authorized, read-only service functions."
+      },
+      {
+        title: "Dynamic Payroll Calculation Engine",
+        desc: "Engineered a fault-tolerant payroll computation pipeline that synthesizes attendance records, approved leaves, tax tiers, and overtime bonuses into immutable, auditable monthly payroll runs."
+      },
+      {
+        title: "Comprehensive Automated Test Suite",
+        desc: "Architected a full regression test harness with 105/105 passing assertions covering authentication flows, role-based guards, payroll formulas, and assistant tool execution."
+      }
+    ],
+    workflow: [
+      "User Authentication & JWT Issuance",
+      "Role-Guarded Endpoint Request",
+      "Service Layer Execution",
+      "Mongoose Schema Validation",
+      "Audit Log & Anomaly Check",
+      "Real-Time Socket.IO Notification"
+    ],
+    images: {
+      preview: "assets/images/hrm-portal-1.png",
+      previewAlt: "HR & Payroll Management System — Analytics & Employee Directory",
+      gallery: [
+        { src: "assets/images/hrm-portal-2.png", caption: "HR Assistant & Anomaly Detection Dashboard" }
+      ]
+    },
+    github: "https://github.com/mohamedfakhar/hrm-system",
+    liveDemo: ""
+  },
   {
     id: "kemet-gate",
     name: "Kemet Gate",
@@ -18,7 +100,8 @@ const projectsData = [
     filterCategories: ["featured", "fullstack"],
     status: "Completed",
     isFeatured: true,
-    shortDesc: "A full-stack platform for exploring Egyptian tourist destinations, trips, and services. Built with React.js, Vite, Tailwind CSS, Axios, Node.js, Express.js, and MongoDB, integrating tour discovery with secure booking, Stripe payments, and tamper-proof digital ticketing.",
+    isSpotlight: false,
+    shortDesc: "A full-stack tourism and travel booking platform for exploring Egyptian archaeological destinations, trips, and services. Built with React.js, Vite, Tailwind CSS, Node.js, Express.js, and MongoDB, integrating tour discovery with secure booking, Stripe payments, and tamper-proof digital ticketing.",
     problem: "Before Kemet Gate, discovering authentic Egyptian heritage sites, connecting with verified travel companies, and booking tours was fragmented without integrated digital ticketing, multi-tier approvals, or cryptographic ticket verification.",
     highlights: [
       "Built a full stack platform for exploring Egyptian tourist destinations, trips, and services using React.js, Vite, Tailwind CSS, Axios, Node.js, Express.js, MongoDB, and Mongoose",
@@ -95,182 +178,70 @@ const projectsData = [
     liveDemo: ""
   },
   {
-    id: "hrm-system",
-    name: "HR & Payroll Management System",
-    fullName: "HR & Payroll Management System & HR Smart Assistant",
-    badge: "Enterprise Business Platform · 105/105 Automated Tests Passed",
-    timeline: "Jan 2026 – Present",
-    role: "Full Stack Developer (Solo Project)",
-    category: "ENTERPRISE BUSINESS PLATFORM · FULL STACK & AI",
-    filterCategories: ["featured", "fullstack", "enterprise"],
-    status: "Active Development",
-    isFeatured: true,
-    shortDesc: "An enterprise-style Human Resource and Payroll management platform built with Node.js, Express.js 5, MongoDB, React 19, and Socket.IO. Features attendance tracking, leave lifecycles, payroll calculation engines, operational anomaly detection, smart recommendations, and an HR Smart Assistant with 16 validated tools.",
-    problem: "Manual spreadsheets and disconnected HR tools create administrative bottlenecks, attendance logging discrepancies, payroll calculation errors, and missed operational irregularities across growing organizations.",
-    highlights: [
-      "Built an enterprise-style HRM platform using Node.js, Express.js, MongoDB, React.js, and Socket.IO, with JWT authentication and role-based access control",
-      "Implemented attendance, leave management, payroll, performance evaluation, anomaly detection, smart recommendations, and real-time notifications",
-      "Developed an HR Smart Assistant with 16 validated tools for employee, attendance, leave, payroll, performance, anomaly, and recommendation insights",
-      "Applied secure service-layer architecture, input validation, audit logging, targeted database indexing, and automated testing with 105/105 passing assertions",
-      "Zero arbitrary database queries: deterministic NLP pipeline with prompt injection defense and complete interaction audit logging"
-    ],
-    features: {
-      "Authentication & Role Guards": [
-        "Stateless access tokens (15-min) paired with httpOnly refresh token rotation and revocation",
-        "Authoritative server-side role guards strictly separating Employee, HR Manager, and Administrator access",
-        "Client-side protected route guards matching server-side API authorization tiers",
-        "Privilege escalation defenses preventing unauthorized registration role assignment"
-      ],
-      "Attendance & Leave Management": [
-        "Daily attendance check-in and check-out timestamp logging with unique employee codes",
-        "Compound database constraints and server validation layers preventing duplicate attendance records for the same employee and date",
-        "Leave request lifecycle workflow (Pending → Approved / Rejected) with automated balance deductions"
-      ],
-      "Payroll & Performance Engines": [
-        "Centralized payroll calculation engine computing basic pay, dynamic allowances, and statutory deductions",
-        "Automated alerts when payroll deductions exceed 25% threshold",
-        "Employee performance evaluation tracking with grade distributions and KPI scoring"
-      ],
-      "Operational Anomaly Engine": [
-        "Real-time detection of repeated lateness spikes, unexcused consecutive absences, and deduction spikes",
-        "In-place telemetry deduplication updating open alert status instead of duplicating records",
-        "Mandatory HR manager resolution workflows with audit note persistence"
-      ],
-      "Smart Workforce Recommendations": [
-        "Rule-driven optimization proposals backed by verifiable database evidence",
-        "Evaluates candidates for performance bonuses, promotion reviews, and support check-ins",
-        "Structured HR review actions (Accept / Reject with notes)"
-      ],
-      "Bilingual HR Smart Assistant": [
-        "Deterministic, tool-governed conversational interface supporting English, Modern Standard Arabic, and Egyptian dialect",
-        "16 pre-defined analytical tools querying headcounts, lateness, leaves, payroll, anomalies, and recommendations",
-        "Prompt injection interception with zero raw LLM-to-MongoDB execution",
-        "Full audit logging recording timestamp, user ID, role, intent, tool args, latency, and source attribution"
-      ]
-    },
-    techStack: {
-      "Frontend": ["React 19", "Vite", "Tailwind CSS", "Recharts", "React Icons", "Axios"],
-      "Backend": ["Node.js", "Express.js 5", "Socket.IO", "Morgan"],
-      "Database & ODM": ["MongoDB", "Mongoose (Compound Indexing)"],
-      "Security & Auth": ["JWT Token Rotation", "RBAC", "Joi Validation", "bcryptjs", "Helmet", "Express Rate Limit"],
-      "Automated Testing": ["105/105 Passing Assertions", "5 Regression Suites (Assistant QA, E2E, Perf, Anomaly, Rec)"]
-    },
-    challenges: [
-      {
-        title: "Deterministic Bilingual Assistant Architecture",
-        desc: "Engineered an NLP intent resolution layer supporting mixed English and Arabic/Egyptian dialect queries that maps exclusively to 16 strictly validated backend tools, intercepting prompt injections and avoiding arbitrary database execution."
-      },
-      {
-        title: "High-Concurrency Attendance Data Integrity",
-        desc: "Designed compound database indexes and server validation constraints to eliminate race conditions and prevent employees from submitting duplicate attendance entries for the same calendar date."
-      },
-      {
-        title: "State-Safe Anomaly Deduplication",
-        desc: "Built a background rule engine that scans attendance and payroll telemetry, updating open anomaly alerts in-place to prevent duplicate notification spam."
-      }
-    ],
-    workflow: [
-      "Employee Ops Logging",
-      "Rule & Anomaly Engine",
-      "Audit & Deduction Validation",
-      "Real-Time Socket.IO Alert",
-      "HR Manager Action / Assistant Query"
-    ],
-    images: {
-      preview: "assets/images/hrm-portal-1.png",
-      previewAlt: "HRM Portal — Enterprise Workforce Management Overview",
-      imgClass: "portrait-preview",
-      gallery: [
-        { src: "assets/images/hrm-portal-2.png", caption: "Employee & HR Dashboard — Attendance, Leave Balances & Upcoming Schedule" }
-      ]
-    },
-    github: "https://github.com/mohamedfakhar/hrm-system",
-    liveDemo: ""
-  },
-  {
     id: "frio-restaurant",
     name: "Frío Restaurant & Cafe",
     fullName: "Frío Restaurant & Cafe — Full-Stack Restaurant & Online Ordering Platform",
-    badge: "Production Platform · Freelance Client Work",
+    badge: "Freelance Production Platform · Next.js 16 App Router",
     timeline: "2026",
     role: "Full Stack Developer (Freelance)",
-    category: "RESTAURANT & ONLINE ORDERING · FULL STACK",
+    category: "FOOD & HOSPITALITY · FULL STACK NEXT.JS",
     filterCategories: ["featured", "fullstack", "ecommerce"],
     status: "Production-Ready",
     isFeatured: true,
-    shortDesc: "A production-ready full-stack restaurant and online ordering platform built for Frío Restaurant & Cafe using Next.js 16 App Router, React 19, TypeScript 5, Tailwind CSS v4, Prisma, and Zod. Features dynamic menu browsing, persistent cart, delivery/takeaway checkout, live order tracking, and automated WhatsApp order dispatch.",
-    problem: "Independent dining venues often struggle with high commission fees and disjointed ordering workflows on third-party marketplace apps. Frío required a customized, direct-to-consumer digital ordering presence with instant WhatsApp order transmission and zero recurring platform take-rates.",
+    isSpotlight: false,
+    shortDesc: "A modern, production-grade restaurant and online ordering platform built with Next.js 16 (App Router), React 19, TypeScript, Tailwind CSS v4, Prisma ORM, and Zod. Features categorized menu exploration, persistent cart state, checkout validation, order tracking, and automated WhatsApp order dispatch.",
+    problem: "Traditional restaurant websites struggle with clunky PDF menus, lack order tracking, suffer from hydration bugs when persisting shopping carts, and lack frictionless direct communication with kitchen and delivery staff.",
     highlights: [
-      "Built a production-ready full-stack restaurant and online ordering platform using Next.js, React, TypeScript, Tailwind CSS, Prisma, and Zod",
+      "Built a production-ready full-stack restaurant and online ordering platform using Next.js 16, React 19, TypeScript, Tailwind CSS, Prisma, and Zod",
       "Implemented menu browsing, persistent cart, checkout, delivery/takeaway flows, order tracking, WhatsApp order dispatch, offers, and content management",
-      "Applied server-side validation with Zod, Prisma data access, SSR-safe client state persistence, and structured SEO metadata (JSON-LD MenuItem schema)",
-      "Engineered dynamic menu explorer across 8 categories with live client search, dietary badges (Chef's Choice, Popular, Vegetarian, Spicy), and SSG pre-rendered dish pages",
-      "Built live order tracking with unique FRIO-XXXXXX reference codes and pre-formatted, URL-encoded WhatsApp order dispatch"
+      "Applied server-side validation, Prisma data access, SSR-safe client state persistence, and structured SEO metadata",
+      "Integrated real-time localized currency formatting (EGP), delivery zone fee calculations, and instant WhatsApp notification pipelines"
     ],
     features: {
-      "Dynamic Menu & SSG Dish Pages": [
-        "8 categorized sections (Appetizers, Main Courses, Pizza, Burgers, Pasta, Sandwiches, Desserts, Drinks)",
-        "Pre-rendered static pages (SSG) for all 23 dishes with calories, prep times, ingredients, and portion counters",
-        "Structured JSON-LD MenuItem metadata enhancing Google Rich Snippets search discovery",
-        "Real-time client search and category filtering with instant visual feedback"
+      "Dynamic Menu & Ordering Engine": [
+        "Rich culinary catalog categorized into appetizers, main platters, hot & cold beverages, and chef specials",
+        "SSR-safe persistent cart using client storage with automatic reconciliation on hydration to avoid SSR mismatch",
+        "Multi-step checkout with delivery address geolocation, pickup/takeaway toggle, and discount coupons"
       ],
-      "Persistent Shopping Bag": [
-        "State persistence across page reloads via LocalStorage with strict SSR hydration safety",
-        "Floating toast notifications on dish additions and modifications",
-        "Dynamic subtotal, delivery fee calculation, and order grand total breakdown"
+      "Kitchen & Delivery Dispatch": [
+        "Automated WhatsApp message generator encoding ordered item details, totals, and delivery coordinates for zero-latency kitchen dispatch",
+        "Unique order reference generation with live status tracking (Received → In Kitchen → Out for Delivery → Completed)"
       ],
-      "Delivery & Takeaway Checkout": [
-        "Dual fulfillment selection (Delivery vs. Takeaway)",
-        "Egyptian mobile phone format validation (01[0125]xxxxxxxx) via Zod schemas",
-        "Support for Cash on Delivery, POS Card, and InstaPay payment methods",
-        "Server-side validation guarding against duplicate order submissions"
-      ],
-      "Live Tracking & WhatsApp Dispatch": [
-        "Unique order tracking reference codes (FRIO-XXXXXX)",
-        "Automated URL-encoded WhatsApp message generation with full itemized breakdown, customer address, and payment method",
-        "Immediate kitchen team notification upon customer checkout"
-      ],
-      "Dining Offers, Gallery & Culinary Journal": [
-        "Curated dining combos with discount percentage badges and direct cart integration",
-        "Accessible masonry photo gallery with keyboard-navigable modal lightbox",
-        "Culinary journal and blog rendered with semantic markdown and BlogPosting JSON-LD schemas",
-        "Contact page with working hours, Google Maps embed, hotline, and local FAQ accordion"
+      "Admin & Content Governance": [
+        "Prisma ORM schema modeling menu categories, items, pricing rules, and operational opening hours",
+        "Type-safe API routes guarded with Zod schema validation ensuring strict payload hygiene",
+        "Search-engine-optimized landing page with structured schema.org JSON-LD restaurant metadata"
       ]
     },
     techStack: {
       "Framework": ["Next.js 16 (App Router)", "React 19", "TypeScript 5"],
-      "Styling": ["Tailwind CSS v4", "CSS Design Tokens", "Lucide Icons"],
-      "Database & ORM": ["Prisma ORM", "PostgreSQL / SQLite Compatible", "Data Seeders"],
-      "Validation & State": ["Zod Validation", "React Context", "SSR Hydration Safety"],
-      "SEO & Integrations": ["JSON-LD Schema", "WhatsApp API Dispatch", "Dynamic Sitemap & Robots"]
+      "Styling": ["Tailwind CSS v4", "Lucide React", "Framer Motion"],
+      "Database & ORM": ["Prisma ORM", "SQLite / PostgreSQL"],
+      "Validation & Logic": ["Zod Validation", "WhatsApp Click-to-Chat API", "SSR Safe Storage"]
     },
     challenges: [
       {
-        title: "SSR-Safe Client State Persistence",
-        desc: "Engineered hydration-safe LocalStorage cart synchronization within Next.js App Router to prevent hydration mismatches while ensuring customer shopping bags persist across browser sessions."
+        title: "SSR-Safe Cart Persistence",
+        desc: "Overcame Next.js server-side hydration mismatches by engineering a custom hydration hook and mounted-state gate, ensuring persistent cart state syncs flawlessly between client and server."
       },
       {
-        title: "Strict Egyptian Mobile & Order Validation",
-        desc: "Designed unified client and server Zod validation schemas enforcing strict Egyptian mobile numbering rules (01[0125]xxxxxxxx) and delivery constraints before order entry."
-      },
-      {
-        title: "URL-Encoded WhatsApp Dispatch Protocol",
-        desc: "Formatted robust URL-encoded order manifests that transmit order items, toppings, customer address, and grand total directly into the restaurant's WhatsApp business dispatch channel."
+        title: "Automated Kitchen Dispatch",
+        desc: "Designed an automated WhatsApp dispatch formatting pipeline that serializes order receipts into localized, formatted messages enabling staff to confirm orders instantly without costly POS integrations."
       }
     ],
     workflow: [
-      "Browse Categorized Menu",
-      "Add to Persistent Bag",
-      "Select Delivery / Takeaway",
-      "Server-Side Zod Validation",
-      "Generate FRIO-XXXXXX Tracking",
-      "One-Tap WhatsApp Dispatch"
+      "Menu Exploration",
+      "Cart Customization",
+      "Zod-Validated Checkout",
+      "Prisma Order Record Creation",
+      "WhatsApp Dispatch to Kitchen",
+      "Order Status Tracking"
     ],
     images: {
       preview: "assets/images/frio-restaurant-1.jpg",
-      previewAlt: "Frío Restaurant & Cafe — Modern Menu Showcase and Dining Presentation",
+      previewAlt: "Frío Restaurant & Cafe — Modern Culinary Presentation & Platter",
       gallery: [
-        { src: "assets/images/frio-restaurant-2.jpg", caption: "Chef's Signature Mixed Grill Platter & Entrees" }
+        { src: "assets/images/frio-restaurant-2.jpg", caption: "Frío Restaurant — Dining Atmosphere & Craft Experience" }
       ]
     },
     github: "https://github.com/mohamedfakhar/frio-restaurant",
@@ -280,62 +251,66 @@ const projectsData = [
     id: "shopery",
     name: "Shopery",
     fullName: "Shopery — Full-Stack E-Commerce Web Application",
-    badge: "Full-Stack E-Commerce · 36 Integration Tests Passed",
+    badge: "Full-Stack E-Commerce · 36 Automated Tests Passed",
     timeline: "Jan 2026 – Mar 2026",
     role: "Full Stack Developer (Solo Project)",
-    category: "E-COMMERCE · FULL STACK",
+    category: "COMMERCIAL E-COMMERCE · FULL STACK",
     filterCategories: ["fullstack", "ecommerce"],
     status: "Completed",
     isFeatured: false,
-    shortDesc: "A full-stack e-commerce platform developed using React.js, Node.js, Express.js, and MongoDB. Implemented JWT authentication, RBAC, REST APIs, product/category CRUD, cart, wishlist, checkout, coupons, order management, and server-side price validation.",
-    problem: "Modern online commerce requires reliable protection against client-side cart price manipulation, smooth synchronization between database inventory and customer carts, and administrative order oversight.",
+    isSpotlight: false,
+    shortDesc: "A complete full-stack e-commerce platform built with React.js, Node.js, Express.js, and MongoDB. Implements JWT authentication, RBAC, RESTful APIs, product/category CRUD, cart, wishlist, checkout, coupons, order management, an admin dashboard, and enforced server-side price validation.",
+    problem: "Many small-to-medium retail businesses struggle with fragmented product management, unreliable stock management, insecure client-side pricing manipulations, and a lack of unified admin governance.",
     highlights: [
       "Developed a full-stack e-commerce platform using React.js, Node.js, Express.js, and MongoDB, implementing JWT authentication, RBAC, REST APIs, product/category CRUD, cart, wishlist, checkout, coupons, and order management",
       "Built an admin dashboard and enforced server-side price validation to protect checkout and order integrity",
-      "36 automated integration tests passed validating auth, product search/filters, order creation, admin route guards, and customer data isolation",
-      "Dynamic catalog filtering with text search ($text), category filtering, price range indexing, and sorting",
-      "Persistent shopping cart and user wishlist maintained across browser sessions"
+      "Architected complete test coverage with 36/36 automated integration tests passing across all critical e-commerce endpoints"
     ],
     features: {
-      "Storefront & Product Catalog": [
-        "Categorized product catalog (Produce, Meat, Fruit, Groceries) with discount badges and hot-deal highlights",
-        "Server-side catalog search, price range filtering, category selection, and sorting pipelines",
-        "Persistent shopping cart with dynamic calculations and checkout routing",
-        "Customer wishlist allowing saved products to be converted directly into active cart items"
+      "Customer Shopping Experience": [
+        "Product catalog with keyword search, multi-faceted category filtering, price sliders, and sorting",
+        "Persistent shopping cart and user wishlist with stock availability checks",
+        "Coupon redemption engine applying percentage and fixed-amount discounts with expiration rules"
       ],
-      "Server-Side Price Protection": [
-        "Client cart prices are never trusted during checkout",
-        "Server-side order processing recalculates every item price directly from MongoDB database records",
-        "Prevents tampering with discount percentages, item unit prices, or total amounts"
+      "Security & Price Validation": [
+        "Strict server-side price recalculation fetching authoritative database values during checkout, preventing client-side price tampering",
+        "JWT access and refresh token authentication with bcrypt password hashing",
+        "Role-Based Access Control protecting customer data and restricting administrative operations"
       ],
-      "User Accounts & Admin Dashboard": [
-        "JWT-based user registration, login, profile updates, and secure password changes",
-        "Order history management showing item breakdowns, timestamps, and fulfillment status",
-        "Admin control panel managing product listings, categories, user accounts, and incoming orders",
-        "Administrative analytics reporting order statistics and revenue metrics"
+      "Admin Store Management": [
+        "Comprehensive administrator dashboard for product inventory CRUD, category management, and coupon creation",
+        "Order lifecycle management (Pending → Processing → Shipped → Delivered → Cancelled)"
       ]
     },
     techStack: {
-      "Frontend": ["React.js", "Vite", "Bootstrap / Tailwind CSS", "Axios", "JavaScript (ES6+)"],
-      "Backend": ["Node.js", "Express.js", "RESTful APIs", "Multer"],
+      "Frontend": ["React.js", "Vite", "Tailwind CSS", "Axios", "Lucide React"],
+      "Backend": ["Node.js", "Express.js", "RESTful APIs", "JWT", "Bcrypt.js"],
       "Database": ["MongoDB", "Mongoose"],
-      "Security & Testing": ["JWT Auth", "RBAC", "Server-Side Price Recalculation", "36 Automated Integration Tests"]
+      "Testing": ["36 Automated Integration Tests Passed", "Mocha / Supertest"]
     },
     challenges: [
       {
-        title: "Server-Side Price Recalculation",
-        desc: "Designed order creation endpoints that extract only product IDs and quantities from client requests, recalculating unit prices and subtotals directly from the database to eliminate price spoofing."
+        title: "Checkout Price Integrity",
+        desc: "Prevented tampering with cart item prices submitted from the browser by calculating all totals server-side directly from the MongoDB product catalog before generating orders."
       },
       {
-        title: "Catalog Filtering & Search Performance",
-        desc: "Designed API query pipelines to perform fast text searches, price-range indexing, and category filtering concurrently over the product database."
+        title: "Atomic Stock Management",
+        desc: "Implemented atomic MongoDB query operators (`$inc`, `$gte`) to prevent negative inventory balances during simultaneous high-volume checkout attempts."
       }
+    ],
+    workflow: [
+      "Browse Catalog",
+      "Add to Cart / Apply Coupon",
+      "Server Price Recalculation",
+      "Atomic Stock Decrement",
+      "Order Stored in MongoDB",
+      "Admin Order Fulfillment"
     ],
     images: {
       preview: "assets/images/shopery-1.png",
-      previewAlt: "Shopery Homepage & Newsletter Modal",
+      previewAlt: "Shopery E-Commerce — Storefront Catalog & Featured Deals",
       gallery: [
-        { src: "assets/images/shopery-2.png", caption: "Product Listing, Hot Deals & Discount Offers" }
+        { src: "assets/images/shopery-2.png", caption: "Shopery Product Details & Customer Cart View" }
       ]
     },
     github: "https://github.com/mohamedfakhar/shopery",
@@ -343,57 +318,46 @@ const projectsData = [
   },
   {
     id: "topico",
-    name: "Topico",
-    fullName: "Topico — E-Commerce & Community Platform",
-    badge: "Frontend E-Commerce · Live on Vercel",
+    name: "Topico (Ecommerce Storefront)",
+    fullName: "Topico — E-Commerce & Community Storefront",
+    badge: "Interactive Storefront · Deployed on Vercel",
     timeline: "Jul 2024 – Dec 2024",
-    role: "Frontend Developer (Solo Project)",
-    category: "E-COMMERCE · FRONTEND",
+    role: "Frontend Developer",
+    category: "STOREFRONT & COMMERCE · VANILLA JS",
     filterCategories: ["ecommerce"],
-    status: "Completed",
+    status: "Live on Vercel",
     isFeatured: false,
-    shortDesc: "A modern, fully responsive e-commerce web application with a focus on clean UI and smooth interactions. Built with pure Vanilla JavaScript, HTML5, and CSS3, consuming backend REST APIs and delivering dynamic topic browsing, product filtering, and slide-cart flows.",
-    problem: "Delivering a rich, multi-page e-commerce experience without heavy front-end frameworks requires disciplined native DOM manipulation, clean CSS architecture, and asynchronous state handling.",
+    isSpotlight: false,
+    shortDesc: "A responsive e-commerce storefront built with vanilla JavaScript, modern CSS, and HTML5, consuming backend RESTful APIs for dynamic product browsing, interactive category sliders, cart persistence, and real-time user engagement.",
+    problem: "E-commerce storefronts frequently suffer from bloat, slow first contentful paint (FCP), and heavy JavaScript frameworks for simple catalog browsing.",
     highlights: [
       "Built the complete responsive frontend in vanilla JavaScript, consuming backend REST APIs and delivering dynamic topic browsing, post interaction, and user engagement features",
-      "Dynamic shopping side-cart where users can add/remove items with real-time price and quantity updates",
-      "Advanced filtering on 'All Products' page allowing users to filter by category, brand, and color",
-      "Responsive hero sliders and touch product carousels engineered using Swiper.js",
-      "Deployed and verified live on Vercel at topoco.vercel.app with high performance and accessibility"
+      "Engineered lightweight, dependency-free interactive UI components with responsive layouts across mobile, tablet, and desktop",
+      "Deployed and verified live on Vercel at topoco.vercel.app with high lighthouse scores"
     ],
     features: {
-      "Frontend Architecture": [
-        "Semantic HTML5 markup ensuring high SEO performance and accessibility",
-        "Responsive styling using CSS Flexbox and Grid, optimized from small mobiles to wide desktop viewports",
-        "Organized modular folder structure separating CSS layouts and JavaScript DOM manipulation"
-      ],
-      "Interactive Components": [
-        "Slide-out shopping drawer with live quantity adjustments and item deletion",
-        "Client-side product filtering and search bar handling",
-        "Touch-enabled hero slider, carousels, and modal overlays using Swiper.js",
-        "Multi-page experience: Home, All Products, Item Details, Login, Signup, and Checkout simulation"
+      "Catalog & Interaction": [
+        "Dynamic JSON product catalog rendering with zero framework dependencies",
+        "Category swiper sliders, multi-product grids, and responsive product detail dialogs",
+        "Client-side cart calculation with local storage persistence and quick item removal"
       ]
     },
     techStack: {
-      "Core Frontend": ["HTML5", "CSS3", "Vanilla JavaScript (ES6+)"],
+      "Core Frontend": ["HTML5", "Vanilla JavaScript (ES6+)", "CSS3 / Modern Flex & Grid"],
       "Libraries": ["Swiper.js", "FontAwesome Icons"],
-      "Integration": ["REST APIs", "Fetch API", "LocalStorage"]
+      "Deployment": ["Vercel Edge Network"]
     },
     challenges: [
       {
-        title: "Pure DOM State Synchronization",
-        desc: "Engineered custom event-driven cart architecture in pure JavaScript to update cart badges, item rows, and financial totals across separate pages without a framework."
-      },
-      {
-        title: "Mobile Touch Optimization",
-        desc: "Integrated Swiper.js touch sliders and responsive side drawers with smooth 60fps transitions and zero layout shifting across mobile devices."
+        title: "Zero-Framework Performance",
+        desc: "Architected modern DOM manipulation and state management purely with vanilla JS, resulting in fast load times and zero framework overhead."
       }
     ],
     images: {
       preview: "assets/images/topico-1.png",
-      previewAlt: "Topico Storefront Homepage and Category Slider",
+      previewAlt: "Topico Storefront — Hero Banners & Featured Collections",
       gallery: [
-        { src: "assets/images/topico-2.png", caption: "Product Grid & Interactive Sliding Cart Drawer" }
+        { src: "assets/images/topico-2.png", caption: "Topico Product Catalog & Shopping Interface" }
       ]
     },
     github: "https://github.com/mohamedfakhar/Ecommerce-Website",
@@ -402,56 +366,45 @@ const projectsData = [
   {
     id: "diabetes-app",
     name: "Diabetes Management App",
-    fullName: "Diabetes Management App (Graduation Project)",
-    badge: "B.Sc. Graduation Project (Zagazig University)",
+    fullName: "Diabetes Management App — Predictive Healthcare Platform",
+    badge: "University Graduation Project · Zagazig University",
     timeline: "Jan 2024 – May 2024",
-    role: "Backend Lead & Full Stack Developer",
-    category: "HEALTHCARE · FULL STACK & ML",
+    role: "Backend Lead & ML Developer",
+    category: "HEALTHCARE PLATFORM · ACADEMIC GRADUATION PROJECT",
     filterCategories: ["enterprise"],
     status: "Completed",
     isFeatured: false,
-    shortDesc: "A healthcare web and mobile application for diabetes patients to track health metrics and for doctors to monitor patient stability with machine learning trend predictions. Led backend development with Node.js and Express.js, building RESTful APIs for patient data and monitoring.",
-    problem: "Patients with diabetes need continuous tracking of glucose, meals, and medication. Without centralized monitoring and predictive trend analysis, clinical interventions are often delayed until dangerous glycemic fluctuations occur.",
+    isSpotlight: false,
+    shortDesc: "A healthcare web and mobile application supporting diabetic patients through biometric logging, glucose monitoring, and machine-learning-driven trend analysis. Led backend development with Node.js, Express.js, and MySQL, building RESTful APIs and predictive health modules.",
+    problem: "Diabetic patients lack unified platforms to record multi-variable biometric data (glucose, meals, exercise) and receive algorithmic trend alerts before severe glycemic events occur.",
     highlights: [
       "Led backend development with Node.js and Express.js, building RESTful APIs for patient data and monitoring",
       "Implemented a machine learning module supporting patient health predictions and trend analysis",
-      "Patient dashboard for daily glucose level logging (mg/dL), medication tracking, and meal context",
-      "Doctor monitoring portal with patient risk classifications (Active, Stable, Critical)",
-      "Relational database schema in MySQL optimized for time-series patient readings"
+      "Designed normalized relational MySQL database schemas for patient profiles, medical logs, and physician notes"
     ],
     features: {
-      "Patient Experience": [
-        "Quick-action interface to add glucose readings (mg/dL) with timestamp and meal context",
-        "Weekly and monthly visual glucose trend charts with stability indicators",
-        "Medication reminders and meal logging module"
-      ],
-      "Doctor Monitoring & Analytics": [
-        "Patient overview panel displaying recent readings, patient IDs, and clinical risk classifications",
-        "Machine learning prediction module identifying patterns of hypoglycemia or hyperglycemia",
-        "Secure relational storage of medical records in MySQL with optimized queries"
+      "Health Monitoring & Analytics": [
+        "RESTful endpoints for logging glucose readings, insulin doses, meal types, and activity metrics",
+        "Machine learning prediction module calculating glucose risk indices and historical trend trajectories",
+        "Physician dashboard for reviewing patient adherence and glycemic trends over time"
       ]
     },
     techStack: {
       "Backend": ["Node.js", "Express.js", "RESTful APIs"],
-      "Database": ["MySQL (Relational Schema & Indexing)"],
-      "Analytics & ML": ["Machine Learning Models", "Trend Prediction Algorithms"],
-      "Frontend & Mobile": ["Mobile Client UI", "Chart.js / Data Visualization"]
+      "Database": ["MySQL", "Relational Schema Normalization"],
+      "Machine Learning": ["Python ML Scripting", "Health Predictive Modeling"]
     },
     challenges: [
       {
-        title: "Time-Series Health Data Modeling",
-        desc: "Designed efficient MySQL relational schemas to index and retrieve patient glucose readings over 7, 30, and 90-day time series with sub-millisecond query performance."
-      },
-      {
-        title: "Predictive Analytics Integration",
-        desc: "Integrated ML forecasting models with the Node.js API to evaluate glucose stability and alert doctors when readings fall outside safe clinical boundaries."
+        title: "Medical Data Normalization",
+        desc: "Designed structured, HIPAA-conscious relational database schemas in MySQL to handle high-frequency biometric logs with zero data loss."
       }
     ],
     images: {
       preview: "assets/images/diabetes-app.png",
-      previewAlt: "Diabetes Management App — Patient Dashboard, Add Reading, and Doctor Monitoring",
+      previewAlt: "Diabetes Management App — Medical Dashboard & Patient Metrics",
       gallery: [
-        { src: "assets/images/diabetes-app.png", caption: "Triple Screen Mockup: Patient Home, Quick Reading Form, and Doctor Monitoring" }
+        { src: "assets/images/diabetes-app.png", caption: "Diabetes App Mobile & Web Interface" }
       ]
     },
     github: "https://github.com/mohamedfakhar/Diabetes-App",
@@ -460,51 +413,39 @@ const projectsData = [
   {
     id: "al-quds-pharmacy",
     name: "Al-Quds Pharmacy",
-    fullName: "Al-Quds Pharmacy — Full-Stack Pharmacy Website",
-    badge: "Pharmacy Web Platform · Freelance Client Work",
-    timeline: "2025 – 2026",
+    fullName: "Al-Quds Pharmacy — Community Pharmacy Storefront",
+    badge: "Freelance Client Platform · Pharmacy & Prescriptions",
+    timeline: "2024",
     role: "Full Stack Developer (Freelance)",
-    category: "HEALTHCARE & COMMERCE · FULL STACK",
-    filterCategories: ["fullstack", "ecommerce", "enterprise"],
-    status: "Completed",
+    category: "HEALTHCARE & COMMERCE · FREELANCE",
+    filterCategories: ["enterprise", "ecommerce"],
+    status: "Delivered",
     isFeatured: false,
-    shortDesc: "A responsive pharmacy website and healthcare storefront focused on clean UI, product and service presentation, digital prescription uploads, and user-friendly navigation. Built with Node.js, Express, MongoDB, and modern JavaScript.",
-    problem: "Community pharmacies require a clear digital presence allowing patients to browse medications and wellness products, check availability, and upload prescriptions digitally without needing to visit the store in person.",
+    isSpotlight: false,
+    shortDesc: "A community pharmacy website developed to modernize customer interactions, product inquiries, and prescription fulfillment. Features a structured medical product catalog, prescription upload flow, and direct WhatsApp customer support.",
+    problem: "Local community pharmacies lose repeat orders due to lack of digital prescription submission channels and inability to display OTC medications and healthcare supplies online.",
     highlights: [
       "Developed a responsive pharmacy website focused on clean UI, product/service presentation, and user-friendly navigation",
-      "Designed digital prescription upload workflow enabling customers to securely submit prescriptions for review",
-      "Built structured catalog with server-side text search ($text), category, brand, and prescription requirement filters",
-      "Designed 12 Mongoose data models covering Users, Products, Categories, Orders, Prescriptions, Branches, and Reviews",
-      "Responsive multi-page storefront (Home, Shop, Product Details, Prescription Upload, Cart, Checkout, FAQ)"
+      "Implemented online prescription upload flow allowing patients to submit photo prescriptions directly to pharmacists",
+      "Engineered high-contrast, accessible UI tailored for healthcare accessibility and seamless mobile ordering"
     ],
     features: {
-      "Pharmacy Catalog & Search": [
-        "Searchable medicine and health product catalog with category, brand, price, and prescription-only filters",
-        "Individual product pages displaying dosage guidelines, active ingredients, and stock status",
-        "Interactive shopping cart and wishlist management"
-      ],
-      "Digital Prescription Upload": [
-        "Patient prescription upload portal allowing image/document submission with contact info and delivery notes",
-        "Pharmacist review workflow to confirm prescription validity before dispensing"
-      ],
-      "Store Presentation & Community Support": [
-        "Branch location details, operating hours, emergency contact hotline, and customer FAQ accordion",
-        "Responsive design ensuring accessibility for mobile users seeking quick healthcare information"
+      "Pharmacy Services": [
+        "Categorized medical supply catalog (Medicines, Vitamins, Baby Care, Medical Equipment)",
+        "Secure prescription upload form with image validation and customer contact collection",
+        "Direct pharmacy consultation link via integrated WhatsApp communication"
       ]
     },
     techStack: {
-      "Backend": ["Node.js", "Express.js", "MongoDB", "Mongoose"],
-      "Frontend": ["HTML5", "CSS3", "JavaScript (ES6+)", "SVG Vector Design"],
-      "Security": ["JWT Auth", "Role Guards", "Rate Limiting", "Helmet", "Mongo Sanitize"]
+      "Frontend": ["HTML5", "CSS3", "JavaScript"],
+      "Backend": ["Node.js", "Express.js"],
+      "Database": ["MongoDB", "Mongoose"],
+      "Integration": ["WhatsApp Business API Integration"]
     },
     challenges: [
       {
         title: "Accessible Healthcare UI",
         desc: "Engineered clean, accessible UI components with high-contrast text and intuitive navigation for patients across all age groups."
-      },
-      {
-        title: "Structured Medical Data Modeling",
-        desc: "Designed 12 Mongoose schemas separating prescription requirements, product inventories, and customer orders."
       }
     ],
     images: {
@@ -521,179 +462,255 @@ const projectsData = [
 ];
 
 // ==========================================================================
-// 2. DOM Rendering: Project Cards & Dynamic Filtering
+// 2. DOM Rendering: Editorial Showcase with Visual Rhythm
 // ==========================================================================
 let currentFilter = "all";
 
-function createFeaturedCardHTML(proj) {
-  let primaryTags = [];
-  if (proj.techStack["Frontend"]) primaryTags.push(...proj.techStack["Frontend"].slice(0, 3));
-  if (proj.techStack["Framework"]) primaryTags.push(...proj.techStack["Framework"].slice(0, 2));
-  if (proj.techStack["Backend"]) primaryTags.push(...proj.techStack["Backend"].slice(0, 2));
-  if (proj.techStack["Payments & Real-Time"]) primaryTags.push(...proj.techStack["Payments & Real-Time"].slice(0, 2));
+// Helper to render tech pills
+function renderTechPills(proj, limit = 5) {
+  let tags = [];
+  if (proj.techStack["Frontend"]) tags.push(...proj.techStack["Frontend"]);
+  if (proj.techStack["Framework"]) tags.push(...proj.techStack["Framework"]);
+  if (proj.techStack["Backend"]) tags.push(...proj.techStack["Backend"]);
+  if (proj.techStack["Core Frontend"]) tags.push(...proj.techStack["Core Frontend"]);
+  if (proj.techStack["Database"]) tags.push(...proj.techStack["Database"]);
+  if (proj.techStack["Payments & Real-Time"]) tags.push(...proj.techStack["Payments & Real-Time"]);
 
-  const techTagsHTML = primaryTags
-    .map(t => `<span class="stack-tag">${t}</span>`)
+  return tags.slice(0, limit)
+    .map(t => `<span class="project-pill">${t}</span>`)
     .join("");
+}
 
-  const highlightsHTML = proj.highlights.slice(0, 4)
-    .map(h => `<li>${h}</li>`)
+// 1. Flagship Spotlight Card (#1 HRM System)
+function createSpotlightCardHTML(proj) {
+  const pillsHTML = renderTechPills(proj, 6);
+  const highlightsHTML = proj.highlights.slice(0, 3)
+    .map(h => `<li><span class="bullet-dot">✦</span><span>${h}</span></li>`)
     .join("");
 
   return `
-    <div class="project-card featured" data-id="${proj.id}">
-      <div class="project-img-wrapper" onclick="openModal('${proj.id}')" style="cursor: pointer;">
-        <span class="project-card-status">${proj.status}</span>
-        <span class="project-badge-featured">★ Featured</span>
-        <img class="project-img ${proj.images.imgClass || ''}" src="${proj.images.preview}" alt="${proj.images.previewAlt}" loading="lazy" />
-      </div>
-      <div class="project-card-content">
-        <div class="project-card-meta">
-          <span class="project-card-category">${proj.category}</span>
-          <span class="project-card-date">${proj.timeline}</span>
+    <article class="spotlight-card" data-id="${proj.id}">
+      <div class="spotlight-visual" onclick="openModal('${proj.id}')" role="button" tabindex="0" aria-label="Open ${proj.name} Case Study">
+        <div class="spotlight-img-frame">
+          <img class="spotlight-img" src="${proj.images.preview}" alt="${proj.images.previewAlt}" loading="lazy" />
+          <div class="spotlight-overlay">
+            <span class="spotlight-zoom-pill">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+              <span>View Case Study</span>
+            </span>
+          </div>
         </div>
-        <h3 class="project-card-title">${proj.name}</h3>
-        <p class="project-card-desc">${proj.shortDesc}</p>
-        <ul class="project-card-highlights">
+        <div class="spotlight-badge-row">
+          <span class="tag-flagship">★ Flagship Case Study</span>
+          <span class="tag-status">${proj.status}</span>
+        </div>
+      </div>
+
+      <div class="spotlight-details">
+        <div class="spotlight-header">
+          <div class="spotlight-category">${proj.category}</div>
+          <h3 class="spotlight-title">${proj.name}</h3>
+          <div class="spotlight-timeline">${proj.timeline} &middot; <em>${proj.role}</em></div>
+        </div>
+
+        <p class="spotlight-summary">${proj.shortDesc}</p>
+
+        <ul class="spotlight-highlights">
           ${highlightsHTML}
         </ul>
-        <div class="project-card-role">
-          <strong>Role &amp; Context:</strong> ${proj.role} &middot; <em>${proj.badge}</em>
+
+        <div class="spotlight-metric-chips">
+          <div class="m-chip"><span class="m-num">105/105</span> <span class="m-lbl">Automated Tests</span></div>
+          <div class="m-chip"><span class="m-num">16</span> <span class="m-lbl">Assistant Tools</span></div>
+          <div class="m-chip"><span class="m-num">RBAC</span> <span class="m-lbl">Role Guards</span></div>
+          <div class="m-chip"><span class="m-num">Socket.IO</span> <span class="m-lbl">Real-Time</span></div>
         </div>
-        <div class="project-card-stack">
-          ${techTagsHTML}
+
+        <div class="spotlight-pills-wrap">
+          ${pillsHTML}
         </div>
-        <div class="project-card-links">
-          <button class="project-card-btn primary" onclick="openModal('${proj.id}')">
-            <span>View Full Case Study</span> &rarr;
+
+        <div class="spotlight-actions">
+          <button class="btn-card-primary" onclick="openModal('${proj.id}')">
+            <span>Deep-Dive Case Study</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
           </button>
-          ${proj.liveDemo ? `
-            <a href="${proj.liveDemo}" target="_blank" rel="noopener noreferrer" class="project-card-btn secondary" aria-label="Visit ${proj.name} Live Demo">
-              <span>🌐 Live Demo</span>
-            </a>
-          ` : ""}
           ${proj.github ? `
-            <a href="${proj.github}" target="_blank" rel="noopener noreferrer" class="project-card-btn secondary" aria-label="View ${proj.name} GitHub Repository">
-              <span>🐙 GitHub</span>
+            <a href="${proj.github}" target="_blank" rel="noopener noreferrer" class="btn-card-secondary" aria-label="View ${proj.name} GitHub Repository">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              <span>Repository</span>
             </a>
           ` : ""}
         </div>
       </div>
-    </div>
+    </article>
   `;
 }
 
-function createStandardCardHTML(proj) {
-  let primaryStack = [];
-  if (proj.techStack["Frontend"]) primaryStack.push(...proj.techStack["Frontend"].slice(0, 2));
-  if (proj.techStack["Core Frontend"]) primaryStack.push(...proj.techStack["Core Frontend"].slice(0, 2));
-  if (proj.techStack["Framework"]) primaryStack.push(...proj.techStack["Framework"].slice(0, 2));
-  if (proj.techStack["Backend"]) primaryStack.push(...proj.techStack["Backend"].slice(0, 2));
-  if (proj.techStack["Database"]) primaryStack.push(...proj.techStack["Database"].slice(0, 1));
-
-  const techTagsHTML = primaryStack
-    .map(t => `<span class="stack-tag">${t}</span>`)
-    .join("");
-
-  const highlightsHTML = proj.highlights.slice(0, 3)
-    .map(h => `<li>${h}</li>`)
-    .join("");
+// 2. Secondary Featured Pair Card (#2 Kemet Gate, #3 Frío Restaurant)
+function createFeaturedPairCardHTML(proj) {
+  const pillsHTML = renderTechPills(proj, 4);
 
   return `
-    <div class="project-card" data-id="${proj.id}">
-      <div class="project-img-wrapper" onclick="openModal('${proj.id}')" style="cursor: pointer;">
-        <span class="project-card-status">${proj.status}</span>
-        <img class="project-img ${proj.images.imgClass || ''}" src="${proj.images.preview}" alt="${proj.images.previewAlt}" loading="lazy" />
+    <article class="featured-pair-card" data-id="${proj.id}">
+      <div class="pair-visual" onclick="openModal('${proj.id}')" role="button" tabindex="0" aria-label="Open ${proj.name} Case Study">
+        <img class="pair-img" src="${proj.images.preview}" alt="${proj.images.previewAlt}" loading="lazy" />
+        <div class="pair-overlay">
+          <span class="spotlight-zoom-pill">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            <span>Case Study</span>
+          </span>
+        </div>
+        <div class="pair-badges">
+          <span class="tag-featured">★ Featured</span>
+          <span class="tag-status">${proj.status}</span>
+        </div>
       </div>
-      <div class="project-card-content">
-        <div class="project-card-meta">
-          <span class="project-card-category">${proj.category}</span>
-          <span class="project-card-date">${proj.timeline}</span>
+
+      <div class="pair-content">
+        <div class="pair-category">${proj.category}</div>
+        <h3 class="pair-title">${proj.name}</h3>
+        <p class="pair-desc">${proj.shortDesc}</p>
+
+        <div class="pair-role">
+          <strong>Context:</strong> ${proj.badge}
         </div>
-        <h3 class="project-card-title">${proj.name}</h3>
-        <p class="project-card-desc">${proj.shortDesc}</p>
-        <ul class="project-card-highlights">
-          ${highlightsHTML}
-        </ul>
-        <div class="project-card-role">
-          <strong>Role:</strong> ${proj.role}
+
+        <div class="pair-pills">
+          ${pillsHTML}
         </div>
-        <div class="project-card-stack">
-          ${techTagsHTML}
+
+        <div class="pair-actions">
+          <button class="btn-card-primary" onclick="openModal('${proj.id}')">
+            <span>Case Study</span>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </button>
+          ${proj.github ? `
+            <a href="${proj.github}" target="_blank" rel="noopener noreferrer" class="btn-card-secondary" aria-label="View ${proj.name} GitHub">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              <span>GitHub</span>
+            </a>
+          ` : ""}
         </div>
-        <div class="project-card-links">
-          <button class="project-card-btn primary" onclick="openModal('${proj.id}')">
-            <span>Case Study</span> &rarr;
+      </div>
+    </article>
+  `;
+}
+
+// 3. Compact Supporting Card (#4 Shopery, #5 Topico, #6 Diabetes App, #7 Al-Quds Pharmacy)
+function createSupportingCardHTML(proj) {
+  const pillsHTML = renderTechPills(proj, 3);
+
+  return `
+    <article class="supporting-card" data-id="${proj.id}">
+      <div class="supporting-visual" onclick="openModal('${proj.id}')" role="button" tabindex="0" aria-label="Open ${proj.name} Details">
+        <img class="supporting-img ${proj.images.imgClass || ''}" src="${proj.images.preview}" alt="${proj.images.previewAlt}" loading="lazy" />
+        <span class="supporting-status">${proj.status}</span>
+      </div>
+
+      <div class="supporting-content">
+        <div class="supporting-top">
+          <span class="supporting-category">${proj.category}</span>
+          <span class="supporting-date">${proj.timeline}</span>
+        </div>
+
+        <h4 class="supporting-title">${proj.name}</h4>
+        <p class="supporting-desc">${proj.shortDesc}</p>
+
+        <div class="supporting-pills">
+          ${pillsHTML}
+        </div>
+
+        <div class="supporting-actions">
+          <button class="btn-supporting-detail" onclick="openModal('${proj.id}')">
+            <span>Details</span> &rarr;
           </button>
           ${proj.liveDemo ? `
-            <a href="${proj.liveDemo}" target="_blank" rel="noopener noreferrer" class="project-card-btn secondary" aria-label="Visit ${proj.name} Live Demo">
+            <a href="${proj.liveDemo}" target="_blank" rel="noopener noreferrer" class="supporting-link live" aria-label="Visit ${proj.name} Live Demo">
               <span>🌐 Live</span>
             </a>
           ` : ""}
           ${proj.github ? `
-            <a href="${proj.github}" target="_blank" rel="noopener noreferrer" class="project-card-btn secondary" aria-label="View ${proj.name} GitHub Repository">
+            <a href="${proj.github}" target="_blank" rel="noopener noreferrer" class="supporting-link" aria-label="View ${proj.name} GitHub Repository">
               <span>🐙 Code</span>
             </a>
           ` : ""}
         </div>
       </div>
-    </div>
+    </article>
   `;
 }
 
+// Main Render Function
 function renderProjects(filter = "all") {
-  const featuredContainer = document.getElementById("featured-project-container");
-  const standardGrid = document.getElementById("projects-grid");
-  const standardHeader = document.getElementById("standard-projects-header");
-  const featuredHeader = document.querySelector(".featured-section-header");
+  const spotlightArea = document.getElementById("spotlight-project-area");
+  const featuredPairArea = document.getElementById("featured-pair-area");
+  const supportingHeader = document.getElementById("supporting-header");
+  const supportingGrid = document.getElementById("supporting-projects-grid");
 
-  if (!featuredContainer || !standardGrid) return;
+  if (!spotlightArea || !featuredPairArea || !supportingGrid) return;
 
   if (filter === "all") {
-    // Show standard header
-    if (standardHeader) standardHeader.style.display = "block";
-    if (featuredHeader) featuredHeader.style.display = "block";
+    // 1. Spotlight Project: HRM System
+    const spotlightProject = projectsData.find(p => p.id === "hrm-system");
+    spotlightArea.innerHTML = spotlightProject ? createSpotlightCardHTML(spotlightProject) : "";
+    spotlightArea.style.display = "block";
 
-    // 1. Featured Top 3 Projects (Kemet Gate, HRM System, Frío Restaurant)
-    const featuredProjects = projectsData.filter(p => p.isFeatured);
-    featuredContainer.innerHTML = featuredProjects.map(createFeaturedCardHTML).join("");
+    // 2. Featured Secondary Pair: Kemet Gate & Frío Restaurant
+    const pairProjects = projectsData.filter(p => p.id === "kemet-gate" || p.id === "frio-restaurant");
+    featuredPairArea.innerHTML = pairProjects.map(createFeaturedPairCardHTML).join("");
+    featuredPairArea.style.display = "grid";
 
-    // 2. Standard Projects (Shopery, Topico, Diabetes App, Al-Quds Pharmacy)
-    const standardProjects = projectsData.filter(p => !p.isFeatured);
-    standardGrid.innerHTML = standardProjects.map(createStandardCardHTML).join("");
+    // 3. Supporting Projects: Shopery, Topico, Diabetes App, Al-Quds Pharmacy
+    if (supportingHeader) supportingHeader.style.display = "flex";
+    const supportingProjects = projectsData.filter(p => !p.isFeatured);
+    supportingGrid.innerHTML = supportingProjects.map(createSupportingCardHTML).join("");
+    supportingGrid.style.display = "grid";
   } else if (filter === "featured") {
-    if (standardHeader) standardHeader.style.display = "none";
-    if (featuredHeader) featuredHeader.style.display = "block";
-    standardGrid.innerHTML = "";
+    // Show only 3 featured projects
+    const spotlightProject = projectsData.find(p => p.id === "hrm-system");
+    spotlightArea.innerHTML = spotlightProject ? createSpotlightCardHTML(spotlightProject) : "";
+    spotlightArea.style.display = "block";
 
-    const featuredProjects = projectsData.filter(p => p.isFeatured);
-    featuredContainer.innerHTML = featuredProjects.map(createFeaturedCardHTML).join("");
+    const pairProjects = projectsData.filter(p => p.id === "kemet-gate" || p.id === "frio-restaurant");
+    featuredPairArea.innerHTML = pairProjects.map(createFeaturedPairCardHTML).join("");
+    featuredPairArea.style.display = "grid";
+
+    if (supportingHeader) supportingHeader.style.display = "none";
+    supportingGrid.innerHTML = "";
+    supportingGrid.style.display = "none";
   } else {
-    // Category Filter: fullstack, ecommerce, enterprise
+    // Filtered by category (fullstack, ecommerce, enterprise)
     const matching = projectsData.filter(p => p.filterCategories && p.filterCategories.includes(filter));
-    
-    if (featuredHeader) featuredHeader.style.display = "none";
-    featuredContainer.innerHTML = "";
-    if (standardHeader) {
-      standardHeader.style.display = "block";
-      standardHeader.querySelector(".section-subheading").textContent = `Filtered Projects (${matching.length})`;
-      standardHeader.querySelector(".section-subtext").textContent = `Showing verified projects matching the selected category.`;
+
+    spotlightArea.innerHTML = "";
+    spotlightArea.style.display = "none";
+    featuredPairArea.innerHTML = "";
+    featuredPairArea.style.display = "none";
+
+    if (supportingHeader) {
+      supportingHeader.style.display = "flex";
+      const titleEl = supportingHeader.querySelector("h3");
+      const descEl = supportingHeader.querySelector(".supporting-header-desc");
+      if (titleEl) titleEl.textContent = `Filtered Projects (${matching.length})`;
+      if (descEl) descEl.textContent = `Verified platforms matching the "${filter}" filter.`;
     }
 
-    standardGrid.innerHTML = matching.map(p => {
-      return p.isFeatured ? createFeaturedCardHTML(p) : createStandardCardHTML(p);
+    supportingGrid.innerHTML = matching.map(p => {
+      return p.isFeatured ? createFeaturedPairCardHTML(p) : createSupportingCardHTML(p);
     }).join("");
+    supportingGrid.style.display = "grid";
   }
 }
 
 // Setup Project Filter Tabs
 function initProjectFilters() {
-  const filterBtns = document.querySelectorAll(".filter-btn");
-  filterBtns.forEach(btn => {
-    btn.addEventListener("click", () => {
-      filterBtns.forEach(b => b.classList.remove("active"));
-      btn.classList.add("active");
-      currentFilter = btn.getAttribute("data-filter") || "all";
+  const filterTabs = document.querySelectorAll(".filter-tab");
+  filterTabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      filterTabs.forEach(t => t.classList.remove("active"));
+      tab.classList.add("active");
+      currentFilter = tab.getAttribute("data-filter") || "all";
       renderProjects(currentFilter);
     });
   });
@@ -718,7 +735,6 @@ function openModal(projectId) {
 
   previousActiveElement = document.activeElement;
 
-  // Set titles
   modalTitle.textContent = proj.fullName || proj.name;
   modalSubtitle.textContent = proj.badge || proj.category;
   modalStatus.textContent = `${proj.status} · ${proj.timeline}`;
@@ -813,7 +829,7 @@ function openModal(projectId) {
       <div>
         <div class="modal-meta-box">
           <div class="modal-meta-item">
-            <div class="modal-meta-label">My Role &amp; Contributions</div>
+            <div class="modal-meta-label">My Role &amp; Context</div>
             <div class="modal-meta-val">${proj.role} &middot; <em>${proj.badge}</em></div>
           </div>
           
@@ -824,12 +840,13 @@ function openModal(projectId) {
 
           <div class="modal-meta-item" style="border-top: 1px solid var(--border); padding-top: 16px; display: flex; flex-direction: column; gap: 8px;">
             ${proj.github ? `
-              <a href="${proj.github}" target="_blank" rel="noopener noreferrer" class="project-card-btn primary" style="width: 100%;">
-                <span>🐙 View GitHub Repository</span>
+              <a href="${proj.github}" target="_blank" rel="noopener noreferrer" class="btn-primary" style="width: 100%; justify-content: center;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                <span>View GitHub Repository</span>
               </a>
             ` : ""}
             ${proj.liveDemo ? `
-              <a href="${proj.liveDemo}" target="_blank" rel="noopener noreferrer" class="project-card-btn secondary" style="width: 100%;">
+              <a href="${proj.liveDemo}" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="width: 100%; justify-content: center;">
                 <span>🌐 Open Live Application</span>
               </a>
             ` : ""}
@@ -847,12 +864,10 @@ function openModal(projectId) {
     ${workflowHTML}
   `;
 
-  // Show modal
   modalDialog.classList.add("open");
   modalDialog.setAttribute("aria-hidden", "false");
   document.body.classList.add("modal-open");
 
-  // Focus container for keyboard accessibility
   setTimeout(() => {
     modalContainer.focus();
   }, 50);
@@ -914,58 +929,60 @@ if (modalContainer) {
 }
 
 // ==========================================================================
-// 4. Mobile Navigation Drawer Handling (Accessible & Trap-Free)
+// 4. Mobile Navigation Drawer Handling
 // ==========================================================================
 const hamburgerBtn = document.getElementById("hamburger-btn");
+const mobileCloseBtn = document.getElementById("mobile-close-btn");
 const mobileMenu = document.getElementById("mobile-menu");
 const mobileOverlay = document.getElementById("mobile-overlay");
 const mobileLinks = document.querySelectorAll(".mobile-link");
 
-function toggleMobileMenu() {
+function openMobileMenu() {
   if (!hamburgerBtn || !mobileMenu) return;
-  const isExpanded = hamburgerBtn.getAttribute("aria-expanded") === "true";
-  hamburgerBtn.setAttribute("aria-expanded", !isExpanded);
-  hamburgerBtn.classList.toggle("active");
-  mobileMenu.classList.toggle("active");
-  mobileMenu.setAttribute("aria-hidden", isExpanded);
+  hamburgerBtn.setAttribute("aria-expanded", "true");
+  hamburgerBtn.classList.add("active");
+  mobileMenu.classList.add("active");
+  mobileMenu.setAttribute("aria-hidden", "false");
+  if (mobileOverlay) mobileOverlay.classList.add("active");
+  document.body.style.overflow = "hidden";
+}
 
-  if (mobileOverlay) {
-    mobileOverlay.classList.toggle("active");
-  }
-
-  // Prevent background scroll when mobile drawer is open
-  if (!isExpanded) {
-    document.body.style.overflow = "hidden";
-  } else {
-    document.body.style.overflow = "";
-  }
+function closeMobileMenu() {
+  if (!hamburgerBtn || !mobileMenu) return;
+  hamburgerBtn.setAttribute("aria-expanded", "false");
+  hamburgerBtn.classList.remove("active");
+  mobileMenu.classList.remove("active");
+  mobileMenu.setAttribute("aria-hidden", "true");
+  if (mobileOverlay) mobileOverlay.classList.remove("active");
+  document.body.style.overflow = "";
 }
 
 if (hamburgerBtn) {
-  hamburgerBtn.addEventListener("click", toggleMobileMenu);
+  hamburgerBtn.addEventListener("click", () => {
+    const isExpanded = hamburgerBtn.getAttribute("aria-expanded") === "true";
+    if (isExpanded) {
+      closeMobileMenu();
+    } else {
+      openMobileMenu();
+    }
+  });
+}
+
+if (mobileCloseBtn) {
+  mobileCloseBtn.addEventListener("click", closeMobileMenu);
 }
 
 if (mobileOverlay) {
-  mobileOverlay.addEventListener("click", () => {
-    if (mobileMenu && mobileMenu.classList.contains("active")) {
-      toggleMobileMenu();
-    }
-  });
+  mobileOverlay.addEventListener("click", closeMobileMenu);
 }
 
-// Close drawer on link click
 mobileLinks.forEach(link => {
-  link.addEventListener("click", () => {
-    if (mobileMenu && mobileMenu.classList.contains("active")) {
-      toggleMobileMenu();
-    }
-  });
+  link.addEventListener("click", closeMobileMenu);
 });
 
-// Close drawer on Escape
 window.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && mobileMenu && mobileMenu.classList.contains("active")) {
-    toggleMobileMenu();
+    closeMobileMenu();
     if (hamburgerBtn) hamburgerBtn.focus();
   }
 });
@@ -974,7 +991,7 @@ window.addEventListener("keydown", (e) => {
 // 5. Initialization on DOMContentLoaded
 // ==========================================================================
 document.addEventListener("DOMContentLoaded", () => {
-  // Render projects & initialize filters
+  // Render projects with visual rhythm & initialize filters
   renderProjects("all");
   initProjectFilters();
 
@@ -984,11 +1001,11 @@ document.addEventListener("DOMContentLoaded", () => {
     yearEl.textContent = new Date().getFullYear();
   }
 
-  // Navbar subtle scroll shadow
-  const nav = document.querySelector("nav");
+  // Navbar subtle scroll elevation
+  const nav = document.querySelector(".nav-bar");
   if (nav) {
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 40) {
+      if (window.scrollY > 30) {
         nav.classList.add("scrolled");
       } else {
         nav.classList.remove("scrolled");

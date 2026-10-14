@@ -1,6 +1,6 @@
-# Mohamed Elshahat Ibrahim — Portfolio
+# Mohamed Elshahat Ibrahim — Full Stack Developer Portfolio
 
-> Full Stack Developer specializing in Node.js, Express.js, React.js, and MongoDB. Experienced in JWT/RBAC, real-time systems, payments, and business logic. AWS Certified Cloud Practitioner.
+> Full Stack Developer specializing in Node.js, Express.js, React.js, and MongoDB. Experienced in building secure, scalable web systems, RESTful APIs, JWT/RBAC security, real-time architectures, and payment integrations. AWS Certified Cloud Practitioner.
 
 [![GitHub](https://img.shields.io/badge/GitHub-mohamedfakhar-181717.svg?logo=github)](https://github.com/mohamedfakhar)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
@@ -8,61 +8,68 @@
 
 ## 📌 Overview
 
-A modern, responsive, high-performance personal portfolio website built with semantic HTML5, CSS3 (Vanilla CSS architecture with custom design tokens), and modular JavaScript. Aligned with Mohamed Elshahat Ibrahim's latest verified CV and GitHub project repositories.
+A bespoke, dark editorial developer portfolio engineered with semantic HTML5, Vanilla CSS3 (custom design system with obsidian charcoal surfaces and warm champagne amber accents), and modular JavaScript. Strictly synchronized with Mohamed Elshahat Ibrahim's verified curriculum vitae (**September 2026** baseline) and authentic GitHub repositories.
 
-## 🚀 Key Features
+---
 
-- **Dynamic Typography & Design**: Built with Plus Jakarta Sans and DM Mono, using a sleek dark luxury aesthetic with warm champagne gold accents.
-- **Fluid Responsiveness**: Engineered to adapt cleanly from 320px mobile screens up to 1920px+ ultra-wide desktop displays with reduced-motion support.
-- **Interactive Project Showcase (7 Verified Projects)**:
-  - **Kemet Gate**: Interactive digital tourism platform (Digilians Flagship Graduation Project | React, Node.js, Stripe, HMAC QR, Socket.IO).
-  - **HR & Payroll Management System**: Enterprise HRM platform with 105/105 automated test assertions passing, anomaly detection, and a bilingual HR Smart Assistant.
-  - **Frío Restaurant & Cafe**: Production-ready restaurant & online ordering platform (Next.js 16 App Router, React 19, TypeScript, Prisma, Zod, WhatsApp dispatch).
-  - **Shopery**: Full-stack e-commerce web application with 36 automated integration tests, admin dashboard, and server-side price protection.
-  - **Topico**: Vanilla JS e-commerce & community portal consuming REST APIs, deployed on Vercel.
-  - **Diabetes Management App**: Machine learning prediction and health analytics app (Zagazig University B.Sc. Graduation Project).
-  - **Al-Quds Pharmacy**: Responsive full-stack pharmacy website with prescription upload workflow.
-- **Interactive Case Study Modal**: Lightweight lightbox with full keyboard accessibility (focus trap, Escape dismiss) and high-resolution screenshot galleries.
-- **Dynamic Category Filtering**: Instant filtering across Featured Work, Full-Stack, E-Commerce, and Enterprise & Healthcare.
-- **Resume Download**: Verified CV download pointing to `Mohamed_Elshahat_Ibrahim_CV.pdf`.
+## 🎨 Design System & Architecture
 
-## 🛠️ Tech Stack
+- **Editorial Dark Aesthetics**: Deep charcoal obsidian background (`#0c0d0f`), elevated surface panels (`#16181d`, `#191b22`), and restrained warm champagne gold accents (`#d4a85c`).
+- **Typographic Hierarchy**: Tight geometric headings in *Plus Jakarta Sans*, editorial italic flourishes in *Instrument Serif*, and code metadata in *DM Mono*.
+- **Visual Rhythm Showcase**:
+  1. **Flagship Spotlight**: Deep-dive showcase for the **HR & Payroll Management System** (105/105 automated assertions passing, 16-tool bilingual HR assistant, anomaly detection).
+  2. **Featured Secondary Pair**: 2-column balanced showcase for **Kemet Gate** (Stripe payments, HMAC QR ticketing) and **Frío Restaurant & Cafe** (Next.js 16 App Router, React 19, TypeScript, Prisma, Zod).
+  3. **Supporting Applications Grid**: Compact, scannable cards for **Shopery** (36 passing tests), **Topico** (live on Vercel), **Diabetes Management App** (B.Sc. project with ML), and **Al-Quds Pharmacy**.
+- **Interactive Case Study Modal**: Accessible dialog with focus trapping, Escape-key dismissal, system architecture diagrams, and full-resolution screenshot galleries.
+- **Editorial Chronological Split**: 2-column split layout separating active professional experience (VGN Full Stack Intern, Freelance Web Developer) from formal education and training (Digilians NTI, Zagazig University B.Sc.).
+- **Responsive Layout**: Designed for seamless viewport scaling across 375px mobile up to 1920px+ ultra-wide screens with full `prefers-reduced-motion` accessibility support.
 
-- **Frontend**: HTML5, CSS3 (Custom Design System, Flexbox, CSS Grid), Vanilla JavaScript (ES6+)
-- **Typography**: Plus Jakarta Sans, DM Mono, Instrument Serif
-- **Assets**: Verified project screenshots, compressed vectors, and synchronized CV PDF
+---
 
-## 📂 Project Structure
+## 🛠️ Technical Stack
+
+- **Core**: Semantic HTML5, Vanilla CSS3 (Custom Design Tokens), Vanilla JavaScript (ES6+)
+- **Fonts**: Plus Jakarta Sans, Instrument Serif, DM Mono
+- **Deployment**: Vercel Edge Network
+- **Assets**: 20 verified local static assets (all tested and returning HTTP 200 OK)
+
+---
+
+## 📂 Project Directory Structure
 
 ```
 portfolio/
-├── index.html                          # Main application structure
-├── styles.css                          # Core design system & responsive styling
-├── script.js                           # Interactive UI behavior & modal system
-├── server.js                           # Lightweight preview server
-├── verify_assets.js                    # Automated asset verification script
+├── index.html                          # Semantic application structure
+├── styles.css                          # Editorial dark design system & responsive rules
+├── script.js                           # Dynamic showcase, modal dialog, and filter engine
+├── server.js                           # Lightweight local preview HTTP server
+├── verify_assets.js                    # Automated 20-point asset verification script
 ├── .gitignore                          # Git exclusions
 ├── assets/
-│   ├── Mohamed_Elshahat_Ibrahim_CV.pdf # Verified Latest CV / Resume
-│   ├── Mohamed_Elshahat_CV.pdf         # Synchronized CV backup
-│   └── images/                         # Genuine project screenshots & assets
+│   ├── Mohamed_Elshahat_Ibrahim_CV.pdf # Primary verified downloadable CV
+│   ├── Mohamed_Elshahat_CV.pdf         # Canonical backup copy
+│   └── images/                         # Genuine project screenshots & brand assets
 └── README.md                           # Documentation
 ```
 
+---
+
 ## 💻 Local Preview & Verification
 
-To preview and verify all assets locally:
+To run and verify the portfolio locally:
 
 ```bash
-# 1. Start local server
+# 1. Start local preview server
 node server.js
 
-# 2. In another terminal, run asset verification
+# 2. In another terminal, run the automated asset verification
 node verify_assets.js
 ```
 
-Then navigate to `http://localhost:8080` in your web browser.
+All 20 assets will be tested against the local server and verified for HTTP 200 OK responses.
+
+---
 
 ## 📄 License
 
-This project is open source and available under the [MIT License](LICENSE).
+This repository is open source and available under the [MIT License](LICENSE).

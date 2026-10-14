@@ -4,14 +4,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mohamed Elshahat Ibrahim — Full Stack Developer (Node.js / React.js)</title>
+  <title>Mohamed Elshahat Ibrahim — Full Stack Developer (Node.js &amp; React.js)</title>
   <meta name="description"
-    content="Full Stack Developer specializing in Node.js, Express.js, React.js, and MongoDB. Experienced in JWT/RBAC, real-time systems, Stripe payments, and business logic. AWS Certified Cloud Practitioner." />
+    content="Full Stack Developer specializing in Node.js, Express.js, React.js, and MongoDB. Experienced in building secure, scalable web systems, RESTful APIs, JWT/RBAC security, real-time architectures, and payment integrations. AWS Certified Cloud Practitioner." />
   
   <!-- Open Graph Metadata -->
-  <meta property="og:title" content="Mohamed Elshahat Ibrahim — Full Stack Developer (Node.js / React.js)" />
+  <meta property="og:title" content="Mohamed Elshahat Ibrahim — Full Stack Developer (Node.js &amp; React.js)" />
   <meta property="og:description"
-    content="Full Stack Developer specializing in Node.js, Express.js, React.js, and MongoDB. Experienced in JWT/RBAC, real-time systems, payments, and business logic across team, freelance, and professional projects." />
+    content="Full Stack Developer specializing in Node.js, Express.js, React.js, and MongoDB. Experienced in building secure, scalable web applications, RESTful APIs, and business logic. AWS Certified Cloud Practitioner." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/images/hero-profile.jpg" />
   <meta property="og:url" content="https://github.com/mohamedfakhar/portfolio" />
@@ -19,10 +19,10 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Mohamed Elshahat Ibrahim — Full Stack Developer" />
-  <meta name="twitter:description" content="Node.js, Express.js, React.js, MongoDB, Web Security & AWS Certified Practitioner." />
+  <meta name="twitter:description" content="Node.js, Express.js, React.js, MongoDB, Web Security &amp; AWS Certified Practitioner." />
   <meta name="twitter:image" content="assets/images/hero-profile.jpg" />
 
-  <!-- Google Fonts: Plus Jakarta Sans (Primary), DM Mono (Code/Tags), Instrument Serif (Accents) -->
+  <!-- Google Fonts: Plus Jakarta Sans (Grotesque), DM Mono (Technical), Instrument Serif (Editorial Accent) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -36,102 +36,385 @@
 <body>
 
   <!-- Navigation Bar -->
-  <nav>
-    <a href="#hero" class="nav-logo" aria-label="Mohamed Elshahat Ibrahim Homepage">
-      M<span>.</span>Elshahat
-    </a>
+  <nav class="nav-bar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo" aria-label="Mohamed Elshahat Ibrahim Homepage">
+        M<span class="logo-dot">.</span>Elshahat
+      </a>
 
-    <!-- Desktop Menu -->
-    <ul class="nav-links">
-      <li><a href="#services">Services</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#credentials">Credentials</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#why">Why Me</a></li>
-      <li><a href="assets/Mohamed_Elshahat_Ibrahim_CV.pdf" download="Mohamed_Elshahat_Ibrahim_CV.pdf" class="nav-cv-link" aria-label="Download CV">CV ↓</a></li>
-      <li><a href="#contact" class="nav-cta">Hire Me</a></li>
-    </ul>
+      <!-- Desktop Menu -->
+      <ul class="nav-links">
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#capabilities" class="nav-link">Capabilities</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#credentials" class="nav-link">Credentials</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#principles" class="nav-link">Principles</a></li>
+        <li>
+          <a href="assets/Mohamed_Elshahat_Ibrahim_CV.pdf" download="Mohamed_Elshahat_Ibrahim_CV.pdf" class="nav-cv-pill" aria-label="Download CV PDF">
+            <span>CV</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          </a>
+        </li>
+        <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
+      </ul>
 
-    <!-- Mobile Hamburger Button -->
-    <button class="nav-hamburger" id="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false"
-      aria-controls="mobile-menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+      <!-- Mobile Hamburger Button -->
+      <button class="nav-hamburger" id="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+    </div>
   </nav>
 
   <!-- Mobile Overlay & Slide-in Drawer -->
   <div class="mobile-overlay" id="mobile-overlay"></div>
   <div class="nav-mobile-menu" id="mobile-menu" aria-hidden="true">
-    <a href="#services" class="mobile-link">Services <span>&rarr;</span></a>
-    <a href="#projects" class="mobile-link">Projects <span>&rarr;</span></a>
-    <a href="#experience" class="mobile-link">Experience <span>&rarr;</span></a>
-    <a href="#credentials" class="mobile-link">Credentials <span>&rarr;</span></a>
-    <a href="#skills" class="mobile-link">Skills <span>&rarr;</span></a>
-    <a href="#why" class="mobile-link">Why Me <span>&rarr;</span></a>
-    <a href="#process" class="mobile-link">Process <span>&rarr;</span></a>
-    <a href="assets/Mohamed_Elshahat_Ibrahim_CV.pdf" download="Mohamed_Elshahat_Ibrahim_CV.pdf" class="mobile-link" style="color: var(--accent);">Download CV <span>&darr;</span></a>
-    <a href="#contact" class="nav-cta mobile-link">Hire Me</a>
+    <div class="mobile-menu-header">
+      <div class="nav-logo">M<span class="logo-dot">.</span>Elshahat</div>
+      <button class="mobile-close-btn" id="mobile-close-btn" aria-label="Close menu">&times;</button>
+    </div>
+    <div class="mobile-links-list">
+      <a href="#projects" class="mobile-link"><span>Projects</span> <span class="arrow">&rarr;</span></a>
+      <a href="#capabilities" class="mobile-link"><span>Capabilities</span> <span class="arrow">&rarr;</span></a>
+      <a href="#experience" class="mobile-link"><span>Experience &amp; Education</span> <span class="arrow">&rarr;</span></a>
+      <a href="#credentials" class="mobile-link"><span>Credentials &amp; Certifications</span> <span class="arrow">&rarr;</span></a>
+      <a href="#skills" class="mobile-link"><span>Technical Skills</span> <span class="arrow">&rarr;</span></a>
+      <a href="#principles" class="mobile-link"><span>Core Principles</span> <span class="arrow">&rarr;</span></a>
+      <a href="assets/Mohamed_Elshahat_Ibrahim_CV.pdf" download="Mohamed_Elshahat_Ibrahim_CV.pdf" class="mobile-link highlight">
+        <span>Download CV (PDF)</span> <span class="arrow">&darr;</span>
+      </a>
+      <a href="#contact" class="mobile-link cta"><span>Contact &amp; Hire</span> <span class="arrow">&rarr;</span></a>
+    </div>
   </div>
 
   <!-- Hero Section -->
-  <section id="hero">
-    <div class="hero-bg-lines"></div>
-    <div class="hero-glow"></div>
+  <section id="hero" class="hero-section">
+    <div class="hero-ambient-glow"></div>
 
     <div class="container">
       <div class="hero-grid">
         <div class="hero-content">
-          <div class="hero-meta-badges">
-            <span class="hero-badge">Available for Full-Time &amp; Freelance</span>
-            <span class="hero-badge location">📍 Cairo, Egypt &middot; Open to Relocation</span>
-          </div>
-          <h1 class="hero-title">
-            Mohamed Elshahat<br />Full Stack <em>Developer</em>
-          </h1>
-          <p class="hero-sub">
-            Full Stack Developer specializing in Node.js, Express.js, React.js, and MongoDB, building secure, scalable web applications and RESTful APIs. Experienced in JWT/RBAC, real-time systems, payments, and business logic, with hands-on experience across team, freelance, and professional software projects.
-          </p>
-          <div class="hero-actions">
-            <a href="#projects" class="btn-primary">Explore Projects &rarr;</a>
-            <a href="assets/Mohamed_Elshahat_Ibrahim_CV.pdf" download="Mohamed_Elshahat_Ibrahim_CV.pdf" class="btn-secondary" aria-label="Download Mohamed Elshahat Ibrahim CV">Download CV</a>
-            <a href="https://github.com/mohamedfakhar" target="_blank" rel="noopener noreferrer" class="btn-secondary" aria-label="GitHub Profile">🐙 GitHub</a>
+          <!-- Status Pill -->
+          <div class="hero-status-pill">
+            <span class="status-dot"></span>
+            <span class="status-text">Full Stack Developer Intern @ <strong>VGN</strong> &middot; Open to Roles</span>
           </div>
 
-          <!-- Hero Stats Bar (Derived strictly from CV) -->
-          <div class="hero-stats">
-            <div class="stat-item">
-              <div class="stat-num">7<span>+</span></div>
-              <div class="stat-label">Verified Projects</div>
+          <!-- Main Editorial Heading -->
+          <h1 class="hero-title">
+            Mohamed Elshahat Ibrahim
+            <span class="hero-role-line">Full Stack Developer <em>(Node.js &amp; React.js)</em></span>
+          </h1>
+
+          <!-- Concise Technical Positioning (Directly from CV) -->
+          <p class="hero-lead">
+            Specializing in Node.js, Express.js, React.js, and MongoDB to build secure, scalable web applications and high-throughput RESTful APIs. Experienced in JWT/RBAC authorization, real-time WebSocket systems, Stripe payments, and complex business logic.
+          </p>
+
+          <!-- Primary Actions -->
+          <div class="hero-actions">
+            <a href="#projects" class="btn-primary">
+              <span>View Featured Work</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+            </a>
+            <a href="assets/Mohamed_Elshahat_Ibrahim_CV.pdf" download="Mohamed_Elshahat_Ibrahim_CV.pdf" class="btn-secondary" aria-label="Download Mohamed Elshahat Ibrahim CV">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <span>Download CV</span>
+            </a>
+            <div class="hero-social-group">
+              <a href="https://github.com/mohamedfakhar" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="GitHub Profile">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+              <a href="https://linkedin.com/in/mohamedfakhar" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn Profile">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </a>
+              <a href="mailto:shahathamdy29@gmail.com" class="social-icon-btn" aria-label="Email Me">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </a>
             </div>
-            <div class="stat-item">
-              <div class="stat-num">Full Stack</div>
-              <div class="stat-label">Node.js &amp; React.js</div>
+          </div>
+
+          <!-- Minimalist Horizontal Metric Strip -->
+          <div class="hero-metrics-strip">
+            <div class="metric-block">
+              <span class="metric-digit">7+</span>
+              <span class="metric-text">Verified Projects</span>
             </div>
-            <div class="stat-item">
-              <div class="stat-num">AWS</div>
-              <div class="stat-label">Certified Practitioner</div>
+            <div class="metric-sep">/</div>
+            <div class="metric-block">
+              <span class="metric-digit">105</span>
+              <span class="metric-text">Passing Test Assertions</span>
             </div>
-            <div class="stat-item">
-              <div class="stat-num">Intern</div>
-              <div class="stat-label">VGN Full Stack</div>
+            <div class="metric-sep">/</div>
+            <div class="metric-block">
+              <span class="metric-digit">AWS</span>
+              <span class="metric-text">Certified Practitioner</span>
+            </div>
+            <div class="metric-sep">/</div>
+            <div class="metric-block">
+              <span class="metric-digit">B.Sc.</span>
+              <span class="metric-text">Computer Science</span>
             </div>
           </div>
         </div>
 
-        <!-- Profile Photo -->
-        <div class="hero-photo-wrap">
-          <div class="hero-photo-frame">
-            <div class="hero-photo-inner">
-              <img class="hero-photo" src="assets/images/hero-profile.jpg" alt="Mohamed Elshahat Ibrahim — Full Stack Developer" width="350" height="420" />
+        <!-- Editorial Portrait Column -->
+        <div class="hero-visual">
+          <div class="portrait-card">
+            <div class="portrait-frame">
+              <img class="portrait-img" src="assets/images/hero-profile.jpg" alt="Mohamed Elshahat Ibrahim — Full Stack Developer" width="360" height="440" />
             </div>
-            <div class="photo-badge">
-              <span class="photo-badge-dot"></span>
-              <div>
-                <div class="photo-badge-text">Available for Hire</div>
-                <div class="photo-badge-sub">Remote &middot; Saudi / UAE &middot; On-site</div>
+            <div class="portrait-footer">
+              <span class="location-icon">📍</span>
+              <span class="portrait-caption">Cairo, Egypt &middot; Open to Relocation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section (Visual Rhythm: Spotlight -> Featured Pair -> Supporting Grid) -->
+  <section id="projects" class="projects-section">
+    <div class="container">
+      <div class="section-meta-header">
+        <span class="section-tag">Engineered Solutions</span>
+        <h2 class="section-title">Featured <em>Work</em></h2>
+        <p class="section-subtitle">
+          Seven verified production, freelance, and graduation platforms demonstrating backend API design, database modeling, secure authorization, automated testing, and polished frontend interfaces.
+        </p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="filter-tabs-container">
+        <div class="filter-tabs" id="projects-filter-bar">
+          <button class="filter-tab active" data-filter="all">All Projects (7)</button>
+          <button class="filter-tab" data-filter="featured">Featured Work (3)</button>
+          <button class="filter-tab" data-filter="fullstack">Full-Stack (5)</button>
+          <button class="filter-tab" data-filter="ecommerce">E-Commerce &amp; Ordering (3)</button>
+          <button class="filter-tab" data-filter="enterprise">Enterprise &amp; Healthcare (3)</button>
+        </div>
+      </div>
+
+      <!-- 1. Flagship Spotlight Project (#1 HRM System) -->
+      <div id="spotlight-project-area" class="showcase-area">
+        <!-- Rendered by script.js -->
+      </div>
+
+      <!-- 2. Featured Secondary Pair (#2 Kemet Gate, #3 Frío Restaurant) -->
+      <div id="featured-pair-area" class="showcase-area">
+        <!-- Rendered by script.js -->
+      </div>
+
+      <!-- 3. Supporting Projects Section Header -->
+      <div class="supporting-section-header" id="supporting-header">
+        <div class="supporting-header-title">
+          <span class="sub-icon">✦</span>
+          <h3>Supporting &amp; Specialized Applications</h3>
+        </div>
+        <p class="supporting-header-desc">Focused storefronts, academic achievements, and client platforms.</p>
+      </div>
+
+      <!-- 4. Supporting Projects Grid (#4 Shopery, #5 Topico, #6 Diabetes App, #7 Al-Quds Pharmacy) -->
+      <div id="supporting-projects-grid" class="projects-grid-container">
+        <!-- Rendered by script.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Capabilities Section (4 Architectural Pillars) -->
+  <section id="capabilities" class="capabilities-section">
+    <div class="container">
+      <div class="section-meta-header">
+        <span class="section-tag">Technical Depth</span>
+        <h2 class="section-title">Core <em>Capabilities</em></h2>
+        <p class="section-subtitle">
+          How I architect, engineer, and deliver resilient software systems across the entire application lifecycle.
+        </p>
+      </div>
+
+      <div class="capabilities-grid">
+        <!-- Pillar 1: Backend & APIs -->
+        <div class="capability-card">
+          <div class="capability-num">01</div>
+          <h3 class="capability-title">Scalable Backend &amp; APIs</h3>
+          <p class="capability-desc">
+            Architecting robust server-side systems with Node.js and Express.js. Structured controller-service layers, idempotent RESTful endpoints, asynchronous error handling, and real-time event streaming with Socket.IO.
+          </p>
+          <div class="capability-tags">
+            <span class="cap-tag">Node.js</span>
+            <span class="cap-tag">Express.js</span>
+            <span class="cap-tag">RESTful APIs</span>
+            <span class="cap-tag">Socket.IO</span>
+            <span class="cap-tag">Cron Automation</span>
+          </div>
+        </div>
+
+        <!-- Pillar 2: Frontend Engineering -->
+        <div class="capability-card">
+          <div class="capability-num">02</div>
+          <h3 class="capability-title">Modern Frontend Systems</h3>
+          <p class="capability-desc">
+            Crafting responsive, accessible, high-performance web applications using React.js, Next.js (App Router), and modern CSS. Fluid state management, SSR-safe client persistence, reusable design systems, and mobile-first layouts.
+          </p>
+          <div class="capability-tags">
+            <span class="cap-tag">React.js</span>
+            <span class="cap-tag">Next.js 16</span>
+            <span class="cap-tag">TypeScript</span>
+            <span class="cap-tag">Tailwind CSS</span>
+            <span class="cap-tag">Vite</span>
+          </div>
+        </div>
+
+        <!-- Pillar 3: Database & Data Architecture -->
+        <div class="capability-card">
+          <div class="capability-num">03</div>
+          <h3 class="capability-title">Database Design &amp; Modeling</h3>
+          <p class="capability-desc">
+            Designing resilient NoSQL and relational database schemas, relationship modeling, targeted database indexing for high query performance, Prisma ORM mappings, and compound integrity constraints.
+          </p>
+          <div class="capability-tags">
+            <span class="cap-tag">MongoDB</span>
+            <span class="cap-tag">Mongoose</span>
+            <span class="cap-tag">MySQL</span>
+            <span class="cap-tag">Prisma ORM</span>
+            <span class="cap-tag">Targeted Indexing</span>
+          </div>
+        </div>
+
+        <!-- Pillar 4: Authentication, Security & Payments -->
+        <div class="capability-card">
+          <div class="capability-num">04</div>
+          <h3 class="capability-title">Authentication, Security &amp; Payments</h3>
+          <p class="capability-desc">
+            Implementing stateless JWT with refresh token rotation, authoritative Role-Based Access Control (RBAC), strict input validation (Joi, Zod), OWASP Top 10 defenses, and PCI-compliant Stripe Payment Intents with webhook verification.
+          </p>
+          <div class="capability-tags">
+            <span class="cap-tag">JWT &amp; Refresh</span>
+            <span class="cap-tag">RBAC</span>
+            <span class="cap-tag">OWASP Top 10</span>
+            <span class="cap-tag">Stripe Elements</span>
+            <span class="cap-tag">HMAC QR</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience & Education (Editorial Split Layout) -->
+  <section id="experience" class="experience-section">
+    <div class="container">
+      <div class="section-meta-header">
+        <span class="section-tag">Career History</span>
+        <h2 class="section-title">Experience &amp; <em>Education</em></h2>
+        <p class="section-subtitle">
+          Documented software engineering experience, professional training, and formal computer science background.
+        </p>
+      </div>
+
+      <div class="editorial-timeline-grid">
+        <!-- Left Column: Work Experience -->
+        <div class="timeline-column">
+          <div class="column-header">
+            <span class="column-badge">Engineering Roles</span>
+            <h3 class="column-title">Work Experience</h3>
+          </div>
+
+          <div class="timeline-items">
+            <!-- 1. VGN Internship (Current Role) -->
+            <div class="timeline-entry current-role">
+              <div class="entry-marker">
+                <span class="marker-dot current"></span>
+                <span class="marker-line"></span>
+              </div>
+              <div class="entry-body">
+                <div class="entry-meta">
+                  <span class="role-badge active-tag">Current Role</span>
+                  <span class="entry-date">Sep 2026 – Present</span>
+                </div>
+                <h4 class="entry-title">Full Stack Developer Intern</h4>
+                <div class="entry-company">VGN &middot; Software Development</div>
+                <ul class="entry-bullets">
+                  <li>Gaining hands-on professional experience in full-stack web development within a software development environment.</li>
+                  <li>Collaborating with engineering team members on core web functionality, API endpoints, and interface integration.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- 2. Freelance Web Developer -->
+            <div class="timeline-entry">
+              <div class="entry-marker">
+                <span class="marker-dot"></span>
+                <span class="marker-line"></span>
+              </div>
+              <div class="entry-body">
+                <div class="entry-meta">
+                  <span class="role-badge">Freelance Delivery</span>
+                  <span class="entry-date">Jan 2024 – Present</span>
+                </div>
+                <h4 class="entry-title">Freelance Full Stack Web Developer</h4>
+                <div class="entry-company">Self-Employed &middot; Egypt / Remote</div>
+                <ul class="entry-bullets">
+                  <li>Develop full stack web applications on a project basis using Node.js, Express.js, and React.js.</li>
+                  <li>Design and implement RESTful APIs for authentication, payments, and data management.</li>
+                  <li>Integrate MongoDB and MySQL databases with secure, optimized queries.</li>
+                  <li>Collaborate directly with clients to deliver customized, scalable web solutions.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Education & Training -->
+        <div class="timeline-column">
+          <div class="column-header">
+            <span class="column-badge">Formative Training</span>
+            <h3 class="column-title">Education &amp; Diploma</h3>
+          </div>
+
+          <div class="timeline-items">
+            <!-- 1. Digilians Training -->
+            <div class="timeline-entry">
+              <div class="entry-marker">
+                <span class="marker-dot"></span>
+                <span class="marker-line"></span>
+              </div>
+              <div class="entry-body">
+                <div class="entry-meta">
+                  <span class="role-badge">Diploma / NTI</span>
+                  <span class="entry-date">Dec 2025 – Sep 2026</span>
+                </div>
+                <h4 class="entry-title">Software Development Trainee</h4>
+                <div class="entry-company">Digital Pioneers Initiative (Digilians), NTI</div>
+                <ul class="entry-bullets">
+                  <li>9-month diploma in AI-Powered Software Development covering full stack web development, DevOps, and web security.</li>
+                  <li>Completed team-based software development training across the full web development lifecycle, from planning through deployment.</li>
+                  <li>Built full stack features and RESTful APIs using Node.js, Express.js, React.js, and MongoDB.</li>
+                  <li>Gained working knowledge of Docker, Kubernetes, Linux, CI/CD, and AWS fundamentals; applied OWASP Top 10 secure coding practices.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- 2. Zagazig University B.Sc. -->
+            <div class="timeline-entry">
+              <div class="entry-marker">
+                <span class="marker-dot"></span>
+                <span class="marker-line"></span>
+              </div>
+              <div class="entry-body">
+                <div class="entry-meta">
+                  <span class="role-badge">University Degree</span>
+                  <span class="entry-date">Sep 2020 – Jun 2024</span>
+                </div>
+                <h4 class="entry-title">B.Sc. in Computer Science</h4>
+                <div class="entry-company">Faculty of Computers and Information, Zagazig University</div>
+                <ul class="entry-bullets">
+                  <li>Comprehensive 4-year degree covering algorithms, data structures, software engineering, databases, and system design.</li>
+                  <li>Graduation project: Diabetes Management App (Node.js RESTful APIs, MySQL, and ML trend prediction).</li>
+                  <li>Languages: Arabic (Native), English (Very Good — Written &amp; Spoken).</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -140,469 +423,342 @@
     </div>
   </section>
 
-  <!-- Services Section -->
-  <section id="services">
+  <!-- Credentials & Certifications -->
+  <section id="credentials" class="credentials-section">
     <div class="container">
-      <div class="section-label">Core Capabilities</div>
-      <h2 class="section-title">Engineering <span>Services</span></h2>
-
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon-box">⚡</div>
-          <h3 class="service-name">Backend Development</h3>
-          <p class="service-desc">Architecting robust server-side systems with Node.js and Express.js. Structured controller-service layers, RESTful API design, WebSockets, and asynchronous error handling.</p>
-          <div class="service-tags">
-            <span class="tag">Node.js</span>
-            <span class="tag">Express.js</span>
-            <span class="tag">RESTful APIs</span>
-            <span class="tag">Socket.IO</span>
-          </div>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon-box">🎨</div>
-          <h3 class="service-name">Frontend Engineering</h3>
-          <p class="service-desc">Building responsive, accessible, high-performance web user interfaces using React.js, Next.js, and modern CSS. Fluid state management, reusable component architectures, and mobile-first layouts.</p>
-          <div class="service-tags">
-            <span class="tag">React.js</span>
-            <span class="tag">Next.js</span>
-            <span class="tag">Vite</span>
-            <span class="tag">Tailwind CSS</span>
-          </div>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon-box">🗄️</div>
-          <h3 class="service-name">Database Design &amp; Optimization</h3>
-          <p class="service-desc">Designing scalable NoSQL and relational database schemas, relationship modeling, targeted database indexing, Prisma ORM mappings, and compound integrity constraints.</p>
-          <div class="service-tags">
-            <span class="tag">MongoDB</span>
-            <span class="tag">Mongoose</span>
-            <span class="tag">MySQL</span>
-            <span class="tag">Prisma ORM</span>
-          </div>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon-box">🔒</div>
-          <h3 class="service-name">Authentication &amp; Security</h3>
-          <p class="service-desc">Implementing stateless JWT with token rotation, Role-Based Access Control (RBAC), strict input validation (Joi, Zod), rate limiting, and defense against OWASP Top 10 vulnerabilities.</p>
-          <div class="service-tags">
-            <span class="tag">JWT &amp; Refresh</span>
-            <span class="tag">RBAC</span>
-            <span class="tag">OWASP Top 10</span>
-            <span class="tag">HMAC QR</span>
-          </div>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon-box">🚀</div>
-          <h3 class="service-name">Full-Stack Web Applications</h3>
-          <p class="service-desc">Delivering complete web solutions from requirements to production deployment. Third-party integrations including payment gateways (Stripe Elements &amp; Webhooks) and real-time events.</p>
-          <div class="service-tags">
-            <span class="tag">Full Stack</span>
-            <span class="tag">Stripe Payments</span>
-            <span class="tag">WhatsApp Dispatch</span>
-            <span class="tag">Cron Jobs</span>
-          </div>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon-box">📊</div>
-          <h3 class="service-name">Admin Dashboards &amp; Workflows</h3>
-          <p class="service-desc">Building operational management portals, multi-tier approval pipelines, attendance &amp; payroll calculation logic, operational anomaly detection, and analytical summary reporting interfaces.</p>
-          <div class="service-tags">
-            <span class="tag">Dashboards</span>
-            <span class="tag">Approval Pipelines</span>
-            <span class="tag">Anomaly Detection</span>
-            <span class="tag">Smart Assistant</span>
-          </div>
-        </div>
+      <div class="section-meta-header">
+        <span class="section-tag">Validated Expertise</span>
+        <h2 class="section-title">Certifications &amp; <em>Cloud</em></h2>
+        <p class="section-subtitle">
+          Industry cloud credentials and active professional preparation on Amazon Web Services.
+        </p>
       </div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects">
-    <div class="container">
-      <div class="section-label">Case Studies</div>
-      <h2 class="section-title">Verified <span>Projects</span></h2>
-      <p class="projects-intro">
-        Explore 7 verified end-to-end projects demonstrating production full-stack architecture, backend security, robust database modeling, automated testing, and polished user experiences.
-      </p>
-
-      <!-- Interactive Filter Tabs -->
-      <div class="projects-filter-bar" id="projects-filter-bar">
-        <button class="filter-btn active" data-filter="all">All Projects (7)</button>
-        <button class="filter-btn" data-filter="featured">Featured Work (3)</button>
-        <button class="filter-btn" data-filter="fullstack">Full-Stack (5)</button>
-        <button class="filter-btn" data-filter="ecommerce">E-Commerce &amp; Ordering (3)</button>
-        <button class="filter-btn" data-filter="enterprise">Enterprise &amp; Healthcare (3)</button>
-      </div>
-
-      <!-- Featured Projects Section (#1 Kemet Gate, #2 HRM System, #3 Frío Restaurant) -->
-      <div class="featured-section-header">
-        <h3 class="section-subheading">★ Featured Engineering Showcase</h3>
-        <p class="section-subtext">Deep architectural implementations, complex business logic, real-time protocols, and comprehensive test suites.</p>
-      </div>
-      <div id="featured-project-container" class="featured-projects-stack">
-        <!-- Injected dynamically via script.js -->
-      </div>
-
-      <!-- Supporting & Specialized Projects Header -->
-      <div class="standard-section-header" id="standard-projects-header" style="margin-top: 52px; margin-bottom: 24px;">
-        <h3 class="section-subheading">✦ Supporting &amp; Specialized Work</h3>
-        <p class="section-subtext">Focused web applications, storefronts, academic achievements, and client platforms.</p>
-      </div>
-
-      <!-- Standard Projects Grid (Shopery, Topico, Diabetes App, Al-Quds Pharmacy) -->
-      <div class="projects-standard-grid" id="projects-grid">
-        <!-- Injected dynamically via script.js -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Experience & Education Section (Directly from CV) -->
-  <section id="experience">
-    <div class="container">
-      <div class="section-label">Professional Background</div>
-      <h2 class="section-title">Experience &amp; <span>Education</span></h2>
-
-      <div class="timeline-grid">
-        <!-- 1. VGN Internship (Current Role) -->
-        <div class="timeline-card featured-exp">
-          <div class="timeline-badge current-role">Current Position</div>
-          <h3 class="timeline-title">Full Stack Developer Intern</h3>
-          <div class="timeline-org">VGN &middot; Software Development</div>
-          <div class="timeline-date">Sep 2026 – Present</div>
-          <ul class="timeline-list">
-            <li>Currently gaining hands-on professional experience in full-stack web development within a software development environment.</li>
-            <li>Collaborating with engineering team on web features, backend services, and interface integration.</li>
-          </ul>
-        </div>
-
-        <!-- 2. Freelance Experience -->
-        <div class="timeline-card">
-          <div class="timeline-badge">Professional Experience</div>
-          <h3 class="timeline-title">Freelance Full Stack Web Developer</h3>
-          <div class="timeline-org">Self-Employed &middot; Egypt</div>
-          <div class="timeline-date">Jan 2024 – Present</div>
-          <ul class="timeline-list">
-            <li>Develop full stack web applications on a project basis using Node.js, Express.js, and React.js.</li>
-            <li>Design and implement RESTful APIs for authentication, payments, and data management.</li>
-            <li>Integrate MongoDB and MySQL databases with secure, optimized queries.</li>
-            <li>Collaborate directly with clients to deliver customized, scalable web solutions.</li>
-          </ul>
-        </div>
-
-        <!-- 3. Digilians Professional Training -->
-        <div class="timeline-card">
-          <div class="timeline-badge">Professional Training</div>
-          <h3 class="timeline-title">Software Development Trainee</h3>
-          <div class="timeline-org">Digital Pioneers Initiative (Digilians), NTI</div>
-          <div class="timeline-date">Dec 2025 – Sep 2026</div>
-          <ul class="timeline-list">
-            <li>9-month diploma in AI-Powered Software Development covering full stack web development, DevOps, and web security.</li>
-            <li>Completed team-based software development training across the full web development lifecycle, from planning through deployment.</li>
-            <li>Built full stack features and RESTful APIs using Node.js, Express.js, React.js, and MongoDB.</li>
-            <li>Gained working knowledge of Docker, Kubernetes, Linux, CI/CD, and AWS fundamentals; applied OWASP Top 10 secure coding practices.</li>
-          </ul>
-        </div>
-
-        <!-- 4. Academic Degree -->
-        <div class="timeline-card">
-          <div class="timeline-badge">University Education</div>
-          <h3 class="timeline-title">B.Sc. in Computer Science</h3>
-          <div class="timeline-org">Faculty of Computers and Information, Zagazig University</div>
-          <div class="timeline-date">Sep 2020 – Jun 2024</div>
-          <ul class="timeline-list">
-            <li>Comprehensive 4-year degree in Computer Science, software engineering methodologies, data structures, and algorithms.</li>
-            <li>Completed graduation project: Diabetes Management App (Node.js RESTful APIs, MySQL, and ML trend prediction).</li>
-            <li>Strong foundation in C++ programming, OOP, relational databases, and system design.</li>
-            <li>Languages: Arabic (Native), English (Very Good — Written &amp; Spoken).</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Credentials & Certifications Section -->
-  <section id="credentials">
-    <div class="container">
-      <div class="section-label">Verified Credentials</div>
-      <h2 class="section-title">Certifications &amp; <span>Training</span></h2>
 
       <div class="credentials-grid">
-        <!-- AWS Cloud Practitioner -->
-        <div class="credential-card">
-          <div class="cred-header">
-            <div>
-              <h3 class="cred-title">AWS Certified Cloud Practitioner</h3>
-              <div class="cred-sub">Amazon Web Services (AWS)</div>
+        <!-- 1. AWS Certified Cloud Practitioner -->
+        <div class="credential-card certified">
+          <div class="cred-top">
+            <div class="cred-badge-wrap">
+              <span class="cred-status-tag verified">✓ Certified</span>
+              <span class="cred-authority">Amazon Web Services</span>
             </div>
-            <span class="cred-badge verified">✓ Verified Credential</span>
+            <h3 class="cred-name">AWS Certified Cloud Practitioner</h3>
+            <div class="cred-validity">Issued: July 2026 &middot; Expires: July 2029</div>
           </div>
-          <div style="font-size: 12px; color: var(--muted); margin-bottom: 10px; font-family: var(--font-mono);">
-            Issued: July 2026 &middot; Expires: July 2029
-          </div>
-          <p class="cred-desc">
+          <p class="cred-description">
             Validated foundational cloud fluency, security architectures, IAM permission modeling, core AWS services (EC2, S3, RDS, VPC), and operational cloud economics.
           </p>
-          <div class="service-tags">
-            <span class="tag">Cloud Architecture</span>
-            <span class="tag">AWS IAM</span>
-            <span class="tag">Security Standards</span>
-            <span class="tag">Cloud Economics</span>
+          <div class="cred-tags">
+            <span class="c-tag">Cloud Architecture</span>
+            <span class="c-tag">AWS IAM</span>
+            <span class="c-tag">VPC &amp; S3</span>
+            <span class="c-tag">Security Standards</span>
           </div>
         </div>
 
-        <!-- AWS Developer Associate Training -->
-        <div class="credential-card">
-          <div class="cred-header">
-            <div>
-              <h3 class="cred-title">AWS Developer Associate (DVA-C02)</h3>
-              <div class="cred-sub">Training &amp; Exam Preparation (In Progress)</div>
+        <!-- 2. AWS Developer Associate (In Preparation) -->
+        <div class="credential-card in-prep">
+          <div class="cred-top">
+            <div class="cred-badge-wrap">
+              <span class="cred-status-tag prep">Training &middot; Exam Prep</span>
+              <span class="cred-authority">Amazon Web Services</span>
             </div>
-            <span class="cred-badge">Training / Exam Prep</span>
+            <h3 class="cred-name">AWS Developer Associate (DVA-C02)</h3>
+            <div class="cred-validity">Active Preparation &middot; Target: 2026 (Not Yet Certified)</div>
           </div>
-          <div style="font-size: 12px; color: var(--muted); margin-bottom: 10px; font-family: var(--font-mono);">
-            Active Preparation &middot; Target: 2026 (Not Yet Certified)
-          </div>
-          <p class="cred-desc">
-            In-depth training on developing, deploying, and debugging cloud-native applications on AWS, containerized deployments with Docker, serverless patterns, and CI/CD pipelines.
+          <p class="cred-description">
+            In-depth training on developing, deploying, and debugging cloud-native applications on AWS, containerized deployments with Docker, serverless patterns with Lambda, and CI/CD pipelines.
           </p>
-          <div class="service-tags">
-            <span class="tag">AWS Lambda</span>
-            <span class="tag">API Gateway</span>
-            <span class="tag">Docker &amp; ECS</span>
-            <span class="tag">CI/CD Automation</span>
+          <div class="cred-tags">
+            <span class="c-tag">AWS Lambda</span>
+            <span class="c-tag">Docker &amp; ECS</span>
+            <span class="c-tag">API Gateway</span>
+            <span class="c-tag">CI/CD Pipelines</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Technical Skills Section (Categorized strictly from new CV) -->
-  <section id="skills">
+  <!-- Technical Skills Section -->
+  <section id="skills" class="skills-section">
     <div class="container">
-      <div class="section-label">Technical Expertise</div>
-      <h2 class="section-title">Skills &amp; <span>Toolbox</span></h2>
+      <div class="section-meta-header">
+        <span class="section-tag">Technology Stack</span>
+        <h2 class="section-title">Technical <em>Skills</em></h2>
+        <p class="section-subtitle">
+          Verified programming languages, frameworks, databases, and DevOps tools from active development.
+        </p>
+      </div>
 
-      <div class="skills-container">
+      <div class="skills-grid-layout">
         <!-- 1. Frontend -->
-        <div class="skill-category">
-          <div class="skill-group-title">Frontend</div>
-          <div class="tech-pills">
-            <span class="tech-pill"><span class="tech-pill-dot"></span>HTML5</span>
-            <span class="tech-pill"><span class="tech-pill-dot"></span>CSS3</span>
-            <span class="tech-pill"><span class="tech-pill-dot"></span>React.js</span>
-            <span class="tech-pill"><span class="tech-pill-dot"></span>Angular</span>
-            <span class="tech-pill"><span class="tech-pill-dot"></span>Vite</span>
-            <span class="tech-pill"><span class="tech-pill-dot"></span>Tailwind CSS</span>
-            <span class="tech-pill"><span class="tech-pill-dot"></span>Bootstrap</span>
-            <span class="tech-pill"><span class="tech-pill-dot"></span>Axios</span>
+        <div class="skill-group-box">
+          <div class="group-title">
+            <span class="group-dot"></span>
+            <h4>Frontend</h4>
+          </div>
+          <div class="tech-pills-wrap">
+            <span class="tech-pill">HTML5</span>
+            <span class="tech-pill">CSS3</span>
+            <span class="tech-pill">React.js</span>
+            <span class="tech-pill">Angular</span>
+            <span class="tech-pill">Vite</span>
+            <span class="tech-pill">Tailwind CSS</span>
+            <span class="tech-pill">Bootstrap</span>
+            <span class="tech-pill">Axios</span>
           </div>
         </div>
 
         <!-- 2. Backend & Databases -->
-        <div class="skill-category">
-          <div class="skill-group-title">Backend &amp; Databases</div>
-          <div class="tech-pills">
-            <span class="tech-pill"><span class="tech-pill-dot"></span>Node.js</span>
-            <span class="tech-pill"><span class="tech-pill-dot"></span>Express.js</span>
-            <span class="tech-pill"><span class="tech-pill-dot"></span>RESTful APIs</span>
-            <span class="tech-pill"><span class="tech-pill-dot"></span>WebSockets</span>
-            <span class="tech-pill"><span class="tech-pill-dot"></span>Socket.IO</span>
-            <span class="tech-pill"><span class="tech-pill-dot"></span>MongoDB</span>
-            <span class="tech-pill"><span class="tech-pill-dot"></span>Mongoose</span>
-            <span class="tech-pill"><span class="tech-pill-dot"></span>MySQL</span>
-            <span class="tech-pill"><span class="tech-pill-dot"></span>PostgreSQL</span>
+        <div class="skill-group-box">
+          <div class="group-title">
+            <span class="group-dot"></span>
+            <h4>Backend &amp; Databases</h4>
+          </div>
+          <div class="tech-pills-wrap">
+            <span class="tech-pill">Node.js</span>
+            <span class="tech-pill">Express.js</span>
+            <span class="tech-pill">RESTful APIs</span>
+            <span class="tech-pill">WebSockets</span>
+            <span class="tech-pill">Socket.IO</span>
+            <span class="tech-pill">MongoDB</span>
+            <span class="tech-pill">Mongoose</span>
+            <span class="tech-pill">MySQL</span>
+            <span class="tech-pill">PostgreSQL</span>
           </div>
         </div>
 
         <!-- 3. Authentication & Security -->
-        <div class="skill-category">
-          <div class="skill-group-title">Authentication &amp; Security</div>
-          <div class="tech-pills">
-            <span class="tech-pill"><span class="tech-pill-dot"></span>JWT</span>
-            <span class="tech-pill"><span class="tech-pill-dot"></span>RBAC</span>
-            <span class="tech-pill"><span class="tech-pill-dot"></span>OWASP Top 10</span>
-            <span class="tech-pill"><span class="tech-pill-dot"></span>XSS</span>
-            <span class="tech-pill"><span class="tech-pill-dot"></span>SQL Injection</span>
-            <span class="tech-pill"><span class="tech-pill-dot"></span>IDOR</span>
-            <span class="tech-pill"><span class="tech-pill-dot"></span>CSRF</span>
-            <span class="tech-pill"><span class="tech-pill-dot"></span>Secure API Practices</span>
+        <div class="skill-group-box">
+          <div class="group-title">
+            <span class="group-dot"></span>
+            <h4>Authentication &amp; Security</h4>
+          </div>
+          <div class="tech-pills-wrap">
+            <span class="tech-pill">JWT</span>
+            <span class="tech-pill">RBAC</span>
+            <span class="tech-pill">OWASP Top 10</span>
+            <span class="tech-pill">XSS Defense</span>
+            <span class="tech-pill">SQL Injection</span>
+            <span class="tech-pill">IDOR</span>
+            <span class="tech-pill">CSRF</span>
+            <span class="tech-pill">Secure API Practices</span>
           </div>
         </div>
 
         <!-- 4. Cloud, DevOps & Automation -->
-        <div class="skill-category">
-          <div class="skill-group-title">Cloud, DevOps &amp; Automation</div>
-          <div class="tech-pills">
-            <span class="tech-pill"><span class="tech-pill-dot"></span>AWS</span>
-            <span class="tech-pill"><span class="tech-pill-dot"></span>Docker</span>
-            <span class="tech-pill"><span class="tech-pill-dot"></span>Kubernetes</span>
-            <span class="tech-pill"><span class="tech-pill-dot"></span>Linux</span>
-            <span class="tech-pill"><span class="tech-pill-dot"></span>CI/CD</span>
-            <span class="tech-pill"><span class="tech-pill-dot"></span>n8n</span>
-            <span class="tech-pill"><span class="tech-pill-dot"></span>Cron Jobs</span>
+        <div class="skill-group-box">
+          <div class="group-title">
+            <span class="group-dot"></span>
+            <h4>Cloud, DevOps &amp; Automation</h4>
+          </div>
+          <div class="tech-pills-wrap">
+            <span class="tech-pill">AWS</span>
+            <span class="tech-pill">Docker</span>
+            <span class="tech-pill">Kubernetes</span>
+            <span class="tech-pill">Linux</span>
+            <span class="tech-pill">CI/CD</span>
+            <span class="tech-pill">n8n</span>
+            <span class="tech-pill">Cron Jobs</span>
           </div>
         </div>
 
-        <!-- 5. Payments & Tools -->
-        <div class="skill-category" style="grid-column: 1 / -1;">
-          <div class="skill-group-title">Payments &amp; Tools</div>
-          <div class="tech-pills">
-            <span class="tech-pill"><span class="tech-pill-dot"></span>Stripe</span>
-            <span class="tech-pill"><span class="tech-pill-dot"></span>Git</span>
-            <span class="tech-pill"><span class="tech-pill-dot"></span>GitHub</span>
-            <span class="tech-pill"><span class="tech-pill-dot"></span>Postman</span>
-            <span class="tech-pill"><span class="tech-pill-dot"></span>VS Code</span>
-            <span class="tech-pill"><span class="tech-pill-dot"></span>System Design</span>
-            <span class="tech-pill"><span class="tech-pill-dot"></span>Unit Testing</span>
-            <span class="tech-pill"><span class="tech-pill-dot"></span>Agile</span>
+        <!-- 5. Payments & Tools (Span Full Width) -->
+        <div class="skill-group-box full-width">
+          <div class="group-title">
+            <span class="group-dot"></span>
+            <h4>Payments, Testing &amp; Development Tools</h4>
+          </div>
+          <div class="tech-pills-wrap">
+            <span class="tech-pill">Stripe</span>
+            <span class="tech-pill">Git</span>
+            <span class="tech-pill">GitHub</span>
+            <span class="tech-pill">Postman</span>
+            <span class="tech-pill">VS Code</span>
+            <span class="tech-pill">System Design</span>
+            <span class="tech-pill">Unit Testing</span>
+            <span class="tech-pill">Agile</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Engineering Principles Section (Why Work With Me) -->
-  <section id="why">
+  <!-- Core Principles Section (Why Work With Me) -->
+  <section id="principles" class="principles-section">
     <div class="container">
-      <div class="section-label">Core Philosophy</div>
-      <h2 class="section-title">Why Work <span>With Me</span></h2>
-
-      <div class="why-grid">
-        <div class="why-card">
-          <div class="why-num">01</div>
-          <h3 class="why-title">Full-Stack Versatility</h3>
-          <p class="why-text">I seamlessly connect backend REST APIs, databases, and microservices with responsive React interfaces, ensuring cohesive state management and zero integration friction.</p>
-        </div>
-
-        <div class="why-card">
-          <div class="why-num">02</div>
-          <h3 class="why-title">Security-First Mindset</h3>
-          <p class="why-text">Trained in OWASP Top 10 vulnerabilities. I build defensive architectures with token rotation, strict input validation, cryptographic signatures, and role-based access guards on every endpoint.</p>
-        </div>
-
-        <div class="why-card">
-          <div class="why-num">03</div>
-          <h3 class="why-title">Complex Business Logic</h3>
-          <p class="why-text">Proven experience handling real-world workflows, such as multi-tier booking pipelines, idempotent payment webhooks (Stripe), dynamic payroll calculations, and anomaly detection engines.</p>
-        </div>
-
-        <div class="why-card">
-          <div class="why-num">04</div>
-          <h3 class="why-title">Clean &amp; Maintainable Code</h3>
-          <p class="why-text">Adhering to modular separation of concerns, clean controller-service hierarchies, well-indexed database schemas, and structured Git workflows for reliable team collaboration.</p>
-        </div>
+      <div class="section-meta-header">
+        <span class="section-tag">Engineering Mindset</span>
+        <h2 class="section-title">Core <em>Principles</em></h2>
+        <p class="section-subtitle">
+          How I approach software architecture, code quality, and technical collaboration.
+        </p>
       </div>
-    </div>
-  </section>
 
-  <!-- Process Section -->
-  <section id="process">
-    <div class="container">
-      <div class="section-label">Development Workflow</div>
-      <h2 class="section-title">Execution <span>Methodology</span></h2>
-
-      <div class="process-steps">
-        <div class="process-step">
-          <div class="step-header">
-            <div class="step-dot">01</div>
-          </div>
-          <h3 class="step-title">Discovery &amp; Requirements</h3>
-          <p class="step-desc">Analyzing business goals, user personas, roles, security constraints, and data flows to establish a clear scope and non-ambiguous roadmap.</p>
-        </div>
-
-        <div class="process-step">
-          <div class="step-header">
-            <div class="step-dot">02</div>
-          </div>
-          <h3 class="step-title">Architecture &amp; Planning</h3>
-          <p class="step-desc">Designing database models, API endpoint structures, authorization tiers, and frontend component hierarchies for optimal performance.</p>
-        </div>
-
-        <div class="process-step">
-          <div class="step-header">
-            <div class="step-dot">03</div>
-          </div>
-          <h3 class="step-title">Development &amp; Integration</h3>
-          <p class="step-desc">Writing clean backend services, building responsive UI components, integrating third-party APIs, and linking real-time Socket.IO events.</p>
-        </div>
-
-        <div class="process-step">
-          <div class="step-header">
-            <div class="step-dot">04</div>
-          </div>
-          <h3 class="step-title">Testing &amp; Delivery</h3>
-          <p class="step-desc">Verifying database integrity, automated test assertions, cross-browser responsiveness, error handling, and preparing clean documentation for deployment.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact">
-    <div class="container">
-      <div class="section-label">Get in Touch</div>
-      <h2 class="section-title">Let's Build <span>Together</span></h2>
-
-      <div class="contact-layout">
-        <!-- Direct Contact Card -->
-        <div class="contact-info-card">
-          <p class="contact-tagline">"Ready to create scalable, high-impact web solutions."</p>
-          <p class="contact-desc">
-            I am available for full-time engineering roles (remote or on-site in Saudi Arabia / UAE / Egypt) as well as freelance contracts. Feel free to reach out directly via email, phone, or LinkedIn.
+      <div class="principles-grid">
+        <div class="principle-item">
+          <div class="principle-index">01</div>
+          <h3 class="principle-title">Security-First Architecture</h3>
+          <p class="principle-text">
+            Trained in OWASP Top 10 vulnerabilities. I build defensive architectures with token rotation, strict input validation, cryptographic signatures, and role-based access guards on every route.
           </p>
-          <div class="contact-links">
-            <a href="mailto:shahathamdy29@gmail.com" class="contact-link" aria-label="Send Email">
-              <span class="contact-link-icon">📧</span>
-              <span>shahathamdy29@gmail.com</span>
+        </div>
+
+        <div class="principle-item">
+          <div class="principle-index">02</div>
+          <h3 class="principle-title">Full-Stack Cohesion</h3>
+          <p class="principle-text">
+            Seamlessly linking backend services, databases, and third-party APIs with responsive React interfaces, ensuring predictable state management and frictionless API contracts.
+          </p>
+        </div>
+
+        <div class="principle-item">
+          <div class="principle-index">03</div>
+          <h3 class="principle-title">Real-World Business Logic</h3>
+          <p class="principle-text">
+            Hands-on experience handling real-world workflows: multi-tier booking pipelines, idempotent payment webhooks (Stripe), dynamic payroll engines, and operational anomaly detection.
+          </p>
+        </div>
+
+        <div class="principle-item">
+          <div class="principle-index">04</div>
+          <h3 class="principle-title">Testing &amp; Code Quality</h3>
+          <p class="principle-text">
+            Prioritizing testable service-layer patterns, automated assertions (105+ in HRM), clean database indexing, and structured Git workflows for reliable team collaboration.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Direct Reachout Section -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="section-meta-header">
+        <span class="section-tag">Initiate Contact</span>
+        <h2 class="section-title">Let's <em>Connect</em></h2>
+        <p class="section-subtitle">
+          Available for full-time full-stack engineering roles (remote or on-site in Saudi Arabia / UAE / Egypt) as well as freelance project contracts.
+        </p>
+      </div>
+
+      <div class="contact-split-layout">
+        <!-- Direct Contact Info -->
+        <div class="contact-direct-card">
+          <div class="contact-direct-header">
+            <h3>Direct Contact</h3>
+            <p>Direct lines of communication for engineering opportunities and project inquiries.</p>
+          </div>
+
+          <div class="direct-links-list">
+            <a href="mailto:shahathamdy29@gmail.com" class="direct-link-row">
+              <div class="direct-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </div>
+              <div class="direct-info">
+                <span class="direct-label">Email</span>
+                <span class="direct-val">shahathamdy29@gmail.com</span>
+              </div>
+              <span class="row-arrow">&nearr;</span>
             </a>
-            <a href="tel:+201066082415" class="contact-link" aria-label="Phone Call">
-              <span class="contact-link-icon">📱</span>
-              <span>+20 106 608 2415</span>
+
+            <a href="tel:+201066082415" class="direct-link-row">
+              <div class="direct-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              </div>
+              <div class="direct-info">
+                <span class="direct-label">Phone &amp; WhatsApp</span>
+                <span class="direct-val">+20 106 608 2415</span>
+              </div>
+              <span class="row-arrow">&nearr;</span>
             </a>
-            <a href="https://linkedin.com/in/mohamedfakhar" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="LinkedIn Profile">
-              <span class="contact-link-icon">💼</span>
-              <span>linkedin.com/in/mohamedfakhar</span>
+
+            <a href="https://linkedin.com/in/mohamedfakhar" target="_blank" rel="noopener noreferrer" class="direct-link-row">
+              <div class="direct-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </div>
+              <div class="direct-info">
+                <span class="direct-label">LinkedIn</span>
+                <span class="direct-val">linkedin.com/in/mohamedfakhar</span>
+              </div>
+              <span class="row-arrow">&nearr;</span>
             </a>
-            <a href="https://github.com/mohamedfakhar" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="GitHub Profile">
-              <span class="contact-link-icon">🐙</span>
-              <span>github.com/mohamedfakhar</span>
+
+            <a href="https://github.com/mohamedfakhar" target="_blank" rel="noopener noreferrer" class="direct-link-row">
+              <div class="direct-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </div>
+              <div class="direct-info">
+                <span class="direct-label">GitHub</span>
+                <span class="direct-val">github.com/mohamedfakhar</span>
+              </div>
+              <span class="row-arrow">&nearr;</span>
+            </a>
+          </div>
+
+          <div class="direct-cv-cta">
+            <a href="assets/Mohamed_Elshahat_Ibrahim_CV.pdf" download="Mohamed_Elshahat_Ibrahim_CV.pdf" class="btn-primary full-width" aria-label="Download Mohamed Elshahat Ibrahim CV PDF">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <span>Download Updated CV (PDF)</span>
             </a>
           </div>
         </div>
 
         <!-- Verified Freelance Profiles -->
-        <div>
-          <div class="platforms-title">Verified Freelance Platforms</div>
-          <div class="platforms-grid">
-            <a href="https://www.upwork.com/freelancers/~011cb897177dd10d5c" target="_blank" rel="noopener noreferrer" class="platform-card highlight">
-              <div class="platform-name">Upwork <span>&nearr;</span></div>
-              <div class="platform-status">✦ View Profile</div>
+        <div class="freelance-profiles-card">
+          <div class="freelance-header">
+            <h3>Freelance Platforms</h3>
+            <p>Verified developer profiles across professional marketplace networks.</p>
+          </div>
+
+          <div class="freelance-grid">
+            <a href="https://www.upwork.com/freelancers/~011cb897177dd10d5c" target="_blank" rel="noopener noreferrer" class="freelance-item highlight">
+              <div class="f-top">
+                <span class="f-name">Upwork</span>
+                <span class="f-arrow">&nearr;</span>
+              </div>
+              <span class="f-status">✦ Verified Profile</span>
             </a>
-            <a href="https://mostaql.com/u/Mohammed_Fakhr" target="_blank" rel="noopener noreferrer" class="platform-card highlight">
-              <div class="platform-name">Mostaql مستقل <span>&nearr;</span></div>
-              <div class="platform-status">✦ View Profile</div>
+
+            <a href="https://mostaql.com/u/Mohammed_Fakhr" target="_blank" rel="noopener noreferrer" class="freelance-item highlight">
+              <div class="f-top">
+                <span class="f-name">Mostaql مستقل</span>
+                <span class="f-arrow">&nearr;</span>
+              </div>
+              <span class="f-status">✦ Verified Profile</span>
             </a>
-            <a href="https://nafezly.com/u/MohamedFakhr" target="_blank" rel="noopener noreferrer" class="platform-card">
-              <div class="platform-name">Nafezly نفذلي <span>&nearr;</span></div>
-              <div class="platform-status">✦ View Profile</div>
+
+            <a href="https://nafezly.com/u/MohamedFakhr" target="_blank" rel="noopener noreferrer" class="freelance-item">
+              <div class="f-top">
+                <span class="f-name">Nafezly نفذلي</span>
+                <span class="f-arrow">&nearr;</span>
+              </div>
+              <span class="f-status">View Profile</span>
             </a>
-            <a href="https://www.freelancer.com/u/mohamedf386" target="_blank" rel="noopener noreferrer" class="platform-card">
-              <div class="platform-name">Freelancer <span>&nearr;</span></div>
-              <div class="platform-status">✦ View Profile</div>
+
+            <a href="https://www.freelancer.com/u/mohamedf386" target="_blank" rel="noopener noreferrer" class="freelance-item">
+              <div class="f-top">
+                <span class="f-name">Freelancer</span>
+                <span class="f-arrow">&nearr;</span>
+              </div>
+              <span class="f-status">View Profile</span>
             </a>
-            <a href="https://khamsat.com/user/mohamed_fakhar204" target="_blank" rel="noopener noreferrer" class="platform-card">
-              <div class="platform-name">Khamsat خمسات <span>&nearr;</span></div>
-              <div class="platform-status">✦ View Profile</div>
+
+            <a href="https://khamsat.com/user/mohamed_fakhar204" target="_blank" rel="noopener noreferrer" class="freelance-item">
+              <div class="f-top">
+                <span class="f-name">Khamsat خمسات</span>
+                <span class="f-arrow">&nearr;</span>
+              </div>
+              <span class="f-status">View Profile</span>
             </a>
-            <a href="https://www.peopleperhour.com/freelancer/mohamed-fakhar-full-stack-developer-zxqwxqmz" target="_blank" rel="noopener noreferrer" class="platform-card">
-              <div class="platform-name">PeoplePerHour <span>&nearr;</span></div>
-              <div class="platform-status">✦ View Profile</div>
+
+            <a href="https://www.peopleperhour.com/freelancer/mohamed-fakhar-full-stack-developer-zxqwxqmz" target="_blank" rel="noopener noreferrer" class="freelance-item">
+              <div class="f-top">
+                <span class="f-name">PeoplePerHour</span>
+                <span class="f-arrow">&nearr;</span>
+              </div>
+              <span class="f-status">View Profile</span>
             </a>
           </div>
         </div>
@@ -611,23 +767,30 @@
   </section>
 
   <!-- Footer -->
-  <footer>
+  <footer class="site-footer">
     <div class="container">
-      <div class="footer-content">
-        <div class="footer-copy">
-          &copy; <span id="current-year">2026</span> <span>Mohamed Elshahat Ibrahim</span> &middot; Full Stack Developer (Node.js / React.js)
+      <div class="footer-layout">
+        <div class="footer-brand">
+          <div class="nav-logo">M<span class="logo-dot">.</span>Elshahat</div>
+          <p class="footer-tagline">Mohamed Elshahat Ibrahim &middot; Full Stack Developer (Node.js &amp; React.js)</p>
         </div>
-        <div class="footer-links">
+
+        <div class="footer-nav">
           <a href="#hero">Back to Top &uarr;</a>
+          <a href="#projects">Projects</a>
           <a href="assets/Mohamed_Elshahat_Ibrahim_CV.pdf" download="Mohamed_Elshahat_Ibrahim_CV.pdf">Download CV</a>
           <a href="https://github.com/mohamedfakhar" target="_blank" rel="noopener noreferrer">GitHub</a>
           <a href="https://linkedin.com/in/mohamedfakhar" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
       </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year">2026</span> Mohamed Elshahat Ibrahim. All rights reserved.</p>
+        <p class="footer-status">Hosted on Vercel &middot; AWS Certified Practitioner &middot; Built with Vanilla Web Standards</p>
+      </div>
     </div>
   </footer>
 
-  <!-- Project Details Modal Dialog (Light Dismiss & Accessible) -->
+  <!-- Project Details Modal Dialog (Accessible & Light Dismiss) -->
   <div class="modal-dialog" id="project-modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title-heading">
     <div class="modal-backdrop"></div>
     <div class="modal-container" id="modal-container" tabindex="-1">
@@ -645,7 +808,7 @@
     </div>
   </div>
 
-  <!-- Scripts -->
+  <!-- JavaScript -->
   <script src="script.js"></script>
 </body>
 
