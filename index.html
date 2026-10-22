@@ -4,23 +4,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b1220" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230b1220'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial' font-weight='800' font-size='34' fill='%234fd1c5'%3EM%3C/text%3E%3C/svg%3E" />
+  <script>document.documentElement.classList.add("js");</script>
   <title>Mohamed Elshahat Ibrahim — Full Stack Developer (Node.js &amp; React.js)</title>
   <meta name="description"
     content="Full Stack Developer specializing in Node.js, Express.js, React.js, and MongoDB. Experienced in building secure, scalable web systems, RESTful APIs, JWT/RBAC security, real-time architectures, and payment integrations. AWS Certified Cloud Practitioner." />
   
-  <!-- Open Graph Metadata -->
+  <!-- Canonical Link -->
+  <link rel="canonical" href="https://portfolio-mohamedfakhars-projects.vercel.app/" />
+
+  <!-- Open Graph Metadata (Full Vercel URL for social link previews) -->
+  <meta property="og:site_name" content="Mohamed Elshahat Ibrahim Portfolio" />
   <meta property="og:title" content="Mohamed Elshahat Ibrahim — Full Stack Developer (Node.js &amp; React.js)" />
   <meta property="og:description"
     content="Full Stack Developer specializing in Node.js, Express.js, React.js, and MongoDB. Experienced in building secure, scalable web applications, RESTful APIs, and business logic. AWS Certified Cloud Practitioner." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/images/hero-profile.jpg" />
-  <meta property="og:url" content="https://github.com/mohamedfakhar/portfolio" />
+  <meta property="og:url" content="https://portfolio-mohamedfakhars-projects.vercel.app/" />
+  <meta property="og:image" content="https://portfolio-mohamedfakhars-projects.vercel.app/assets/images/hero-profile.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/jpeg" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Mohamed Elshahat Ibrahim — Full Stack Developer" />
   <meta name="twitter:description" content="Node.js, Express.js, React.js, MongoDB, Web Security &amp; AWS Certified Practitioner." />
-  <meta name="twitter:image" content="assets/images/hero-profile.jpg" />
+  <meta name="twitter:image" content="https://portfolio-mohamedfakhars-projects.vercel.app/assets/images/hero-profile.jpg" />
 
   <!-- Google Fonts: Plus Jakarta Sans (Grotesque), DM Mono (Technical), Instrument Serif (Editorial Accent) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -34,6 +44,9 @@
 </head>
 
 <body>
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
 
   <!-- Navigation Bar -->
   <nav class="nav-bar">
@@ -60,7 +73,7 @@
       </ul>
 
       <!-- Mobile Hamburger Button -->
-      <button class="nav-hamburger" id="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+      <button class="nav-hamburger" type="button" id="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
         <span class="hamburger-bar"></span>
         <span class="hamburger-bar"></span>
         <span class="hamburger-bar"></span>
@@ -91,7 +104,8 @@
 
   <!-- Hero Section -->
   <section id="hero" class="hero-section">
-    <div class="hero-ambient-glow"></div>
+    <div class="hero-glow hero-glow-one" aria-hidden="true"></div>
+    <div class="hero-glow hero-glow-two" aria-hidden="true"></div>
 
     <div class="container">
       <div class="hero-grid">
@@ -99,7 +113,7 @@
           <!-- Status Pill -->
           <div class="hero-status-pill">
             <span class="status-dot"></span>
-            <span class="status-text">Full Stack Developer Intern @ <strong>VGN</strong> &middot; Open to Roles</span>
+            <span class="status-text">Full Stack Developer Intern @ <strong>VGN</strong> &middot; Open to roles</span>
           </div>
 
           <!-- Main Editorial Heading -->
@@ -107,6 +121,9 @@
             Mohamed Elshahat Ibrahim
             <span class="hero-role-line">Full Stack Developer <em>(Node.js &amp; React.js)</em></span>
           </h1>
+
+          <!-- Shown on mobile only (the photo card footer is hidden there) -->
+          <p class="hero-location">📍 Cairo, Egypt &middot; Open to relocation</p>
 
           <!-- Concise Technical Positioning (Directly from CV) -->
           <p class="hero-lead">
@@ -142,17 +159,14 @@
               <span class="metric-digit">7+</span>
               <span class="metric-text">Verified Projects</span>
             </div>
-            <div class="metric-sep">/</div>
             <div class="metric-block">
               <span class="metric-digit">105</span>
               <span class="metric-text">Passing Test Assertions</span>
             </div>
-            <div class="metric-sep">/</div>
             <div class="metric-block">
               <span class="metric-digit">AWS</span>
               <span class="metric-text">Certified Practitioner</span>
             </div>
-            <div class="metric-sep">/</div>
             <div class="metric-block">
               <span class="metric-digit">B.Sc.</span>
               <span class="metric-text">Computer Science</span>
@@ -164,11 +178,11 @@
         <div class="hero-visual">
           <div class="portrait-card">
             <div class="portrait-frame">
-              <img class="portrait-img" src="assets/images/hero-profile.jpg" alt="Mohamed Elshahat Ibrahim — Full Stack Developer" width="360" height="440" />
+              <img class="portrait-img" src="assets/images/hero-profile.jpg" fetchpriority="high" alt="Mohamed Elshahat Ibrahim — Full Stack Developer" width="360" height="440" />
             </div>
             <div class="portrait-footer">
               <span class="location-icon">📍</span>
-              <span class="portrait-caption">Cairo, Egypt &middot; Open to Relocation</span>
+              <span class="portrait-caption">Cairo, Egypt &middot; Open to relocation</span>
             </div>
           </div>
         </div>
@@ -179,7 +193,7 @@
   <!-- Projects Section (Visual Rhythm: Spotlight -> Featured Pair -> Supporting Grid) -->
   <section id="projects" class="projects-section">
     <div class="container">
-      <div class="section-meta-header">
+      <div class="section-meta-header reveal">
         <span class="section-tag">Engineered Solutions</span>
         <h2 class="section-title">Featured <em>Work</em></h2>
         <p class="section-subtitle">
@@ -187,47 +201,24 @@
         </p>
       </div>
 
-      <!-- Category Filter Tabs -->
+      <!-- Filter buttons (created by script.js) -->
       <div class="filter-tabs-container">
-        <div class="filter-tabs" id="projects-filter-bar">
-          <button class="filter-tab active" data-filter="all">All Projects (7)</button>
-          <button class="filter-tab" data-filter="featured">Featured Work (3)</button>
-          <button class="filter-tab" data-filter="fullstack">Full-Stack (5)</button>
-          <button class="filter-tab" data-filter="ecommerce">E-Commerce &amp; Ordering (3)</button>
-          <button class="filter-tab" data-filter="enterprise">Enterprise &amp; Healthcare (3)</button>
-        </div>
+        <div class="filter-tabs" id="projects-filter-bar" role="group" aria-label="Filter projects"></div>
+        <p class="projects-result-text" id="projects-result-text" aria-live="polite"></p>
       </div>
 
-      <!-- 1. Flagship Spotlight Project (#1 HRM System) -->
-      <div id="spotlight-project-area" class="showcase-area">
-        <!-- Rendered by script.js -->
-      </div>
+      <!-- Big card for the main project (created by script.js) -->
+      <div id="spotlight-project-area" class="showcase-area"></div>
 
-      <!-- 2. Featured Secondary Pair (#2 Kemet Gate, #3 Frío Restaurant) -->
-      <div id="featured-pair-area" class="showcase-area">
-        <!-- Rendered by script.js -->
-      </div>
-
-      <!-- 3. Supporting Projects Section Header -->
-      <div class="supporting-section-header" id="supporting-header">
-        <div class="supporting-header-title">
-          <span class="sub-icon">✦</span>
-          <h3>Supporting &amp; Specialized Applications</h3>
-        </div>
-        <p class="supporting-header-desc">Focused storefronts, academic achievements, and client platforms.</p>
-      </div>
-
-      <!-- 4. Supporting Projects Grid (#4 Shopery, #5 Topico, #6 Diabetes App, #7 Al-Quds Pharmacy) -->
-      <div id="supporting-projects-grid" class="projects-grid-container">
-        <!-- Rendered by script.js -->
-      </div>
+      <!-- Cards for the other projects (created by script.js) -->
+      <div id="projects-grid" class="projects-grid"></div>
     </div>
   </section>
 
   <!-- Core Capabilities Section (4 Architectural Pillars) -->
   <section id="capabilities" class="capabilities-section">
     <div class="container">
-      <div class="section-meta-header">
+      <div class="section-meta-header reveal">
         <span class="section-tag">Technical Depth</span>
         <h2 class="section-title">Core <em>Capabilities</em></h2>
         <p class="section-subtitle">
@@ -237,8 +228,8 @@
 
       <div class="capabilities-grid">
         <!-- Pillar 1: Backend & APIs -->
-        <div class="capability-card">
-          <div class="capability-num">01</div>
+        <div class="capability-card reveal">
+          <div class="capability-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg></div>
           <h3 class="capability-title">Scalable Backend &amp; APIs</h3>
           <p class="capability-desc">
             Architecting robust server-side systems with Node.js and Express.js. Structured controller-service layers, idempotent RESTful endpoints, asynchronous error handling, and real-time event streaming with Socket.IO.
@@ -253,8 +244,8 @@
         </div>
 
         <!-- Pillar 2: Frontend Engineering -->
-        <div class="capability-card">
-          <div class="capability-num">02</div>
+        <div class="capability-card reveal">
+          <div class="capability-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg></div>
           <h3 class="capability-title">Modern Frontend Systems</h3>
           <p class="capability-desc">
             Crafting responsive, accessible, high-performance web applications using React.js, Next.js (App Router), and modern CSS. Fluid state management, SSR-safe client persistence, reusable design systems, and mobile-first layouts.
@@ -269,8 +260,8 @@
         </div>
 
         <!-- Pillar 3: Database & Data Architecture -->
-        <div class="capability-card">
-          <div class="capability-num">03</div>
+        <div class="capability-card reveal">
+          <div class="capability-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></div>
           <h3 class="capability-title">Database Design &amp; Modeling</h3>
           <p class="capability-desc">
             Designing resilient NoSQL and relational database schemas, relationship modeling, targeted database indexing for high query performance, Prisma ORM mappings, and compound integrity constraints.
@@ -285,8 +276,8 @@
         </div>
 
         <!-- Pillar 4: Authentication, Security & Payments -->
-        <div class="capability-card">
-          <div class="capability-num">04</div>
+        <div class="capability-card reveal">
+          <div class="capability-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
           <h3 class="capability-title">Authentication, Security &amp; Payments</h3>
           <p class="capability-desc">
             Implementing stateless JWT with refresh token rotation, authoritative Role-Based Access Control (RBAC), strict input validation (Joi, Zod), OWASP Top 10 defenses, and PCI-compliant Stripe Payment Intents with webhook verification.
@@ -306,7 +297,7 @@
   <!-- Experience & Education (Editorial Split Layout) -->
   <section id="experience" class="experience-section">
     <div class="container">
-      <div class="section-meta-header">
+      <div class="section-meta-header reveal">
         <span class="section-tag">Career History</span>
         <h2 class="section-title">Experience &amp; <em>Education</em></h2>
         <p class="section-subtitle">
@@ -324,7 +315,7 @@
 
           <div class="timeline-items">
             <!-- 1. VGN Internship (Current Role) -->
-            <div class="timeline-entry current-role">
+            <div class="timeline-entry current-role reveal">
               <div class="entry-marker">
                 <span class="marker-dot current"></span>
                 <span class="marker-line"></span>
@@ -344,7 +335,7 @@
             </div>
 
             <!-- 2. Freelance Web Developer -->
-            <div class="timeline-entry">
+            <div class="timeline-entry reveal">
               <div class="entry-marker">
                 <span class="marker-dot"></span>
                 <span class="marker-line"></span>
@@ -376,7 +367,7 @@
 
           <div class="timeline-items">
             <!-- 1. Digilians Training -->
-            <div class="timeline-entry">
+            <div class="timeline-entry reveal">
               <div class="entry-marker">
                 <span class="marker-dot"></span>
                 <span class="marker-line"></span>
@@ -398,7 +389,7 @@
             </div>
 
             <!-- 2. Zagazig University B.Sc. -->
-            <div class="timeline-entry">
+            <div class="timeline-entry reveal">
               <div class="entry-marker">
                 <span class="marker-dot"></span>
                 <span class="marker-line"></span>
@@ -426,7 +417,7 @@
   <!-- Credentials & Certifications -->
   <section id="credentials" class="credentials-section">
     <div class="container">
-      <div class="section-meta-header">
+      <div class="section-meta-header reveal">
         <span class="section-tag">Validated Expertise</span>
         <h2 class="section-title">Certifications &amp; <em>Cloud</em></h2>
         <p class="section-subtitle">
@@ -436,7 +427,7 @@
 
       <div class="credentials-grid">
         <!-- 1. AWS Certified Cloud Practitioner -->
-        <div class="credential-card certified">
+        <div class="credential-card certified reveal">
           <div class="cred-top">
             <div class="cred-badge-wrap">
               <span class="cred-status-tag verified">✓ Certified</span>
@@ -457,7 +448,7 @@
         </div>
 
         <!-- 2. AWS Developer Associate (In Preparation) -->
-        <div class="credential-card in-prep">
+        <div class="credential-card in-prep reveal">
           <div class="cred-top">
             <div class="cred-badge-wrap">
               <span class="cred-status-tag prep">Training &middot; Exam Prep</span>
@@ -483,7 +474,7 @@
   <!-- Technical Skills Section -->
   <section id="skills" class="skills-section">
     <div class="container">
-      <div class="section-meta-header">
+      <div class="section-meta-header reveal">
         <span class="section-tag">Technology Stack</span>
         <h2 class="section-title">Technical <em>Skills</em></h2>
         <p class="section-subtitle">
@@ -493,7 +484,7 @@
 
       <div class="skills-grid-layout">
         <!-- 1. Frontend -->
-        <div class="skill-group-box">
+        <div class="skill-group-box reveal">
           <div class="group-title">
             <span class="group-dot"></span>
             <h4>Frontend</h4>
@@ -511,7 +502,7 @@
         </div>
 
         <!-- 2. Backend & Databases -->
-        <div class="skill-group-box">
+        <div class="skill-group-box reveal">
           <div class="group-title">
             <span class="group-dot"></span>
             <h4>Backend &amp; Databases</h4>
@@ -530,7 +521,7 @@
         </div>
 
         <!-- 3. Authentication & Security -->
-        <div class="skill-group-box">
+        <div class="skill-group-box reveal">
           <div class="group-title">
             <span class="group-dot"></span>
             <h4>Authentication &amp; Security</h4>
@@ -548,7 +539,7 @@
         </div>
 
         <!-- 4. Cloud, DevOps & Automation -->
-        <div class="skill-group-box">
+        <div class="skill-group-box reveal">
           <div class="group-title">
             <span class="group-dot"></span>
             <h4>Cloud, DevOps &amp; Automation</h4>
@@ -565,7 +556,7 @@
         </div>
 
         <!-- 5. Payments & Tools (Span Full Width) -->
-        <div class="skill-group-box full-width">
+        <div class="skill-group-box full-width reveal">
           <div class="group-title">
             <span class="group-dot"></span>
             <h4>Payments, Testing &amp; Development Tools</h4>
@@ -588,7 +579,7 @@
   <!-- Core Principles Section (Why Work With Me) -->
   <section id="principles" class="principles-section">
     <div class="container">
-      <div class="section-meta-header">
+      <div class="section-meta-header reveal">
         <span class="section-tag">Engineering Mindset</span>
         <h2 class="section-title">Core <em>Principles</em></h2>
         <p class="section-subtitle">
@@ -597,32 +588,28 @@
       </div>
 
       <div class="principles-grid">
-        <div class="principle-item">
-          <div class="principle-index">01</div>
+        <div class="principle-item reveal">
           <h3 class="principle-title">Security-First Architecture</h3>
           <p class="principle-text">
             Trained in OWASP Top 10 vulnerabilities. I build defensive architectures with token rotation, strict input validation, cryptographic signatures, and role-based access guards on every route.
           </p>
         </div>
 
-        <div class="principle-item">
-          <div class="principle-index">02</div>
+        <div class="principle-item reveal">
           <h3 class="principle-title">Full-Stack Cohesion</h3>
           <p class="principle-text">
             Seamlessly linking backend services, databases, and third-party APIs with responsive React interfaces, ensuring predictable state management and frictionless API contracts.
           </p>
         </div>
 
-        <div class="principle-item">
-          <div class="principle-index">03</div>
+        <div class="principle-item reveal">
           <h3 class="principle-title">Real-World Business Logic</h3>
           <p class="principle-text">
             Hands-on experience handling real-world workflows: multi-tier booking pipelines, idempotent payment webhooks (Stripe), dynamic payroll engines, and operational anomaly detection.
           </p>
         </div>
 
-        <div class="principle-item">
-          <div class="principle-index">04</div>
+        <div class="principle-item reveal">
           <h3 class="principle-title">Testing &amp; Code Quality</h3>
           <p class="principle-text">
             Prioritizing testable service-layer patterns, automated assertions (105+ in HRM), clean database indexing, and structured Git workflows for reliable team collaboration.
@@ -635,7 +622,7 @@
   <!-- Contact & Direct Reachout Section -->
   <section id="contact" class="contact-section">
     <div class="container">
-      <div class="section-meta-header">
+      <div class="section-meta-header reveal">
         <span class="section-tag">Initiate Contact</span>
         <h2 class="section-title">Let's <em>Connect</em></h2>
         <p class="section-subtitle">
@@ -645,7 +632,7 @@
 
       <div class="contact-split-layout">
         <!-- Direct Contact Info -->
-        <div class="contact-direct-card">
+        <div class="contact-direct-card reveal">
           <div class="contact-direct-header">
             <h3>Direct Contact</h3>
             <p>Direct lines of communication for engineering opportunities and project inquiries.</p>
@@ -706,7 +693,7 @@
         </div>
 
         <!-- Verified Freelance Profiles -->
-        <div class="freelance-profiles-card">
+        <div class="freelance-profiles-card reveal">
           <div class="freelance-header">
             <h3>Freelance Platforms</h3>
             <p>Verified developer profiles across professional marketplace networks.</p>
@@ -807,6 +794,11 @@
       </div>
     </div>
   </div>
+
+  <!-- Back to top button -->
+  <button type="button" class="back-to-top" id="back-to-top" aria-label="Back to top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+  </button>
 
   <!-- JavaScript -->
   <script src="script.js"></script>

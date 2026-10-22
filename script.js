@@ -9,6 +9,16 @@
 const projectsData = [
   {
     id: "hrm-system",
+    cardCategory: "Enterprise · Full Stack & AI",
+    cardDesc: "Enterprise HR and payroll platform with attendance, leave, a payroll engine, anomaly detection and a 16-tool bilingual HR assistant.",
+    cardTags: ["React 19", "Node.js", "MongoDB", "Socket.IO"],
+    spotlightPoints: [
+      "JWT authentication with refresh tokens and role-based access control",
+      "Attendance, leave, payroll, performance, anomaly detection and real-time notifications",
+      "HR assistant with 16 validated tools and zero arbitrary database queries",
+      "105/105 automated test assertions passing"
+    ],
+    imagePosition: "top left",
     name: "HR & Payroll Management System",
     fullName: "HR & Payroll Management System & HR Smart Assistant",
     badge: "Enterprise Business Platform · 105/105 Automated Tests Passed",
@@ -80,10 +90,11 @@ const projectsData = [
       "Real-Time Socket.IO Notification"
     ],
     images: {
-      preview: "assets/images/hrm-portal-1.png",
-      previewAlt: "HR & Payroll Management System — Analytics & Employee Directory",
+      preview: "assets/images/hrm-portal-2.png",
+      previewAlt: "HR & Payroll Management System — Employee dashboard with attendance overview",
+      previewCaption: "Employee dashboard — attendance overview",
       gallery: [
-        { src: "assets/images/hrm-portal-2.png", caption: "HR Assistant & Anomaly Detection Dashboard" }
+        { src: "assets/images/hrm-portal-1.png", caption: "HRM Portal — landing page" }
       ]
     },
     github: "https://github.com/mohamedfakhar/hrm-system",
@@ -91,6 +102,10 @@ const projectsData = [
   },
   {
     id: "kemet-gate",
+    cardCategory: "Tourism · Full Stack",
+    cardDesc: "Tourism booking platform for Egyptian destinations with Stripe payments and tamper-proof, HMAC-signed QR tickets.",
+    cardTags: ["React", "Node.js", "MongoDB", "Stripe"],
+    imagePosition: "center center",
     name: "Kemet Gate",
     fullName: "Kemet Gate — Interactive Digital Tourism Platform",
     badge: "Graduation Project (Team) | Digilians / Digital Pioneers Initiative",
@@ -179,6 +194,10 @@ const projectsData = [
   },
   {
     id: "frio-restaurant",
+    cardCategory: "Hospitality · Next.js",
+    cardDesc: "Restaurant and online ordering platform with a persistent cart, order tracking and automatic WhatsApp order dispatch.",
+    cardTags: ["Next.js 16", "TypeScript", "Prisma", "Tailwind v4"],
+    imagePosition: "center 35%",
     name: "Frío Restaurant & Cafe",
     fullName: "Frío Restaurant & Cafe — Full-Stack Restaurant & Online Ordering Platform",
     badge: "Freelance Production Platform · Next.js 16 App Router",
@@ -249,6 +268,10 @@ const projectsData = [
   },
   {
     id: "shopery",
+    cardCategory: "E-Commerce · Full Stack",
+    cardDesc: "Full-stack store with JWT and RBAC, cart, coupons, an admin dashboard and server-side price validation (36 passing tests).",
+    cardTags: ["React", "Node.js", "MongoDB", "JWT"],
+    imagePosition: "top center",
     name: "Shopery",
     fullName: "Shopery — Full-Stack E-Commerce Web Application",
     badge: "Full-Stack E-Commerce · 36 Automated Tests Passed",
@@ -318,7 +341,11 @@ const projectsData = [
   },
   {
     id: "topico",
-    name: "Topico (Ecommerce Storefront)",
+    cardCategory: "Storefront · Vanilla JS",
+    cardDesc: "Responsive storefront in vanilla JavaScript that consumes REST APIs, with category sliders and a persistent cart.",
+    cardTags: ["JavaScript", "HTML5 / CSS3", "Swiper.js", "Vercel"],
+    imagePosition: "top center",
+    name: "Topico Storefront",
     fullName: "Topico — E-Commerce & Community Storefront",
     badge: "Interactive Storefront · Deployed on Vercel",
     timeline: "Jul 2024 – Dec 2024",
@@ -365,6 +392,10 @@ const projectsData = [
   },
   {
     id: "diabetes-app",
+    cardCategory: "Healthcare · Graduation project",
+    cardDesc: "App for diabetic patients with glucose logging and machine-learning trend prediction, backed by Node.js and MySQL.",
+    cardTags: ["Node.js", "Express.js", "MySQL", "ML"],
+    imagePosition: "center center",
     name: "Diabetes Management App",
     fullName: "Diabetes Management App — Predictive Healthcare Platform",
     badge: "University Graduation Project · Zagazig University",
@@ -412,6 +443,11 @@ const projectsData = [
   },
   {
     id: "al-quds-pharmacy",
+    cardCategory: "Healthcare · Freelance",
+    cardDesc: "Community pharmacy website with a product catalog, a prescription upload flow and direct WhatsApp consultation.",
+    cardTags: ["Node.js", "Express.js", "MongoDB", "WhatsApp API"],
+    imagePosition: "center center",
+    imageBackground: "#eef3fa",
     name: "Al-Quds Pharmacy",
     fullName: "Al-Quds Pharmacy — Community Pharmacy Storefront",
     badge: "Freelance Client Platform · Pharmacy & Prescriptions",
@@ -462,262 +498,208 @@ const projectsData = [
 ];
 
 // ==========================================================================
-// 2. DOM Rendering: Editorial Showcase with Visual Rhythm
+// 2. Small helpers and icons
 // ==========================================================================
+const githubIcon = '<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>';
+
+const arrowIcon = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>';
+
+const externalIcon = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>';
+
+// Filter buttons shown above the projects
+const filterList = [
+  { key: "all", label: "All" },
+  { key: "featured", label: "Featured" },
+  { key: "fullstack", label: "Full-Stack" },
+  { key: "ecommerce", label: "E-Commerce" },
+  { key: "enterprise", label: "Enterprise & Healthcare" }
+];
+
 let currentFilter = "all";
 
-// Helper to render tech pills
-function renderTechPills(proj, limit = 5) {
-  let tags = [];
-  if (proj.techStack["Frontend"]) tags.push(...proj.techStack["Frontend"]);
-  if (proj.techStack["Framework"]) tags.push(...proj.techStack["Framework"]);
-  if (proj.techStack["Backend"]) tags.push(...proj.techStack["Backend"]);
-  if (proj.techStack["Core Frontend"]) tags.push(...proj.techStack["Core Frontend"]);
-  if (proj.techStack["Database"]) tags.push(...proj.techStack["Database"]);
-  if (proj.techStack["Payments & Real-Time"]) tags.push(...proj.techStack["Payments & Real-Time"]);
-
-  return tags.slice(0, limit)
-    .map(t => `<span class="project-pill">${t}</span>`)
-    .join("");
-}
-
-// 1. Flagship Spotlight Card (#1 HRM System)
-function createSpotlightCardHTML(proj) {
-  const pillsHTML = renderTechPills(proj, 6);
-  const highlightsHTML = proj.highlights.slice(0, 3)
-    .map(h => `<li><span class="bullet-dot">✦</span><span>${h}</span></li>`)
-    .join("");
-
-  return `
-    <article class="spotlight-card" data-id="${proj.id}">
-      <div class="spotlight-visual" onclick="openModal('${proj.id}')" role="button" tabindex="0" aria-label="Open ${proj.name} Case Study">
-        <div class="spotlight-img-frame">
-          <img class="spotlight-img" src="${proj.images.preview}" alt="${proj.images.previewAlt}" loading="lazy" />
-          <div class="spotlight-overlay">
-            <span class="spotlight-zoom-pill">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-              <span>View Case Study</span>
-            </span>
-          </div>
-        </div>
-        <div class="spotlight-badge-row">
-          <span class="tag-flagship">★ Flagship Case Study</span>
-          <span class="tag-status">${proj.status}</span>
-        </div>
-      </div>
-
-      <div class="spotlight-details">
-        <div class="spotlight-header">
-          <div class="spotlight-category">${proj.category}</div>
-          <h3 class="spotlight-title">${proj.name}</h3>
-          <div class="spotlight-timeline">${proj.timeline} &middot; <em>${proj.role}</em></div>
-        </div>
-
-        <p class="spotlight-summary">${proj.shortDesc}</p>
-
-        <ul class="spotlight-highlights">
-          ${highlightsHTML}
-        </ul>
-
-        <div class="spotlight-metric-chips">
-          <div class="m-chip"><span class="m-num">105/105</span> <span class="m-lbl">Automated Tests</span></div>
-          <div class="m-chip"><span class="m-num">16</span> <span class="m-lbl">Assistant Tools</span></div>
-          <div class="m-chip"><span class="m-num">RBAC</span> <span class="m-lbl">Role Guards</span></div>
-          <div class="m-chip"><span class="m-num">Socket.IO</span> <span class="m-lbl">Real-Time</span></div>
-        </div>
-
-        <div class="spotlight-pills-wrap">
-          ${pillsHTML}
-        </div>
-
-        <div class="spotlight-actions">
-          <button class="btn-card-primary" onclick="openModal('${proj.id}')">
-            <span>Deep-Dive Case Study</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-          </button>
-          ${proj.github ? `
-            <a href="${proj.github}" target="_blank" rel="noopener noreferrer" class="btn-card-secondary" aria-label="View ${proj.name} GitHub Repository">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-              <span>Repository</span>
-            </a>
-          ` : ""}
-        </div>
-      </div>
-    </article>
-  `;
-}
-
-// 2. Secondary Featured Pair Card (#2 Kemet Gate, #3 Frío Restaurant)
-function createFeaturedPairCardHTML(proj) {
-  const pillsHTML = renderTechPills(proj, 4);
-
-  return `
-    <article class="featured-pair-card" data-id="${proj.id}">
-      <div class="pair-visual" onclick="openModal('${proj.id}')" role="button" tabindex="0" aria-label="Open ${proj.name} Case Study">
-        <img class="pair-img" src="${proj.images.preview}" alt="${proj.images.previewAlt}" loading="lazy" />
-        <div class="pair-overlay">
-          <span class="spotlight-zoom-pill">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-            <span>Case Study</span>
-          </span>
-        </div>
-        <div class="pair-badges">
-          <span class="tag-featured">★ Featured</span>
-          <span class="tag-status">${proj.status}</span>
-        </div>
-      </div>
-
-      <div class="pair-content">
-        <div class="pair-category">${proj.category}</div>
-        <h3 class="pair-title">${proj.name}</h3>
-        <p class="pair-desc">${proj.shortDesc}</p>
-
-        <div class="pair-role">
-          <strong>Context:</strong> ${proj.badge}
-        </div>
-
-        <div class="pair-pills">
-          ${pillsHTML}
-        </div>
-
-        <div class="pair-actions">
-          <button class="btn-card-primary" onclick="openModal('${proj.id}')">
-            <span>Case Study</span>
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-          </button>
-          ${proj.github ? `
-            <a href="${proj.github}" target="_blank" rel="noopener noreferrer" class="btn-card-secondary" aria-label="View ${proj.name} GitHub">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-              <span>GitHub</span>
-            </a>
-          ` : ""}
-        </div>
-      </div>
-    </article>
-  `;
-}
-
-// 3. Compact Supporting Card (#4 Shopery, #5 Topico, #6 Diabetes App, #7 Al-Quds Pharmacy)
-function createSupportingCardHTML(proj) {
-  const pillsHTML = renderTechPills(proj, 3);
-
-  return `
-    <article class="supporting-card" data-id="${proj.id}">
-      <div class="supporting-visual" onclick="openModal('${proj.id}')" role="button" tabindex="0" aria-label="Open ${proj.name} Details">
-        <img class="supporting-img ${proj.images.imgClass || ''}" src="${proj.images.preview}" alt="${proj.images.previewAlt}" loading="lazy" />
-        <span class="supporting-status">${proj.status}</span>
-      </div>
-
-      <div class="supporting-content">
-        <div class="supporting-top">
-          <span class="supporting-category">${proj.category}</span>
-          <span class="supporting-date">${proj.timeline}</span>
-        </div>
-
-        <h4 class="supporting-title">${proj.name}</h4>
-        <p class="supporting-desc">${proj.shortDesc}</p>
-
-        <div class="supporting-pills">
-          ${pillsHTML}
-        </div>
-
-        <div class="supporting-actions">
-          <button class="btn-supporting-detail" onclick="openModal('${proj.id}')">
-            <span>Details</span> &rarr;
-          </button>
-          ${proj.liveDemo ? `
-            <a href="${proj.liveDemo}" target="_blank" rel="noopener noreferrer" class="supporting-link live" aria-label="Visit ${proj.name} Live Demo">
-              <span>🌐 Live</span>
-            </a>
-          ` : ""}
-          ${proj.github ? `
-            <a href="${proj.github}" target="_blank" rel="noopener noreferrer" class="supporting-link" aria-label="View ${proj.name} GitHub Repository">
-              <span>🐙 Code</span>
-            </a>
-          ` : ""}
-        </div>
-      </div>
-    </article>
-  `;
-}
-
-// Main Render Function
-function renderProjects(filter = "all") {
-  const spotlightArea = document.getElementById("spotlight-project-area");
-  const featuredPairArea = document.getElementById("featured-pair-area");
-  const supportingHeader = document.getElementById("supporting-header");
-  const supportingGrid = document.getElementById("supporting-projects-grid");
-
-  if (!spotlightArea || !featuredPairArea || !supportingGrid) return;
-
+// Returns the projects that match a filter
+function getProjectsForFilter(filter) {
   if (filter === "all") {
-    // 1. Spotlight Project: HRM System
-    const spotlightProject = projectsData.find(p => p.id === "hrm-system");
-    spotlightArea.innerHTML = spotlightProject ? createSpotlightCardHTML(spotlightProject) : "";
-    spotlightArea.style.display = "block";
-
-    // 2. Featured Secondary Pair: Kemet Gate & Frío Restaurant
-    const pairProjects = projectsData.filter(p => p.id === "kemet-gate" || p.id === "frio-restaurant");
-    featuredPairArea.innerHTML = pairProjects.map(createFeaturedPairCardHTML).join("");
-    featuredPairArea.style.display = "grid";
-
-    // 3. Supporting Projects: Shopery, Topico, Diabetes App, Al-Quds Pharmacy
-    if (supportingHeader) supportingHeader.style.display = "flex";
-    const supportingProjects = projectsData.filter(p => !p.isFeatured);
-    supportingGrid.innerHTML = supportingProjects.map(createSupportingCardHTML).join("");
-    supportingGrid.style.display = "grid";
-  } else if (filter === "featured") {
-    // Show only 3 featured projects
-    const spotlightProject = projectsData.find(p => p.id === "hrm-system");
-    spotlightArea.innerHTML = spotlightProject ? createSpotlightCardHTML(spotlightProject) : "";
-    spotlightArea.style.display = "block";
-
-    const pairProjects = projectsData.filter(p => p.id === "kemet-gate" || p.id === "frio-restaurant");
-    featuredPairArea.innerHTML = pairProjects.map(createFeaturedPairCardHTML).join("");
-    featuredPairArea.style.display = "grid";
-
-    if (supportingHeader) supportingHeader.style.display = "none";
-    supportingGrid.innerHTML = "";
-    supportingGrid.style.display = "none";
-  } else {
-    // Filtered by category (fullstack, ecommerce, enterprise)
-    const matching = projectsData.filter(p => p.filterCategories && p.filterCategories.includes(filter));
-
-    spotlightArea.innerHTML = "";
-    spotlightArea.style.display = "none";
-    featuredPairArea.innerHTML = "";
-    featuredPairArea.style.display = "none";
-
-    if (supportingHeader) {
-      supportingHeader.style.display = "flex";
-      const titleEl = supportingHeader.querySelector("h3");
-      const descEl = supportingHeader.querySelector(".supporting-header-desc");
-      if (titleEl) titleEl.textContent = `Filtered Projects (${matching.length})`;
-      if (descEl) descEl.textContent = `Verified platforms matching the "${filter}" filter.`;
-    }
-
-    supportingGrid.innerHTML = matching.map(p => {
-      return p.isFeatured ? createFeaturedPairCardHTML(p) : createSupportingCardHTML(p);
-    }).join("");
-    supportingGrid.style.display = "grid";
+    return projectsData;
   }
+  return projectsData.filter(function (project) {
+    return project.filterCategories.includes(filter);
+  });
 }
 
-// Setup Project Filter Tabs
-function initProjectFilters() {
-  const filterTabs = document.querySelectorAll(".filter-tab");
-  filterTabs.forEach(tab => {
-    tab.addEventListener("click", () => {
-      filterTabs.forEach(t => t.classList.remove("active"));
-      tab.classList.add("active");
-      currentFilter = tab.getAttribute("data-filter") || "all";
+// ==========================================================================
+// 3. Project cards
+// ==========================================================================
+
+// Big card for the main project (HRM system)
+function createSpotlightCardHTML(proj) {
+  const pointsHTML = proj.spotlightPoints
+    .map(function (point) {
+      return '<li><span class="bullet-dot" aria-hidden="true"></span><span>' + point + "</span></li>";
+    })
+    .join("");
+
+  const tagsHTML = proj.cardTags
+    .map(function (tag) {
+      return '<span class="project-pill">' + tag + "</span>";
+    })
+    .join("");
+
+  const githubButton = proj.github
+    ? '<a href="' + proj.github + '" target="_blank" rel="noopener noreferrer" class="btn-card-secondary" aria-label="View ' + proj.name + ' on GitHub">' + githubIcon + "<span>Repository</span></a>"
+    : "";
+
+  const liveButton = proj.liveDemo
+    ? '<a href="' + proj.liveDemo + '" target="_blank" rel="noopener noreferrer" class="btn-card-secondary" aria-label="Open ' + proj.name + ' live site">' + externalIcon + "<span>Live Site</span></a>"
+    : "";
+
+  return (
+    '<article class="spotlight-card reveal">' +
+    '<button type="button" class="spotlight-visual" onclick="openModal(\'' + proj.id + '\')" aria-label="Open ' + proj.name + ' case study">' +
+    '<span class="spotlight-img-frame">' +
+    '<img class="spotlight-img" src="' + proj.images.preview + '" alt="' + proj.images.previewAlt + '" style="object-position: ' + proj.imagePosition + ';" loading="lazy" />' +
+    '<span class="spotlight-overlay"><span class="zoom-pill">View case study</span></span>' +
+    "</span>" +
+    "</button>" +
+    '<div class="spotlight-details">' +
+    '<div class="spotlight-badges">' +
+    '<span class="chip chip-featured">★ Flagship project</span>' +
+    '<span class="chip chip-status">' + proj.status + "</span>" +
+    "</div>" +
+    '<p class="project-card-category">' + proj.cardCategory + "</p>" +
+    '<h3 class="spotlight-title">' + proj.name + "</h3>" +
+    '<p class="spotlight-timeline">' + proj.timeline + " — " + proj.role + "</p>" +
+    '<p class="spotlight-summary">' + proj.shortDesc + "</p>" +
+    '<ul class="spotlight-points">' + pointsHTML + "</ul>" +
+    '<div class="project-card-tags">' + tagsHTML + "</div>" +
+    '<div class="project-card-actions">' +
+    '<button type="button" class="btn-card-primary" onclick="openModal(\'' + proj.id + '\')"><span>Read case study</span>' + arrowIcon + "</button>" +
+    liveButton +
+    githubButton +
+    "</div>" +
+    "</div>" +
+    "</article>"
+  );
+}
+
+// Normal card used for all other projects (same size and layout for every project)
+function createProjectCardHTML(proj, index) {
+  const tagsHTML = proj.cardTags
+    .map(function (tag) {
+      return '<span class="project-pill">' + tag + "</span>";
+    })
+    .join("");
+
+  const featuredChip = proj.isFeatured ? '<span class="chip chip-featured">★ Featured</span>' : "";
+  const imageClass = proj.images.imgClass ? " is-logo" : "";
+  const imageBackground = proj.imageBackground ? "background: " + proj.imageBackground + ";" : "";
+
+  const liveButton = proj.liveDemo
+    ? '<a href="' + proj.liveDemo + '" target="_blank" rel="noopener noreferrer" class="btn-icon-link" aria-label="Open ' + proj.name + ' live site">' + externalIcon + "<span>Live</span></a>"
+    : "";
+
+  const githubButton = proj.github
+    ? '<a href="' + proj.github + '" target="_blank" rel="noopener noreferrer" class="btn-icon-link" aria-label="View ' + proj.name + ' on GitHub">' + githubIcon + "<span>Code</span></a>"
+    : "";
+
+  return (
+    '<article class="project-card reveal" style="--i: ' + index + ';">' +
+    '<button type="button" class="project-card-image' + imageClass + '" style="' + imageBackground + '" onclick="openModal(\'' + proj.id + '\')" aria-label="Open ' + proj.name + ' case study">' +
+    '<img src="' + proj.images.preview + '" alt="' + proj.images.previewAlt + '" style="object-position: ' + proj.imagePosition + ';" loading="lazy" />' +
+    '<span class="project-card-overlay"><span class="zoom-pill">View case study</span></span>' +
+    '<span class="card-chips">' +
+    '<span class="chip chip-status">' + proj.status + "</span>" +
+    featuredChip +
+    "</span>" +
+    "</button>" +
+    '<div class="project-card-body">' +
+    '<div class="project-card-meta">' +
+    '<span class="project-card-category">' + proj.cardCategory + "</span>" +
+    '<span class="project-card-date">' + proj.timeline + "</span>" +
+    "</div>" +
+    '<h3 class="project-card-title">' + proj.name + "</h3>" +
+    '<p class="project-card-desc">' + proj.cardDesc + "</p>" +
+    '<div class="project-card-tags">' + tagsHTML + "</div>" +
+    '<div class="project-card-actions">' +
+    '<button type="button" class="btn-card-primary" onclick="openModal(\'' + proj.id + '\')"><span>Case study</span>' + arrowIcon + "</button>" +
+    liveButton +
+    githubButton +
+    "</div>" +
+    "</div>" +
+    "</article>"
+  );
+}
+
+// Builds the filter buttons (the numbers are counted automatically)
+function renderFilters() {
+  const filterBar = document.getElementById("projects-filter-bar");
+  if (!filterBar) return;
+
+  filterBar.innerHTML = filterList
+    .map(function (item) {
+      const count = getProjectsForFilter(item.key).length;
+      const activeClass = item.key === currentFilter ? " active" : "";
+      return (
+        '<button type="button" class="filter-tab' + activeClass + '" data-filter="' + item.key + '" aria-pressed="' + (item.key === currentFilter) + '">' +
+        item.label + ' <span class="filter-count">' + count + "</span>" +
+        "</button>"
+      );
+    })
+    .join("");
+
+  const tabs = filterBar.querySelectorAll(".filter-tab");
+  tabs.forEach(function (tab) {
+    tab.addEventListener("click", function () {
+      currentFilter = tab.getAttribute("data-filter");
+      renderFilters();
       renderProjects(currentFilter);
     });
   });
 }
 
+// Shows the projects for the chosen filter
+function renderProjects(filter) {
+  const spotlightArea = document.getElementById("spotlight-project-area");
+  const projectsGrid = document.getElementById("projects-grid");
+  const resultText = document.getElementById("projects-result-text");
+
+  if (!spotlightArea || !projectsGrid) return;
+
+  const matchingProjects = getProjectsForFilter(filter);
+
+  // The big card is only shown for "All" and "Featured"
+  let spotlightProject = null;
+  if (filter === "all" || filter === "featured") {
+    spotlightProject = matchingProjects.find(function (project) {
+      return project.isSpotlight;
+    });
+  }
+
+  const otherProjects = matchingProjects.filter(function (project) {
+    return project !== spotlightProject;
+  });
+
+  spotlightArea.innerHTML = spotlightProject ? createSpotlightCardHTML(spotlightProject) : "";
+
+  projectsGrid.innerHTML = otherProjects
+    .map(function (project, index) {
+      return createProjectCardHTML(project, index);
+    })
+    .join("");
+
+  // The CSS uses this number to choose 2 or 3 columns
+  projectsGrid.setAttribute("data-count", otherProjects.length);
+
+  if (resultText) {
+    resultText.textContent = "Showing " + matchingProjects.length + " of " + projectsData.length + " projects";
+  }
+
+  // New cards need the reveal animation
+  watchRevealItems();
+}
+
 // ==========================================================================
-// 3. Modal Dialog (Case Study Lightbox with Focus Trap & Escape Dismiss)
+// 4. Project modal (case study)
 // ==========================================================================
 const modalDialog = document.getElementById("project-modal");
 const modalContainer = document.getElementById("modal-container");
@@ -726,149 +708,127 @@ const modalTitle = document.getElementById("modal-title-heading");
 const modalSubtitle = document.getElementById("modal-subtitle-text");
 const modalStatus = document.getElementById("modal-status-badge");
 const modalBody = document.getElementById("modal-body-content");
+const modalContent = document.querySelector(".modal-content");
 
 let previousActiveElement = null;
 
 function openModal(projectId) {
-  const proj = projectsData.find(p => p.id === projectId);
+  const proj = projectsData.find(function (p) {
+    return p.id === projectId;
+  });
   if (!proj || !modalDialog) return;
 
   previousActiveElement = document.activeElement;
 
   modalTitle.textContent = proj.fullName || proj.name;
   modalSubtitle.textContent = proj.badge || proj.category;
-  modalStatus.textContent = `${proj.status} · ${proj.timeline}`;
+  modalStatus.textContent = proj.status + " · " + proj.timeline;
 
-  // Build Features HTML
+  // Features
   let featuresHTML = "";
   if (proj.features) {
-    for (const [sectionName, listItems] of Object.entries(proj.features)) {
-      featuresHTML += `
-        <div style="margin-bottom: 20px;">
-          <h4 style="font-size: 13.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; font-family: var(--font-heading); font-weight: 700;">${sectionName}</h4>
-          <ul class="modal-list">
-            ${listItems.map(item => `<li>${item}</li>`).join("")}
-          </ul>
-        </div>
-      `;
+    for (const sectionName in proj.features) {
+      const items = proj.features[sectionName]
+        .map(function (item) {
+          return "<li>" + item + "</li>";
+        })
+        .join("");
+      featuresHTML += '<div class="modal-feature-group"><h4 class="modal-feature-title">' + sectionName + '</h4><ul class="modal-list">' + items + "</ul></div>";
     }
   }
 
-  // Build Tech Stack HTML
+  // Tech stack
   let techStackHTML = "";
   if (proj.techStack) {
-    for (const [layerName, tags] of Object.entries(proj.techStack)) {
-      techStackHTML += `
-        <div style="margin-bottom: 14px;">
-          <div class="modal-meta-label">${layerName}</div>
-          <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px;">
-            ${tags.map(t => `<span class="stack-tag">${t}</span>`).join("")}
-          </div>
-        </div>
-      `;
+    for (const layerName in proj.techStack) {
+      const tags = proj.techStack[layerName]
+        .map(function (tag) {
+          return '<span class="stack-tag">' + tag + "</span>";
+        })
+        .join("");
+      techStackHTML += '<div class="modal-stack-group"><div class="modal-meta-label">' + layerName + '</div><div class="modal-stack-tags">' + tags + "</div></div>";
     }
   }
 
-  // Build Challenges HTML
+  // Challenges
   let challengesHTML = "";
   if (proj.challenges && proj.challenges.length > 0) {
-    challengesHTML = proj.challenges.map(ch => `
-      <div style="margin-bottom: 16px;">
-        <div style="font-weight: 700; color: var(--white); font-size: 14px; margin-bottom: 4px; font-family: var(--font-heading);">✦ ${ch.title}</div>
-        <div class="modal-text" style="margin-bottom: 0; padding-left: 14px;">${ch.desc}</div>
-      </div>
-    `).join("");
+    challengesHTML = proj.challenges
+      .map(function (challenge) {
+        return '<div class="modal-challenge"><h4 class="modal-challenge-title">' + challenge.title + '</h4><p class="modal-text">' + challenge.desc + "</p></div>";
+      })
+      .join("");
   }
 
-  // Build Workflow Diagram
+  // Workflow (numbered steps)
   let workflowHTML = "";
   if (proj.workflow && proj.workflow.length > 0) {
-    const nodes = proj.workflow.map(node => `<div class="workflow-node">${node}</div>`).join('<div class="workflow-arrow">&rarr;</div>');
-    workflowHTML = `
-      <div style="margin-top: 28px;">
-        <div class="modal-section-title">End-to-End System Workflow</div>
-        <div class="workflow-container">
-          ${nodes}
-        </div>
-      </div>
-    `;
+    const steps = proj.workflow
+      .map(function (step, index) {
+        return '<li class="workflow-step"><span class="workflow-number">' + (index + 1) + '</span><span class="workflow-text">' + step + "</span></li>";
+      })
+      .join("");
+    workflowHTML = '<div class="modal-section"><h3 class="modal-section-title">How it works</h3><ol class="workflow-list">' + steps + "</ol></div>";
   }
 
-  // Build Image Gallery
-  const allImages = [{ src: proj.images.preview, caption: "Primary Architecture View" }, ...(proj.images.gallery || [])];
-  const galleryHTML = `
-    <div class="modal-gallery">
-      ${allImages.map(img => `
-        <div class="modal-gallery-img-wrap" onclick="window.open('${img.src}', '_blank')">
-          <img class="modal-gallery-img ${proj.images.imgClass || ''}" src="${img.src}" alt="${proj.name} Screenshot" loading="lazy" />
-          <div class="modal-gallery-caption">${img.caption}</div>
-        </div>
-      `).join("")}
-    </div>
-  `;
+  // Screenshots (the same image is not shown twice)
+  const allImages = [{ src: proj.images.preview, caption: proj.images.previewCaption || "Main screen" }];
+  (proj.images.gallery || []).forEach(function (image) {
+    const alreadyAdded = allImages.some(function (added) {
+      return added.src === image.src;
+    });
+    if (!alreadyAdded) {
+      allImages.push(image);
+    }
+  });
 
-  // Inject into modal body
-  modalBody.innerHTML = `
-    <div class="modal-grid-2">
-      <div>
-        <div class="modal-section-title">Project Overview</div>
-        <p class="modal-text">${proj.shortDesc}</p>
-        
-        <div class="modal-section-title">Problem &amp; Context</div>
-        <p class="modal-text">${proj.problem}</p>
-        
-        <div class="modal-section-title">Key System Features</div>
-        ${featuresHTML}
-        
-        ${challengesHTML ? `
-          <div class="modal-section-title">Technical Challenges &amp; Solutions</div>
-          ${challengesHTML}
-        ` : ""}
-      </div>
-      
-      <div>
-        <div class="modal-meta-box">
-          <div class="modal-meta-item">
-            <div class="modal-meta-label">My Role &amp; Context</div>
-            <div class="modal-meta-val">${proj.role} &middot; <em>${proj.badge}</em></div>
-          </div>
-          
-          <div class="modal-meta-item" style="border-top: 1px solid var(--border); padding-top: 16px;">
-            <div class="modal-meta-label">Technology Architecture</div>
-            ${techStackHTML}
-          </div>
+  const imageClass = proj.images.imgClass ? " is-logo" : "";
+  const imageBackground = proj.imageBackground ? "background: " + proj.imageBackground + ";" : "";
 
-          <div class="modal-meta-item" style="border-top: 1px solid var(--border); padding-top: 16px; display: flex; flex-direction: column; gap: 8px;">
-            ${proj.github ? `
-              <a href="${proj.github}" target="_blank" rel="noopener noreferrer" class="btn-primary" style="width: 100%; justify-content: center;">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                <span>View GitHub Repository</span>
-              </a>
-            ` : ""}
-            ${proj.liveDemo ? `
-              <a href="${proj.liveDemo}" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="width: 100%; justify-content: center;">
-                <span>🌐 Open Live Application</span>
-              </a>
-            ` : ""}
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div>
-      <div class="modal-section-title">Verified Visual Assets (${allImages.length} Visuals)</div>
-      <p style="font-size: 12px; color: var(--muted); margin-bottom: 12px;">Click any visual asset to inspect in full resolution.</p>
-      ${galleryHTML}
-    </div>
+  const galleryHTML = allImages
+    .map(function (image) {
+      return (
+        '<a class="modal-gallery-item" href="' + image.src + '" target="_blank" rel="noopener noreferrer">' +
+        '<span class="modal-gallery-img-box' + imageClass + '" style="' + imageBackground + '"><img src="' + image.src + '" alt="' + proj.name + " — " + image.caption + '" loading="lazy" /></span>' +
+        '<span class="modal-gallery-caption">' + image.caption + "</span>" +
+        "</a>"
+      );
+    })
+    .join("");
 
-    ${workflowHTML}
-  `;
+  // Buttons
+  const githubButton = proj.github
+    ? '<a href="' + proj.github + '" target="_blank" rel="noopener noreferrer" class="btn-primary modal-btn">' + githubIcon + "<span>View GitHub repository</span></a>"
+    : "";
+  const liveButton = proj.liveDemo
+    ? '<a href="' + proj.liveDemo + '" target="_blank" rel="noopener noreferrer" class="btn-secondary modal-btn">' + externalIcon + "<span>Open live site</span></a>"
+    : "";
+
+  modalBody.innerHTML =
+    '<div class="modal-grid-2">' +
+    "<div>" +
+    '<div class="modal-section"><h3 class="modal-section-title">Overview</h3><p class="modal-text">' + proj.shortDesc + "</p></div>" +
+    '<div class="modal-section"><h3 class="modal-section-title">The problem</h3><p class="modal-text">' + proj.problem + "</p></div>" +
+    '<div class="modal-section"><h3 class="modal-section-title">Key features</h3>' + featuresHTML + "</div>" +
+    (challengesHTML ? '<div class="modal-section"><h3 class="modal-section-title">Challenges and solutions</h3>' + challengesHTML + "</div>" : "") +
+    "</div>" +
+    "<aside>" +
+    '<div class="modal-meta-box">' +
+    '<div><div class="modal-meta-label">My role</div><div class="modal-meta-val">' + proj.role + "</div></div>" +
+    '<div class="modal-meta-divider"><div class="modal-meta-label">Technology</div>' + techStackHTML + "</div>" +
+    '<div class="modal-meta-divider modal-buttons">' + githubButton + liveButton + "</div>" +
+    "</div>" +
+    "</aside>" +
+    "</div>" +
+    '<div class="modal-section"><h3 class="modal-section-title">Screenshots</h3><div class="modal-gallery">' + galleryHTML + "</div></div>" +
+    workflowHTML;
 
   modalDialog.classList.add("open");
   modalDialog.setAttribute("aria-hidden", "false");
   document.body.classList.add("modal-open");
+  if (modalContent) modalContent.scrollTop = 0;
 
-  setTimeout(() => {
+  setTimeout(function () {
     modalContainer.focus();
   }, 50);
 }
@@ -884,35 +844,32 @@ function closeModal() {
   }
 }
 
-// Close button click
 if (modalCloseBtn) {
   modalCloseBtn.addEventListener("click", closeModal);
 }
 
-// Close on backdrop click (Light Dismiss)
+// Click outside the box closes the modal
 if (modalDialog) {
-  modalDialog.addEventListener("click", (e) => {
+  modalDialog.addEventListener("click", function (e) {
     if (e.target.classList.contains("modal-backdrop") || e.target === modalDialog) {
       closeModal();
     }
   });
 }
 
-// Close on Escape key
-window.addEventListener("keydown", (e) => {
+// Escape key closes the modal
+window.addEventListener("keydown", function (e) {
   if (e.key === "Escape" && modalDialog && modalDialog.classList.contains("open")) {
     closeModal();
   }
 });
 
-// Focus trap inside modal
+// Keep the Tab key inside the modal
 if (modalContainer) {
-  modalContainer.addEventListener("keydown", (e) => {
+  modalContainer.addEventListener("keydown", function (e) {
     if (e.key !== "Tab") return;
 
-    const focusable = modalContainer.querySelectorAll(
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-    );
+    const focusable = modalContainer.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
     if (focusable.length === 0) return;
 
     const first = focusable[0];
@@ -929,7 +886,7 @@ if (modalContainer) {
 }
 
 // ==========================================================================
-// 4. Mobile Navigation Drawer Handling
+// 5. Mobile menu
 // ==========================================================================
 const hamburgerBtn = document.getElementById("hamburger-btn");
 const mobileCloseBtn = document.getElementById("mobile-close-btn");
@@ -958,9 +915,9 @@ function closeMobileMenu() {
 }
 
 if (hamburgerBtn) {
-  hamburgerBtn.addEventListener("click", () => {
-    const isExpanded = hamburgerBtn.getAttribute("aria-expanded") === "true";
-    if (isExpanded) {
+  hamburgerBtn.addEventListener("click", function () {
+    const isOpen = hamburgerBtn.getAttribute("aria-expanded") === "true";
+    if (isOpen) {
       closeMobileMenu();
     } else {
       openMobileMenu();
@@ -976,11 +933,11 @@ if (mobileOverlay) {
   mobileOverlay.addEventListener("click", closeMobileMenu);
 }
 
-mobileLinks.forEach(link => {
+mobileLinks.forEach(function (link) {
   link.addEventListener("click", closeMobileMenu);
 });
 
-window.addEventListener("keydown", (e) => {
+window.addEventListener("keydown", function (e) {
   if (e.key === "Escape" && mobileMenu && mobileMenu.classList.contains("active")) {
     closeMobileMenu();
     if (hamburgerBtn) hamburgerBtn.focus();
@@ -988,28 +945,91 @@ window.addEventListener("keydown", (e) => {
 });
 
 // ==========================================================================
-// 5. Initialization on DOMContentLoaded
+// 6. Animations: reveal on scroll, progress bar, active menu link
 // ==========================================================================
-document.addEventListener("DOMContentLoaded", () => {
-  // Render projects with visual rhythm & initialize filters
-  renderProjects("all");
-  initProjectFilters();
+let revealObserver = null;
 
-  // Dynamic Year in Footer
+// Shows elements with the class "reveal" when they enter the screen
+function watchRevealItems() {
+  const items = document.querySelectorAll(".reveal:not(.is-visible)");
+
+  // Old browsers: just show everything
+  if (!("IntersectionObserver" in window)) {
+    items.forEach(function (item) {
+      item.classList.add("is-visible");
+    });
+    return;
+  }
+
+  if (!revealObserver) {
+    revealObserver = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
+    );
+  }
+
+  items.forEach(function (item) {
+    revealObserver.observe(item);
+  });
+}
+
+const sectionIds = ["projects", "capabilities", "experience", "credentials", "skills", "principles", "contact"];
+
+// Runs on scroll: navbar shadow, progress bar, back-to-top button, active link
+function handleScroll() {
+  const scrollTop = window.scrollY;
+  const pageHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+  const nav = document.querySelector(".nav-bar");
+  if (nav) {
+    nav.classList.toggle("scrolled", scrollTop > 30);
+  }
+
+  const progressBar = document.getElementById("scroll-progress");
+  if (progressBar && pageHeight > 0) {
+    progressBar.style.width = (scrollTop / pageHeight) * 100 + "%";
+  }
+
+  const backToTop = document.getElementById("back-to-top");
+  if (backToTop) {
+    backToTop.classList.toggle("show", scrollTop > 700);
+  }
+
+  // Find the section the user is reading now
+  let currentId = "";
+  sectionIds.forEach(function (id) {
+    const section = document.getElementById(id);
+    if (section && section.getBoundingClientRect().top <= 140) {
+      currentId = id;
+    }
+  });
+
+  document.querySelectorAll(".nav-link").forEach(function (link) {
+    link.classList.toggle("active", link.getAttribute("href") === "#" + currentId);
+  });
+}
+
+// ==========================================================================
+// 7. Start everything when the page is ready
+// ==========================================================================
+document.addEventListener("DOMContentLoaded", function () {
+  renderFilters();
+  renderProjects(currentFilter);
+  watchRevealItems();
+
+  // Footer year
   const yearEl = document.getElementById("current-year");
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
   }
 
-  // Navbar subtle scroll elevation
-  const nav = document.querySelector(".nav-bar");
-  if (nav) {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 30) {
-        nav.classList.add("scrolled");
-      } else {
-        nav.classList.remove("scrolled");
-      }
-    }, { passive: true });
-  }
+  window.addEventListener("scroll", handleScroll, { passive: true });
+  handleScroll();
 });

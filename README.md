@@ -8,13 +8,13 @@
 
 ## 📌 Overview
 
-A bespoke, dark editorial developer portfolio engineered with semantic HTML5, Vanilla CSS3 (custom design system with obsidian charcoal surfaces and warm champagne amber accents), and modular JavaScript. Strictly synchronized with Mohamed Elshahat Ibrahim's verified curriculum vitae (**September 2026** baseline) and authentic GitHub repositories.
+A bespoke, dark editorial developer portfolio engineered with semantic HTML5, Vanilla CSS3 (custom design system with deep navy surfaces and vibrant soft teal accents), and modular JavaScript. Strictly synchronized with Mohamed Elshahat Ibrahim's verified curriculum vitae (**September 2026** baseline) and authentic GitHub repositories.
 
 ---
 
 ## 🎨 Design System & Architecture
 
-- **Editorial Dark Aesthetics**: Deep charcoal obsidian background (`#0c0d0f`), elevated surface panels (`#16181d`, `#191b22`), and restrained warm champagne gold accents (`#d4a85c`).
+- **Editorial Dark Aesthetics**: Deep navy background (`#0b1220`), elevated surface cards (`#121b2e`, `#17223a`), and modern soft teal accents (`#4fd1c5`).
 - **Typographic Hierarchy**: Tight geometric headings in *Plus Jakarta Sans*, editorial italic flourishes in *Instrument Serif*, and code metadata in *DM Mono*.
 - **Visual Rhythm Showcase**:
   1. **Flagship Spotlight**: Deep-dive showcase for the **HR & Payroll Management System** (105/105 automated assertions passing, 16-tool bilingual HR assistant, anomaly detection).
